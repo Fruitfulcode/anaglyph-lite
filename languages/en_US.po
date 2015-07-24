@@ -1,0 +1,2061 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Anaglyph\n"
+"POT-Creation-Date: 2015-07-22 15:06+0300\n"
+"PO-Revision-Date: 2015-07-22 15:07+0300\n"
+"Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
+"Language-Team: fruitfulcode <mail@fruitfulcode.com>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "Not found"
+msgstr ""
+
+#: archive.php:16
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:18
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:21
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:21
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:24
+msgid "Archives"
+msgstr ""
+
+#: author.php:14
+#, php-format
+msgid "All posts by %s"
+msgstr ""
+
+#: category.php:14
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: comments.php:24
+#, php-format
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:29
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:30
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:31
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:48
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:49
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:54
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:67 includes/theme/theme-comments.php:21
+msgid "Reply"
+msgstr ""
+
+#: comments.php:71 includes/admin/anaglyph-options/admin-config.php:1508
+#: includes/theme/theme-comment-form.php:15
+#: includes/theme/theme-function.php:632 includes/theme/theme-function.php:746
+#: woocommerce/single-product-reviews.php:66
+msgid "Name"
+msgstr ""
+
+#: comments.php:72 includes/admin/anaglyph-options/admin-config.php:1509
+#: includes/theme/theme-comment-form.php:17
+#: woocommerce/single-product-reviews.php:68
+msgid "Email"
+msgstr ""
+
+#: comments.php:77 includes/admin/anaglyph-options/admin-config.php:1510
+#: includes/theme/theme-function.php:653 includes/theme/theme-function.php:759
+msgid "Message"
+msgstr ""
+
+#: content-aside.php:29 content-audio.php:29 content-chat.php:29
+#: content-gallery.php:29 content-image.php:29 content-link.php:29
+#: content-quote.php:29 content-video.php:29
+msgid "&#8230;"
+msgstr ""
+
+#: content-aside.php:44 content-audio.php:44 content-chat.php:44
+#: content-gallery.php:44 content-image.php:44 content-link.php:44
+#: content-page.php:22 content-quote.php:44 content-video.php:44
+#: content.php:62
+msgid "Pages:"
+msgstr ""
+
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:22
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-page.php:34
+msgid "Edit"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:53
+msgid "Section via hook"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:54
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:111
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:118
+#: includes/admin/anaglyph-options/admin-config.php:121
+msgid "Current theme preview"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:128
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:129
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:130
+#: includes/theme/theme-widgets.php:150
+msgid "Tags"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:135
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:135
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:230
+msgid "General"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:238
+msgid "Logo"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:239
+msgid "Change your Logo here, upload or enter the URL to your logo image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:248
+msgid "Logo Retina "
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:249
+msgid ""
+"Upload your Retina Logo. This should be your Logo in double size (If your "
+"logo is 100 x 20px, it should be 200 x 40px)"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:258
+msgid "Original Logo (Width/Height)"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:259
+msgid ""
+"If Retina Logo uploaded, please enter the (width/height) of the Standard "
+"Logo you've uploaded (not the Retina Logo)"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:270
+msgid "Favicon"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:271
+msgid ""
+"A favicon is a 16x16 pixel icon that represents your site; upload your "
+"custom Favicon here."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:279
+msgid "Favicon iPhone"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:280
+msgid "Upload a custom favicon for iPhone (57x57 pixel png)."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:288
+msgid "Favicon iPhone Retina"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:289
+msgid "Upload a custom favicon for iPhone retina (114x114 pixel png)."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:297
+msgid "Favicon iPad"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:298
+msgid "Upload a custom favicon for iPad (72x72 pixel png)."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:306
+msgid "Favicon iPad Retina"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:307
+msgid "Upload a custom favicon for iPhone retina (144x144 pixel png)."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:314
+msgid "Tracking ID"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:315
+msgid "Paste your web analytics' tracking id here."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:326
+msgid "Display options"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:334
+msgid "Enhanced scrolling"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:335
+msgid "Select to enable scrolling library."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:336
+#: includes/admin/anaglyph-options/admin-config.php:363
+#: includes/admin/anaglyph-options/admin-config.php:414
+#: includes/admin/anaglyph-options/admin-config.php:422
+#: includes/admin/anaglyph-options/admin-config.php:430
+#: includes/admin/anaglyph-options/admin-config.php:438
+#: includes/admin/anaglyph-options/admin-config.php:446
+#: includes/admin/anaglyph-options/admin-config.php:455
+#: includes/admin/anaglyph-options/admin-config.php:464
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:345
+msgid "Display Comments"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:346
+msgid "Choose where users are allowed to post comment in your website."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:350
+msgid "Posts Only"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:351
+msgid "Pages Only"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:352
+msgid "Posts/Pages show"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:353
+msgid "Hide all"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:361
+msgid "Display Breadcrumbs"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:362
+msgid "Display dynamic breadcrumbs on each page of your website."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:371
+msgid "Single post layout"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:372
+#: includes/admin/anaglyph-options/admin-config.php:1768
+msgid "Select main content and sidebar alignment."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:384
+msgid "Select Columns"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:385
+msgid "Select the number of columns for post showing."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:387
+msgid "Full width"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:388
+msgid "2 columns"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:389
+msgid "3 columns"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:390
+msgid "4 columns"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:398
+msgid "Select animation for posts."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:400
+#: includes/admin/anaglyph-options/admin-config.php:1805
+msgid "Top"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:401
+#: includes/admin/anaglyph-options/admin-config.php:1806
+msgid "Left"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:402
+#: includes/admin/anaglyph-options/admin-config.php:1807
+msgid "Right"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:403
+#: includes/admin/anaglyph-options/admin-config.php:1808
+msgid "Bottom"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:404
+#: includes/admin/anaglyph-options/admin-config.php:1809
+msgid "None"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:411
+msgid "Display date for posts"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:419
+msgid "Display comments count for posts"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:427
+msgid "Display thumbnails for posts"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:435
+msgid "Display thumbnails for single post page"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:443
+msgid "Display tags for posts"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:452
+msgid "Display authors for posts"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:461
+msgid "Display share for post"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:472
+msgid "Styling"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:480
+msgid "Body Background"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:481
+msgid "Body background with image, color, etc."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:495
+msgid "Headline options"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:502
+msgid "Headline before color separator."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:511
+msgid "Headline after color separator."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:520
+msgid "Page title options"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:527
+msgid "Page title text options."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:537
+#: includes/admin/anaglyph-options/admin-config.php:578
+msgid "Select typography for title text."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:552
+msgid "Page title text background color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:562
+msgid "Blog options"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:569
+msgid "Blog date text options."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:592
+msgid "Blog date background color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:601
+msgid "Post navigation options"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:608
+msgid "Navigation text options."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:619
+msgid "Select typography for page navigation text."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:631
+msgid "Navigation border."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:645
+msgid "Navigation border color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:656
+msgid "Navigation link color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:668
+msgid "Navigation background link color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:683
+msgid "Slider"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:691
+msgid "Slider on \"Home\" page"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:701
+msgid "Slides"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:702
+msgid "Add slides to slider"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:704
+msgid "This is a title"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:705
+msgid "Description Here"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:706
+msgid "Url"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:714
+msgid "Slideshow Speed"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:715
+msgid "Min: 1000, max: 28000, step: 500, default value: 8000"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:726
+#: includes/admin/anaglyph-options/admin-config.php:803
+msgid "Select animation in"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:735
+msgid "Select animation out"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:744
+msgid "Slider title"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:756
+#: includes/admin/anaglyph-options/admin-config.php:855
+#: includes/admin/anaglyph-options/admin-config.php:955
+msgid "Select typography for general text."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:771
+msgid "Slider title background color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:787
+msgid "Header"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:794
+msgid "Header background color"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:805
+msgid "Fixed header on home page"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:806
+msgid "Fixed header for all pages"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:807
+msgid "Disable fixed header"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:823
+msgid "Padding Option"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:824
+msgid "Allow your users to choose the spacing or margin they want."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:836
+msgid "Menu"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:844
+msgid "Menu font settings"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:869
+msgid "Menu item color"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:879
+msgid "Submenu item color"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:890
+msgid "Submenu item background color"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:901
+msgid "Submenu background color"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:910
+msgid "Submenu item border color"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:920
+msgid "Menu before item color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:929
+msgid "Menu after item color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:939
+msgid "Font styles"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:946
+msgid "General Text Font Style"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:969
+msgid "Transparency for content"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:970
+msgid "Set the opacity for the content part"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:982
+msgid "H1 Font Style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:992
+msgid "Select the typography you want for header H1."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1006
+msgid "H2 Font Style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1016
+msgid "Select the typography you want for header H2."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1030
+msgid "H3 Font Style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1040
+msgid "Select the typography you want for header H3."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1055
+msgid "H4 Font Style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1065
+msgid "Select the typography you want for header H4."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1079
+msgid "H5 Font Style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1089
+msgid "Select the typography you want for header H5."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1104
+msgid "H6 Font Style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1114
+msgid "Select the typography you want for header H6."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1129
+msgid "\"p\" Font Style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1138
+msgid "Select the typography you want for tag \"p\"."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1155
+msgid "Link style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1156
+msgid "Select the typography you want for tag \"a\"."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1170
+msgid "Social Links"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1171
+msgid ""
+"Add link to your social media profiles. Icons with link will be display in "
+"header or footer."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1178
+msgid "Facebook"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1185
+msgid "Twitter"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1192
+msgid "LinkedIn"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1199
+msgid "MySpace"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1206
+msgid "Google Plus+"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1213
+msgid "Dribbble"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1220
+msgid "Flickr"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1227
+msgid "You Tube"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1234
+msgid "Delicious"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1241
+msgid "Deviantart"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1248
+msgid "RSS"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1255
+msgid "Instagram"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1262
+msgid "Pinterest"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1269
+msgid "Vimeo"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1276
+msgid "Picassa"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1283
+msgid "Tumblr"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1290
+#: includes/theme/theme-function.php:748
+msgid "E-mail"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1298
+#: includes/admin/anaglyph-options/admin-config.php:1439
+msgid "Skype"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1307
+msgid "Anaglyph contact form"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1321
+msgid "Contact"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1328
+msgid "Contact section title"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1329
+msgid "Edit title for contact section"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1335
+msgid "Contact section additional title"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1336
+msgid "Edit additional title for contact section"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1343
+msgid "Contact section Background Color"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1344
+msgid "Pick a background color for the contact section."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1352
+msgid "Contact section background image"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1358
+msgid "Contact section address icon color."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1367
+#: includes/admin/anaglyph-options/admin-config.php:1654
+msgid "Select section opacity"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1369
+#: includes/admin/anaglyph-options/admin-config.php:1656
+msgid "opacity-1"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1370
+#: includes/admin/anaglyph-options/admin-config.php:1657
+msgid "opacity-2"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1371
+#: includes/admin/anaglyph-options/admin-config.php:1658
+msgid "opacity-3"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1372
+#: includes/admin/anaglyph-options/admin-config.php:1659
+msgid "opacity-4"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1373
+#: includes/admin/anaglyph-options/admin-config.php:1660
+msgid "opacity-5"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1374
+#: includes/admin/anaglyph-options/admin-config.php:1661
+msgid "opacity-6"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1375
+#: includes/admin/anaglyph-options/admin-config.php:1662
+msgid "opacity-7"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1376
+#: includes/admin/anaglyph-options/admin-config.php:1663
+msgid "opacity-8"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1377
+#: includes/admin/anaglyph-options/admin-config.php:1664
+msgid "opacity-9"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1378
+#: includes/admin/anaglyph-options/admin-config.php:1665
+msgid "opacity-10"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1379
+#: includes/admin/anaglyph-options/admin-config.php:1666
+msgid "opacity-20"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1380
+#: includes/admin/anaglyph-options/admin-config.php:1667
+msgid "opacity-30"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1381
+#: includes/admin/anaglyph-options/admin-config.php:1668
+msgid "opacity-40"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1382
+#: includes/admin/anaglyph-options/admin-config.php:1669
+msgid "opacity-50"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1383
+#: includes/admin/anaglyph-options/admin-config.php:1670
+msgid "opacity-60"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1384
+#: includes/admin/anaglyph-options/admin-config.php:1671
+msgid "opacity-70"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1385
+#: includes/admin/anaglyph-options/admin-config.php:1672
+msgid "opacity-80"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1386
+#: includes/admin/anaglyph-options/admin-config.php:1673
+msgid "opacity-90"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1393
+msgid "Contact information panel"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1402
+msgid "Location Name"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1403
+msgid "Enter the location name."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1411
+msgid "Location Address"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1412
+msgid "Enter your company's address"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1421
+msgid "Telephone"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1422
+msgid "Enter your telephone number"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1430
+msgid "Fax"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1431
+msgid "Enter your fax number"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1440
+msgid "Enter your skype number"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1449
+msgid "Contact form settings"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1457
+msgid "Select contact form"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1458
+msgid "select a form from the list to be displayed."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1467
+msgid "Contact Form E-Mail"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1468
+msgid "Enter your E-mail address to use on the \"Contact Form\"."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1480
+msgid "Contact Form description"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1481
+msgid "Enter description for \"Contact Form\"."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1482
+msgid "Worried about a SPAM? We are first to hate it!"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1492
+msgid "Contact Form submit"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1493
+msgid "Enter submit button text for \"Contact Form\"."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1494
+msgid "Send a message"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1504
+msgid "Contact Form Fields"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1505
+msgid "Select the order and fields for the contact form."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1513
+#: includes/theme/theme-function.php:646 includes/theme/theme-function.php:752
+msgid "Mobile"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1514
+#: includes/theme/theme-function.php:639 includes/theme/theme-function.php:750
+msgid "Phone"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1515
+msgid "Captcha"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1528
+msgid "Color submit button"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1529
+msgid "Choose color for submit button on contact form."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1541
+msgid "Animation"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1542
+msgid "On"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1553
+msgid "Default pages"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1560
+msgid "Single Post header image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1567
+msgid "Search header image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1574
+msgid "404 header image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1580
+msgid "404 logo."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1581
+msgid "Upload a banner for your 404 page."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1587
+msgid "404 page text."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1588
+msgid "Enter the text you want to show in your 404 page here."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1589
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1595
+msgid "Category header image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1602
+msgid "Archive header image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1609
+msgid "Author archive header image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1616
+msgid "Tag archive header image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1626
+msgid "Footer"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1633
+msgid "Copyright section"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1634
+msgid "Replace default theme copyright information and links"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1640
+msgid "Footer Background Color"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1641
+msgid "Pick a background color for the footer."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1649
+msgid "Footer background image"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1680
+msgid "Social icons"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1681
+msgid "Enable social icons."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1688
+msgid "See the contact information in the footer"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1689
+msgid "Enable contact information"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1696
+msgid "Footer Font Style."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1705
+msgid "Select typography for footer."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1723
+msgid "Custom Code"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1730
+msgid "CSS Code"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1731
+msgid "Paste your CSS code here."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1740
+msgid "JS Code"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1741
+msgid "Paste your JS code here."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1753
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1760
+msgid "Shop header image."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1767
+msgid "Shop layout"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1780
+msgid "Products per page"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1781
+msgid "Change number of products displayed per page."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1790
+msgid "Products per row"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1791
+msgid "Change number of products per row."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1793
+msgid "2 Columns"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1794
+msgid "3 Columns"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1795
+msgid "4 Columns"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1803
+msgid "Select animation for products."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1819
+msgid "Import / Export"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1820
+msgid ""
+"Import and Export your anaglyph Framework settings from file, text or URL."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1835
+msgid "Extended version"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1865
+#: includes/admin/anaglyph-options/admin-config.php:1866
+msgid "Anaglyph options"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1896
+msgid "Anaglyph Options panel created using \"Reduxe Framework\"."
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1904
+msgid "Support"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1905
+msgid "Documentation"
+msgstr ""
+
+#: includes/admin/anaglyph-options/admin-config.php:1906
+msgid "Faq"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/allobjects-mb.php:24
+msgid "Image + Title"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/allobjects-mb.php:31
+msgid "Title"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/allobjects-mb.php:32
+msgid "Edit additional title name"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/allobjects-mb.php:35
+msgid "Blog Listing"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/allobjects-mb.php:39
+msgid "Image for title"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/allobjects-mb.php:40
+msgid "Upload image for title background."
+msgstr ""
+
+#: includes/admin/libs/metaboxes/custom-fields-for-metaboxes.php:48
+#: includes/admin/libs/metaboxes/custom-fields-for-metaboxes.php:115
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:713
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:778
+msgid "Remove Image"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/custom-fields-for-metaboxes.php:140
+msgid "Add Images"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_ajax.php:47
+msgid "Please Try Again"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_ajax.php:131
+msgid "Remove Embed"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_ajax.php:134
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_field.php:460
+msgid "Add Group"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_field.php:461
+msgid "Remove Group"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:253
+msgid "Add Row"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:309
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:724
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:786
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:619
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:653
+msgid "No terms"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:692
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:746
+msgid "Add or Upload File"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:724
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:786
+msgid "File:"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:724
+#: includes/admin/libs/metaboxes/helpers/cmb_Meta_Box_types.php:786
+msgid "Download"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/init.php:258
+msgid "Clear"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/init.php:259
+msgid "Default"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/init.php:260
+msgid "Select Color"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/init.php:261
+msgid "Current Color"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/init.php:293
+msgid "Select / Deselect All"
+msgstr ""
+
+#: includes/admin/libs/metaboxes/init.php:1187
+msgid "Save"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:71
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:161
+msgid "Install Required Plugins"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:72
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:162
+msgid "Install Plugins"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:73
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:163
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:74
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:75
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:165
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:76
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:166
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:77
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:167
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:78
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:168
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:79
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:169
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:80
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:170
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:81
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:171
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:82
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:172
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:83
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:173
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:84
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:174
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:85
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:175
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:86
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:177
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1956
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-init.php:87
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:178
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1644
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:532
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2173
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1167
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1348
+msgid "Private Repository"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1170
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1351
+msgid "Pre-Packaged"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1175
+msgid "WordPress Repository"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1178
+msgid "Required"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1178
+msgid "Recommended"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1181
+msgid "Not Installed"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1183
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1288
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1409
+msgid "Install"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1312
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1410
+msgid "Activate"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1372
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1388
+msgid "Plugin"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1389
+msgid "Source"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1390
+msgid "Type"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1391
+msgid "Status"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1939
+msgid "Install package not available."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1940
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1941
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1942
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1943
+msgid "Plugin install failed."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1944
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1955
+msgid "Plugin activation failed."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2069
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2070
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2070
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2079
+msgid "Show Details"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2070
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2079
+msgid "Hide Details"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2071
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2072
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2076
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2077
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2078
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2079
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2080
+msgid "All installations have been completed."
+msgstr ""
+
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2081
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/theme/extensions/template-tags.php:27
+msgid "Previous"
+msgstr ""
+
+#: includes/theme/extensions/template-tags.php:28
+msgid "Next"
+msgstr ""
+
+#: includes/theme/extensions/template-tags.php:96
+msgid "Post navigation"
+msgstr ""
+
+#: includes/theme/extensions/template-tags.php:100
+msgid "<span class=\"meta-nav\">Published In</span>%title"
+msgstr ""
+
+#: includes/theme/extensions/template-tags.php:102
+msgid "<span class=\"meta-nav\">Previous Post</span>%title"
+msgstr ""
+
+#: includes/theme/extensions/template-tags.php:103
+msgid "<span class=\"meta-nav\">Next Post</span>%title"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:19
+msgid "Website"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:23
+#, php-format
+msgid "Required fields are marked %s"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:26
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:27
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:28
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:29
+msgid "Your email address will not be published."
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:30
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:34
+msgid "Leave a Reply"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:35
+#: woocommerce/single-product-reviews.php:62
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:36
+msgid "Cancel reply"
+msgstr ""
+
+#: includes/theme/theme-comment-form.php:37
+msgid "Post Comment"
+msgstr ""
+
+#: includes/theme/theme-comments.php:19
+msgid "at"
+msgstr ""
+
+#: includes/theme/theme-comments.php:23
+msgid "Edit this comment"
+msgstr ""
+
+#: includes/theme/theme-comments.php:26
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: includes/theme/theme-function.php:39
+msgid "Top primary menu"
+msgstr ""
+
+#: includes/theme/theme-function.php:116 includes/theme/theme-function.php:131
+msgid "Anaglyph Options"
+msgstr ""
+
+#: includes/theme/theme-function.php:176
+msgid "Single Page Sidebar"
+msgstr ""
+
+#: includes/theme/theme-function.php:178
+msgid "Additional blog page sidebar."
+msgstr ""
+
+#: includes/theme/theme-function.php:187
+msgid "Shop Page Sidebar"
+msgstr ""
+
+#: includes/theme/theme-function.php:189
+msgid "WooCommerce shop page sidebar."
+msgstr ""
+
+#: includes/theme/theme-function.php:409
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: includes/theme/theme-function.php:450
+#, php-format
+msgid "%d Article"
+msgid_plural "%d Articles"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/theme/theme-function.php:575
+msgid "Search"
+msgstr ""
+
+#: includes/theme/theme-function.php:628
+#, php-format
+msgid "Message From %1s Contact Form"
+msgstr ""
+
+#: includes/theme/theme-function.php:658
+#, php-format
+msgid "From: %1s"
+msgstr ""
+
+#: includes/theme/theme-function.php:662
+msgid ""
+"<span id=\"valid\"><i class=\"icon icon-check\"></i>Your Email was sent!</"
+"span>"
+msgstr ""
+
+#: includes/theme/theme-function.php:664
+msgid ""
+"<span id=\"valid\"><i class=\"icon icon-check\"></i>Error! Your Email not "
+"sent!</span>"
+msgstr ""
+
+#: includes/theme/theme-function.php:667
+msgid ""
+"<span id=\"invalid\">Invalid Email, please provide a correct email.</span>"
+msgstr ""
+
+#: includes/theme/theme-function.php:756
+msgid "Please enter Captcha symbols"
+msgstr ""
+
+#: includes/theme/theme-function.php:803
+msgid "Send a Message"
+msgstr ""
+
+#: includes/theme/theme-function.php:1088
+msgid "Home"
+msgstr ""
+
+#: includes/theme/theme-function.php:1229
+msgid "g:i a"
+msgstr ""
+
+#: includes/theme/theme-function.php:1232
+#, php-format
+msgid "Minute %1$s"
+msgstr ""
+
+#: includes/theme/theme-function.php:1232
+msgid "i"
+msgstr ""
+
+#: includes/theme/theme-function.php:1235
+msgid "g a"
+msgstr ""
+
+#: includes/theme/theme-function.php:1246
+#: includes/theme/theme-function.php:1252
+#: includes/theme/theme-function.php:1257
+#: includes/theme/theme-function.php:1262
+msgid "Y"
+msgstr ""
+
+#: includes/theme/theme-function.php:1247
+#: includes/theme/theme-function.php:1258
+msgid "F"
+msgstr ""
+
+#: includes/theme/theme-function.php:1248
+msgid "j"
+msgstr ""
+
+#: includes/theme/theme-function.php:1253
+#, php-format
+msgid "Week %1$s"
+msgstr ""
+
+#: includes/theme/theme-function.php:1253
+msgid "W"
+msgstr ""
+
+#: includes/theme/theme-function.php:1269
+#, php-format
+msgid "Search results for &quot;%1$s&quot;"
+msgstr ""
+
+#: includes/theme/theme-function.php:1273
+msgid "404 Not Found"
+msgstr ""
+
+#: includes/theme/theme-function.php:1446
+msgid "Share this post:"
+msgstr ""
+
+#: includes/theme/theme-function.php:1587
+msgid "By:"
+msgstr ""
+
+#: includes/theme/theme-function.php:1608
+msgid "Tags:"
+msgstr ""
+
+#: includes/theme/theme-function.php:1628
+msgid "Read"
+msgstr ""
+
+#: includes/theme/theme-function.php:1628
+msgid "Read More"
+msgstr ""
+
+#: includes/theme/theme-function.php:1736
+msgid "This is password protected post"
+msgstr ""
+
+#: includes/theme/theme-function.php:1737
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+
+#: includes/theme/theme-function.php:1740
+msgid "Password"
+msgstr ""
+
+#: includes/theme/theme-function.php:1742
+#: woocommerce/single-product-reviews.php:71
+msgid "Submit"
+msgstr ""
+
+#: includes/theme/theme-widgets.php:10
+msgid "Your site&#8217;s most recent Posts."
+msgstr ""
+
+#: includes/theme/theme-widgets.php:11
+msgid "Anaglyph Recent Posts"
+msgstr ""
+
+#: includes/theme/theme-widgets.php:36
+msgid "Recent Posts"
+msgstr ""
+
+#: includes/theme/theme-widgets.php:115 includes/theme/theme-widgets.php:183
+msgid "Title:"
+msgstr ""
+
+#: includes/theme/theme-widgets.php:118
+msgid "Number of posts to show:"
+msgstr ""
+
+#: includes/theme/theme-widgets.php:122
+msgid "Display post date?"
+msgstr ""
+
+#: includes/theme/theme-widgets.php:125
+msgid "Display post comments count?"
+msgstr ""
+
+#: includes/theme/theme-widgets.php:139
+msgid "A cloud of your most used tags."
+msgstr ""
+
+#: includes/theme/theme-widgets.php:140
+msgid "Anaglyph Tag Cloud"
+msgstr ""
+
+#: includes/theme/theme-widgets.php:185
+msgid "Taxonomy:"
+msgstr ""
+
+#: includes/theme/theme-woocommerce.php:226
+msgctxt "breadcrumb"
+msgid "Home"
+msgstr ""
+
+#: search.php:14
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: tag.php:16
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: woocommerce/loop/no-products-found.php:14
+msgid "No products were found matching your selection."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:48
+msgid "There are no reviews yet."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:61
+msgid "Add a review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:61
+msgid "Be the first to review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:77
+msgid "Your Rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:78
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:79
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:80
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:81
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:82
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:83
+msgid "Very Poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:87
+msgid "Your Review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:96
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:25
+msgid "Choose an option"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:73
+msgid "Clear selection"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:103
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:14
+msgid "Product Description"
+msgstr ""
