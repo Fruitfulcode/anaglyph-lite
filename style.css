@@ -1628,6 +1628,20 @@ img.size-full, img.size-large, img.wp-post-image {
    opacity: 1;
    padding: 20px 30px;	
 }
+.entry-content .gallery-item {
+	margin-bottom: 10px;
+}
+.gallery-item .wp-caption-text{
+	background-color: transparent;
+    color: inherit;
+    float: left;
+    padding: 5px 10px 0 0;
+    text-align: left;
+	clear: left;
+}
+.gallery-item .gallery-icon {
+	max-width: 100%;
+}
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
     background: none repeat scroll 0 0 #FF0000 !important;
