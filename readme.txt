@@ -1,180 +1,69 @@
-Thank you for purchasing this theme.
-====================================
+-------------------------------------------------------
+    Thank you for downloading Anaglyph-lite theme!
+-------------------------------------------------------
 
-If you have any questions, please visit the support forums:
-http://support.fruitfulcode.com/
+We have created a theme based on our necessities and experience, we will be glad if you like our work.
+Our code is hand-made, so if you find a bug or have a wish to modify something, feel free to send us your feedback.
+We want to make our product even better and better and we need users support and feedbacks.
 
+Don't forget to visit our website http://fruitfulcode.com
 
-Changelog
-====================================
+Thank you.
 
-= 2.3 =
-23.06.15
+-------------------------------------------------------
+    Copyright
+-------------------------------------------------------
 
-- Update: Visual composer 4.5.3
-- Update: TGM plugin activation 
-- Update: Redux Framework
-- Bug fix: Scrollto in achor menu
-- Bug fix: Theme options, slider, off
-
-
-= 2.2 =
-02.04.15
-
-- New: 15 Layered PSD files
-- New: Additional options for menu styling
-- Update: OwlCarousel
-- Update: WooCommerce
-- Update: Visual Composer 4.4.3
-- Bug fix: Scroll amount on disable fixed header
+Anaglyph-lite is a free WordPress responsive theme with theme options panel, designed and developed in Fruitful Code (www.fruitfulcode.com)
+Feel free to use and modify this theme as you like.
+Anaglyph-lite is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
+Extended or full version of Anaglyph http://themeforest.net/item/zoner-real-estate-wordpress-theme/9099226?ref=fruitfulcode
 
 
-= 2.1 =
-04.03.15
 
-- New: options for sticky header
-- New: Blog listing shortcode, new options "Show/hide read more button"
-- New: option, Display number of comments
-- New: show/hide featured image on single post page (display options)
-- New: Font styles for menu
-- Improvements: Headline text, new option "align left, alight right, align center"
-- Improvements: Hedline text, color for sub title
-- Update: Visual composer 4.4.2
-- Bug fix: Display authors for posts
-- Bug fix: Blog section and sidebar
+-------------------------------------------------------
+    Installation
+-------------------------------------------------------
 
-= 2.0.1 = 
-30.12.14
-
-- Update: Visual composer 4.3.5
-- Update: WordPress 4.1 support
-- New: Translation fr_FR
-
-= 2.0 =
-28.11.14
-
-- New: Visual composer 4.3.4 moved to plugin territory
-- Improvements: Portfolio shortcode, new option: link to inner page or popup with image 
-- Improvements: Social media links target="_blank" added
-- Bug fix: Portfolio single page, if 1 image in gallery
-- Bug fix: Team shortcode, position of social icon.
-
-= 1.9 = 
-07.11.14
-
-- New: Shortcode "Single product" with gallery.
-- New: Font styles, sybset field
-- Bug fix: Fancybox overlay on header
-
-= 1.8 = 
-10.10.14
-
-- New: Slider option, background color for slider headline.
-- New: Slider title, font styles field
-- New: Anaglyph options, Fonts styles, new option "Text transform"
-- New: Shortocde portfolio, new fields. Title and "Detail" button.
-- New: Option, footer button color field
-- New: footer icon color field
-- New: choose contact form in footer. Contact form 7 or anaglyph contact form
-- Improvements: Anaglyph contact form builder, new fields: Mobile, Phone, Captcha
-- Improvements: Team section shortcode, team members alignment center if 2 or 3.
-- Update: Dummy data .xml files
-- Bug fix: One page mode, main navigation from single page.
-- Bug fix: Owl Carousel autoPlay bug fix
+1. Upload the "Anaglyph-lite" folder to the "/wp-content/themes/" directory
+or find in Appearance > Themes > Install theme, type “Anaglyph-lite” in search field.
+2. Activate the Theme through the 'Themes' menu in WordPress
+3. Go to "Appearance" > Theme options
+4. Config theme as you need.
 
 
-= 1.7 =
-17.09.14
 
-- Update: WooCommerce 2.2.2 ready
-- Update: WordPress 4.0 ready
-- Update: Visual composer 4.3.4 
-- Update: Redux framework 3.3.6.8
-- New: WooCommerce product shortcode, added taxonomies filter field
-- New: Theme options menu font size
-- New: Evato toolkit plugin added in TGM activation
-- Improvements: Extra margin removed in footer
-- Improvements: PHP, JS, CSS code optimization.
-- Bug fix: Shortcode headline, no margin not working
-- Bug fix: Single image shortcode, image link
-- Bug fix: Wooproducts shortcode, Product taxonomy
-- Bug fix: Retina logo
-- Bug fix: Portfolio inner page
-- Bug fix: Mobile menu height position with offset
+-------------------------------------------------------
+    Translation
+-------------------------------------------------------
 
-= 1.6 =
-05.08.14
+The themes is ready for translation and already translated in Russian and Dutch.
+We are open for users translations, translation can be included in new theme versions.
+Files: en_US.po, en_US.mo, ru_Ru.po, ru_Ru.mo, fr_FR.mo, fr_FR.po icluded. Default language is english.
 
-- New option: Single default header image
-- New shortcode: Visual composer sidebar
-- Improvements: One page scrollto navigation with header offset
-- Improvements: One page navigation hash removed
-- Improvements: Additional loc. text
-- Improvements: Added wp-link-pages
-- Improvements: Added comment reply 
-- Bug fix: Contact form styles
-- Bug fix: One page checkbox
+-------------------------------------------------------
+    Credits
+-------------------------------------------------------
+ 
+* Bootstrap Framework – http://getbootstrap.com Licensed under GPL licenses
+* Redux Framework – http://reduxframework.com Licensed under MIT
+* Flex Slider - https://github.com/woothemes/FlexSlider Licensed under MIT
+* Custom Metaboxes and Fields for WordPress – https://github.com/webdevstudios Licensed under GPL licenses
+* jQuery Waypoints https://github.com/imakewebthings/jquery-waypoints Licensed under GPL licenses
+* jQuery Placeholder – http://mths.be/placeholder Licensed under GPL licenses
+* Retina.js – https://github.com/imulus/retinajs Licensed under GPL licenses
+* scrollReveal.js – https://github.com/julianlloyd/scrollReveal.js Licensed under GPL licenses
+* html5.js – https://github.com/aFarkas/html5shiv Licensed under GPL licenses
+* Respond.js – https://github.com/scottjehl/Respond Licensed under GPL licenses
+* Modernizr – http://modernizr.com Licensed under GPL licenses
+* Google fonts - https://www.google.com/fonts Licensed under GPL licenses
+* Icons - http://fortawesome.github.io/Font-Awesome/ Licensed under GPL licenses
 
+-------------------------------------------------------
+    Changelog
+-------------------------------------------------------
 
-= 1.5=
-24.07.14
-
-- Update: Latest Redux Framework 3.3.3.8
-- New: Slider animation effect option
-- New: WooCommerce shortcode, new display for products
-- Improvements: Parallax background for sections
-- Improvements: Parallax background disabled for touch devices
-- Improvements: RTL additional styles
-- Bug fix: Slider, slides URL
-- Bug fix: Header background color
-- Bug fix: Responsive long menu on touch devices
-- Bug fix: Skype icon link
-- Bug fix: Add taxonomy button
-
-
-= 1.4 =
-07.07.14
-
-- New option: Additional field contact form, "Worried about a SPAM?"
-- New styles: WooCommerce select and textarea fields
-- Improvements: WooCommerce Responsive styles
-- Improvements: locate_template for Child theme
-- Improvements: Sub menu and main navigation
-- Update: Demo content dummy_data.xml
-- Bug fix: Portfolio for touch devices
-- Bug fix: Userpic in admin bar responsive version
-- Bug fix: Headline text shortcode
-- Buf fix: VC Product shortcode, carousel option
-
-= 1.3 =
-18.06.14
-
-- Bug fix: One page menu on single pages
-- One page menu: New css class "team" (optional)
-- One page menu: New css class "portfolio" (optional)
-- Revolution slider support
-- Layerslider support
-
-= 1.2 =
-17.06.14
-
-- New option: enable/disable smooth scroll
-- Bug fix: WooCommerce sale label with alert
-- Bug fix: Pricing table last table
-- Bug fix: WooCommerce variable product reset
-- Css improvements
-
-= 1.1 =
-12.06.14
-
-- Portfolio: Gallery images align center
-- WooCommerce: Additional CSS styles
-- WooCommerce: Hover effect for products in catalog
-- Bug fix: Post format chat
-- Bug fix: Copyright extra link removed
-- Css improvements
-
-= 1.0 = 
-10.06.14
+= 1.0 =
+27.07.2015
 
 - Initial release
