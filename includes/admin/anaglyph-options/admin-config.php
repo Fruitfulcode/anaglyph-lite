@@ -1571,6 +1571,13 @@ if (!class_exists('anaglyph_config')) {
                     ),
 					
 					array(
+                        'id'        => 'simple-page',
+                        'type'      => 'media',
+                        'title'     => __('Page header image.', 'anaglyph-framework'),
+                        'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
+                    ),
+					
+					array(
                         'id'        => 'search-image',
                         'type'      => 'media',
                         'title'     => __('Search header image.', 'anaglyph-framework'),

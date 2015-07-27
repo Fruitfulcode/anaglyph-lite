@@ -1015,6 +1015,7 @@ add_action('anaglyph_before_page_entry_content', 'anaglyph_get_page_title',  1);
 add_action('anaglyph_before_page_entry_content', 'anaglyph_add_breadcrumbs', 2);
 if ( ! function_exists( 'anaglyph_get_page_title' ) ) {
 function anaglyph_get_page_title() {
+	global $anaglyph_config
 ?>
 	<!-- Page Title -->
 	<section id="page-title">
@@ -1029,7 +1030,9 @@ function anaglyph_get_page_title() {
 			global $post;
 			$title_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
 			echo '<img src="'.$title_thumbnail[0].'" class="parallax-bg" alt="">';
-			}	
+			} else {
+				anaglyph_custom_image('simple-page');
+			}
 		?>
 	</section>
 	<!-- end Page Title -->
