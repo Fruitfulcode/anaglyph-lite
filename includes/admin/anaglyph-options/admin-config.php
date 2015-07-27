@@ -307,16 +307,6 @@ if (!class_exists('anaglyph_config')) {
 							'subtitle'  => __('Upload a custom favicon for iPhone retina (144x144 pixel png).', 'anaglyph-framework'),
 							'default'   => array('url' => $sample_patterns_url . 'favicon/favicon-144x144.png'),
 						),
-						
-						array(
-							'id'        => 'tracking-code',
-							'type'      => 'text',
-							'title'     => __('Tracking ID', 'anaglyph-framework'),
-							'subtitle'  => __("Paste your web analytics' tracking id here.", 'anaglyph-framework'),
-							'validate'  => 'no_html',
-							'default'   => ''
-                    ),
-						
 						 
 				)
 			);

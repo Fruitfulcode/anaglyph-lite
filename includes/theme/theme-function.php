@@ -1811,32 +1811,6 @@ if ( ! function_exists( 'anaglyph_post_chat' ) ) {
 	}
 }
 
-if ( ! function_exists( 'anaglyph_add_google_analytics' ) ) {				
-	function anaglyph_add_google_analytics() {
-		global $anaglyph_config, $prefix;
-		
-		if (!empty($anaglyph_config['tracking-code'])) {
-		?>
-
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', '<?php echo esc_js($anaglyph_config['tracking-code']); ?>']);
-			_gaq.push(['_trackPageview']);
-			(function() {
-				var ga = document.createElement('script'); 
-					ga.type = 'text/javascript'; 
-					ga.async = true;
-					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0];
-					s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-
-		<?php
-		}
-	}
-	add_action('wp_head', 'anaglyph_add_google_analytics', 99);
-}
 
 if ( ! function_exists( 'anaglyph_get_delay_interval' ) ) {				
 	function anaglyph_get_delay_interval($interval = 0) {
