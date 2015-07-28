@@ -205,6 +205,13 @@ padding-bottom: 20px;
 	color: #fff;
 }
 
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li.active a, 
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, 
+.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active a, 
+.woocommerce-page div.product .woocommerce-tabs ul.tabs li.active a {
+	color: #fff;
+}
+
 .woocommerce #content .reviews_tab:hover {
 		background: #292422;
 	color: #fff;
