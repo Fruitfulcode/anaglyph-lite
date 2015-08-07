@@ -51,7 +51,7 @@ function my_theme_register_required_plugins() {
 		array(
             'name'      => 'Redux Framework',
             'slug'      => 'redux-framework',
-            'required'  => true
+            'required'  => false
         )
 		
     );
