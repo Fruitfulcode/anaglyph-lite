@@ -3,7 +3,7 @@
 		function anaglyph_custom_comments( $comment, $args, $depth ) {
 			$GLOBALS['comment'] = $comment; 
 			?>
-			<li id="comment-<?php echo $comment->ID; ?>" <?php comment_class(); ?>>
+			<li id="comment-<?php echo $comment->comment_ID; ?>" <?php comment_class(); ?>>
 				<?php 
 					$avatar_img = '';
 					if (!anaglyph_validate_gravatar($comment->comment_author_email)) {
