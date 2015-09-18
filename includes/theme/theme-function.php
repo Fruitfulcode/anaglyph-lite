@@ -34,6 +34,7 @@ function anaglyph_setup() {
 	 */
 	 
 	load_theme_textdomain( 'anaglyph-lite', get_template_directory() . '/languages' );
+	add_theme_support( "title-tag" )
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 750, 360, true );

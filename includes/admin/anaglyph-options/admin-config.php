@@ -115,10 +115,10 @@ if (!class_exists('anaglyph_config')) {
             <?php if ($screenshot) : ?>
                 <?php if (current_user_can('edit_theme_options')) : ?>
                         <a href="<?php echo wp_customize_url(); ?>" class="load-customize hide-if-no-customize" title="<?php echo esc_attr($customize_title); ?>">
-                            <img src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview'); ?>" />
+                            <img src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview', 'anaglyph-framework'); ?>" />
                         </a>
                 <?php endif; ?>
-                    <img class="hide-if-customize" src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview'); ?>" />
+                    <img class="hide-if-customize" src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview', 'anaglyph-framework'); ?>" />
                 <?php endif; ?>
 
                 <h4><?php echo $this->theme->display('Name'); ?></h4>
@@ -1333,7 +1333,7 @@ if (!class_exists('anaglyph_config')) {
                         'type'      => 'text',
                         'title'     => __('Contact section additional title', 'anaglyph-framework'),
                         'subtitle'  => __('Edit additional title for contact section', 'anaglyph-framework'),
-                        'default'   => 'Questions or just wanna say hello? We’re waiting!'
+                        'default'   => 'Questions or just wanna say hello? We&#8217;re waiting!'
                     ),
 					
 					array(
@@ -1365,24 +1365,24 @@ if (!class_exists('anaglyph_config')) {
                         'type'      => 'select',
                         'title'     => __('Select section opacity', 'anaglyph-framework'),
                         'options'   => array(
-                            __("opacity-1", "anaglyph") => "opacity-1", 
-							__("opacity-2", "anaglyph") => "opacity-2", 
-							__("opacity-3", "anaglyph") => "opacity-3", 
-							__("opacity-4", "anaglyph") => "opacity-4", 
-							__("opacity-5", "anaglyph") => "opacity-5", 
-							__("opacity-6", "anaglyph") => "opacity-6", 
-							__("opacity-7", "anaglyph") => "opacity-7", 
-							__("opacity-8", "anaglyph") => "opacity-8", 
-							__("opacity-9", "anaglyph") => "opacity-9", 
-							__("opacity-10", "anaglyph") => "opacity-10", 
-							__("opacity-20", "anaglyph") => "opacity-20", 
-							__("opacity-30", "anaglyph") => "opacity-30", 
-							__("opacity-40", "anaglyph") => "opacity-40", 
-							__("opacity-50", "anaglyph") => "opacity-50", 
-							__("opacity-60", "anaglyph") => "opacity-60", 
-							__("opacity-70", "anaglyph") => "opacity-70", 
-							__("opacity-80", "anaglyph") => "opacity-80", 
-							__("opacity-90", "anaglyph") => "opacity-90", 
+                            __("opacity-1", "anaglyph-lite") => "opacity-1", 
+							__("opacity-2", "anaglyph-lite") => "opacity-2", 
+							__("opacity-3", "anaglyph-lite") => "opacity-3", 
+							__("opacity-4", "anaglyph-lite") => "opacity-4", 
+							__("opacity-5", "anaglyph-lite") => "opacity-5", 
+							__("opacity-6", "anaglyph-lite") => "opacity-6", 
+							__("opacity-7", "anaglyph-lite") => "opacity-7", 
+							__("opacity-8", "anaglyph-lite") => "opacity-8", 
+							__("opacity-9", "anaglyph-lite") => "opacity-9", 
+							__("opacity-10", "anaglyph-lite") => "opacity-10", 
+							__("opacity-20", "anaglyph-lite") => "opacity-20", 
+							__("opacity-30", "anaglyph-lite") => "opacity-30", 
+							__("opacity-40", "anaglyph-lite") => "opacity-40", 
+							__("opacity-50", "anaglyph-lite") => "opacity-50", 
+							__("opacity-60", "anaglyph-lite") => "opacity-60", 
+							__("opacity-70", "anaglyph-lite") => "opacity-70", 
+							__("opacity-80", "anaglyph-lite") => "opacity-80", 
+							__("opacity-90", "anaglyph-lite") => "opacity-90", 
                         ),
                         'default'   => 'opacity-5'
                     ),
@@ -1659,24 +1659,24 @@ if (!class_exists('anaglyph_config')) {
                         'type'      => 'select',
                         'title'     => __('Select section opacity', 'anaglyph-framework'),
                         'options'   => array(
-                            __("opacity-1", "anaglyph") => "opacity-1", 
-							__("opacity-2", "anaglyph") => "opacity-2", 
-							__("opacity-3", "anaglyph") => "opacity-3", 
-							__("opacity-4", "anaglyph") => "opacity-4", 
-							__("opacity-5", "anaglyph") => "opacity-5", 
-							__("opacity-6", "anaglyph") => "opacity-6", 
-							__("opacity-7", "anaglyph") => "opacity-7", 
-							__("opacity-8", "anaglyph") => "opacity-8", 
-							__("opacity-9", "anaglyph") => "opacity-9", 
-							__("opacity-10", "anaglyph") => "opacity-10", 
-							__("opacity-20", "anaglyph") => "opacity-20", 
-							__("opacity-30", "anaglyph") => "opacity-30", 
-							__("opacity-40", "anaglyph") => "opacity-40", 
-							__("opacity-50", "anaglyph") => "opacity-50", 
-							__("opacity-60", "anaglyph") => "opacity-60", 
-							__("opacity-70", "anaglyph") => "opacity-70", 
-							__("opacity-80", "anaglyph") => "opacity-80", 
-							__("opacity-90", "anaglyph") => "opacity-90", 
+                            __("opacity-1", "anaglyph-lite") => "opacity-1", 
+							__("opacity-2", "anaglyph-lite") => "opacity-2", 
+							__("opacity-3", "anaglyph-lite") => "opacity-3", 
+							__("opacity-4", "anaglyph-lite") => "opacity-4", 
+							__("opacity-5", "anaglyph-lite") => "opacity-5", 
+							__("opacity-6", "anaglyph-lite") => "opacity-6", 
+							__("opacity-7", "anaglyph-lite") => "opacity-7", 
+							__("opacity-8", "anaglyph-lite") => "opacity-8", 
+							__("opacity-9", "anaglyph-lite") => "opacity-9", 
+							__("opacity-10", "anaglyph-lite") => "opacity-10", 
+							__("opacity-20", "anaglyph-lite") => "opacity-20", 
+							__("opacity-30", "anaglyph-lite") => "opacity-30", 
+							__("opacity-40", "anaglyph-lite") => "opacity-40", 
+							__("opacity-50", "anaglyph-lite") => "opacity-50", 
+							__("opacity-60", "anaglyph-lite") => "opacity-60", 
+							__("opacity-70", "anaglyph-lite") => "opacity-70", 
+							__("opacity-80", "anaglyph-lite") => "opacity-80", 
+							__("opacity-90", "anaglyph-lite") => "opacity-90", 
                         ),
                         'default'   => 'opacity-3'
                     ),
