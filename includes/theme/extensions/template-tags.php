@@ -51,7 +51,7 @@ function anaglyph_paging_nav() {
 		$class = 1 == $paged ? ' class="active"' : '';
 		$gen_nav_text .= sprintf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 		if ( ! in_array( 2, $links ) )
-			$gen_nav_text .= '<li><a href="#">…</a></li>';
+			$gen_nav_text .= '<li><a href="#">&#8230;</a></li>';
 	}
 
 	sort( $links );
@@ -61,7 +61,7 @@ function anaglyph_paging_nav() {
 	}
 	if ( ! in_array( $max, $links ) ) {
 		if ( ! in_array( $max - 1, $links ) )
-			$gen_nav_text .= '<li><a href="#">…</a></li>' . "\n";
+			$gen_nav_text .= '<li><a href="#">&#8230;</a></li>' . "\n";
 
 		$class = $paged == $max ? ' class="active"' : '';
 		$gen_nav_text .= sprintf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
