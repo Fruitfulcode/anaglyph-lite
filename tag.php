@@ -13,7 +13,7 @@ get_header(); ?>
 	
 	<section id="page-title">
 		<div class="title">
-			<h1 class="reset-margin"><?php printf( __( 'Tag Archives: %s', 'anaglyph' ), single_tag_title( '', false ) ); ?></h1>
+			<h1 class="reset-margin"><?php printf( __( 'Tag Archives: %s', 'anaglyph-lite' ), single_tag_title( '', false ) ); ?></h1>
 		</div>	
 		<?php anaglyph_custom_image('tag-image'); ?>
 	</section><!-- .archive-header -->

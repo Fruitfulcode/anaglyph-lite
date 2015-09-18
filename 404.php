@@ -14,7 +14,7 @@ get_header(); ?>
 	<!-- Page Title -->
 	<section id="page-title">
 		<div class="title">
-			<h1 class="reset-margin"><?php _e( 'Not found', 'anaglyph' ); ?></h1>
+			<h1 class="reset-margin"><?php _e( 'Not found', 'anaglyph-lite' ); ?></h1>
 		</div>
 		<?php anaglyph_custom_image('404-titleimage'); ?>
 	</section>

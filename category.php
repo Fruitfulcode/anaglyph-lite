@@ -11,7 +11,7 @@ get_header();
 	<!-- Page Title -->
 	<section id="page-title">
 		<div class="title">
-			<h1 class="reset-margin"><?php printf( __( 'Category: %s', 'anaglyph' ), single_cat_title( '', false ) ); ?></h1>
+			<h1 class="reset-margin"><?php printf( __( 'Category: %s', 'anaglyph-lite' ), single_cat_title( '', false ) ); ?></h1>
 		</div>
 		<?php anaglyph_custom_image('category-image'); ?>
 	</section>

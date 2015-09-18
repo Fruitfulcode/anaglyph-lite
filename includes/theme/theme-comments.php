@@ -16,14 +16,14 @@
 				
 				<div class="comment-content">
 					<div class="author"><?php comment_author_link(); ?></div>
-                    <div class="meta has-opacity"><?php echo get_comment_date(get_option( 'date_format' )) ?> <?php _e('at', 'anaglyph'); ?> <?php echo get_comment_time(get_option( 'time_format' )); ?></div>
+                    <div class="meta has-opacity"><?php echo get_comment_date(get_option( 'date_format' )) ?> <?php _e('at', 'anaglyph-lite'); ?> <?php echo get_comment_time(get_option( 'time_format' )); ?></div>
 					<?php comment_text() ?>
-					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'], 'reply_text' => __('Reply', 'anaglyph')))); ?>
+					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'], 'reply_text' => __('Reply', 'anaglyph-lite')))); ?>
 					<div class="clear"></div>
-					<?php edit_comment_link(__('Edit this comment', 'anaglyph'), '', ''); ?>
+					<?php edit_comment_link(__('Edit this comment', 'anaglyph-lite'), '', ''); ?>
 					
 					<?php if ($comment->comment_approved == '0') { ?>
-						<p class='unapproved'><?php _e('Your comment is awaiting moderation.', 'anaglyph'); ?></p>
+						<p class='unapproved'><?php _e('Your comment is awaiting moderation.', 'anaglyph-lite'); ?></p>
 					<?php } ?>
                 </div><!-- /.comment-content -->
 			<?php

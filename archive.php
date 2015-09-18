@@ -13,15 +13,15 @@ get_header();
 		<div class="title">
 			<h1 class="reset-margin"><?php
 				if ( is_day() ) :
-					printf( __( 'Daily Archives: %s', 'anaglyph' ), get_the_date() );
+					printf( __( 'Daily Archives: %s', 'anaglyph-lite' ), get_the_date() );
 				elseif ( is_month() ) :
-					printf( __( 'Monthly Archives: %s', 'anaglyph' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'anaglyph' ) ) );
+					printf( __( 'Monthly Archives: %s', 'anaglyph-lite' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'anaglyph-lite' ) ) );
 
 				elseif ( is_year() ) :
-					printf( __( 'Yearly Archives: %s', 'anaglyph' ), get_the_date( _x( 'Y', 'yearly archives date format', 'anaglyph' ) ) );
+					printf( __( 'Yearly Archives: %s', 'anaglyph-lite' ), get_the_date( _x( 'Y', 'yearly archives date format', 'anaglyph-lite' ) ) );
 
 				else :
-					_e( 'Archives', 'anaglyph' );
+					_e( 'Archives', 'anaglyph-lite' );
 
 				endif;
 			?></h1>

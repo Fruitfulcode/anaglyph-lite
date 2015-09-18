@@ -45,7 +45,7 @@ function anaglyph_get_image($attachment_id) {
 	
 	$out .= '<li class="img_status">';
 		$out .= '<img id="image-'.$attachment_id.'" src="'. $image_attributes[0] .'" alt="" />';
-		$out .= '<p class="cmb_remove_wrapper"><a href="#" class="cmb_remove_file_button">'. __( 'Remove Image', 'anaglyph' ) .'</a></p>';
+		$out .= '<p class="cmb_remove_wrapper"><a href="#" class="cmb_remove_file_button">'. __( 'Remove Image', 'anaglyph-lite' ) .'</a></p>';
 		$out .= '<input type="hidden" value="'.$image_full[0].'" name="_anaglyph_glry_list['.$attachment_id.']" />';
 	$out .= '</li>';
 	
@@ -112,7 +112,7 @@ function anaglyph_add_new_element() {
 	
 	$out .= '<li class="img_status">';
 		$out .= '<img id="image-'.$image_id.'" src="'. $image_attributes[0] .'" alt="" />';
-		$out .= '<p class="cmb_remove_wrapper"><a href="#" class="cmb_remove_file_button">'. __( 'Remove Image', 'anaglyph' ) .'</a></p>';
+		$out .= '<p class="cmb_remove_wrapper"><a href="#" class="cmb_remove_file_button">'. __( 'Remove Image', 'anaglyph-lite' ) .'</a></p>';
 		$out .= '<input type="hidden" value="'.$image_full[0].'" name="_anaglyph_glry_list['.$image_id.']" />';
 	$out .= '</li>';
 	
@@ -137,7 +137,7 @@ function anaglyph_custom_gallery_list( $field, $meta) {
 	}
 	wp_nonce_field('anaglyph_gallery', 'anaglyph_gallery_nonce' );
 	$out .= '<input type="hidden" value="" name="_anaglyph_glry_list" />';
-	$out .= '<input type="button" class="button add_gallery_items_button" value="'. __('Add Images', 'anaglyph') .'"/>';
+	$out .= '<input type="button" class="button add_gallery_items_button" value="'. __('Add Images', 'anaglyph-lite') .'"/>';
 	$out .= '<div class="soratble-inner">';
 		$out .= '<ul id="sortable" class="sortable-admin-gallery cmb_media_status attach_list">';
 			$out .= $gallery_items;

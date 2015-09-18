@@ -21,23 +21,23 @@ function anaglph_all_metaboxes( array $meta_boxes ) {
 	
 	$meta_boxes['anaglph_post_title_image'] = array(
 		'id'         => 'anaglph_post_title_image',
-		'title'      => __( 'Image + Title', 'anaglyph' ),
+		'title'      => __( 'Image + Title', 'anaglyph-lite' ),
 		'pages'      => array( 'post'), 
 		'context'    => 'side',
 		'priority'   => 'low',
 		'show_names' => true, 
 		'fields'     => array(
 			array(
-				'name'    => __( 'Title', 'anaglyph' ),
-				'subname' => __( 'Edit additional title name', 'anaglyph' ),
+				'name'    => __( 'Title', 'anaglyph-lite' ),
+				'subname' => __( 'Edit additional title name', 'anaglyph-lite' ),
 				'id'      => $prefix . 'image_title_text',
 				'type' 	  => 'text_medium',
-				'default' => __('Blog Listing', 'anaglyph')
+				'default' => __('Blog Listing', 'anaglyph-lite')
 			),
 			
 			array(
-				'name' => __('Image for title', 'anaglyph'),
-				'subname' => __('Upload image for title background.', 'anaglyph' ),
+				'name' => __('Image for title', 'anaglyph-lite'),
+				'subname' => __('Upload image for title background.', 'anaglyph-lite' ),
 				'id'   => $prefix . 'image_title_img',
 				'type' => 'file',
 				'allow' => array( 'attachment' )
@@ -51,15 +51,15 @@ function anaglph_all_metaboxes( array $meta_boxes ) {
 	Only with sidebar enabled
 	$meta_boxes['anaglph_page_general_settings'] = array(
 		'id'         => 'anaglph_page_general_settings',
-		'title'      => __( 'Page settings', 'anaglyph' ),
+		'title'      => __( 'Page settings', 'anaglyph-lite' ),
 		'pages'      => array( 'page'), 
 		'context'    => 'side',
 		'priority'   => 'low',
 		'show_names' => true, 
 		'fields'     => array(
 			array(
-				'name'    => __( 'Layout', 'anaglyph' ),
-				'subname'    => __( 'Select a specific layout for this page.', 'anaglyph' ),
+				'name'    => __( 'Layout', 'anaglyph-lite' ),
+				'subname'    => __( 'Select a specific layout for this page.', 'anaglyph-lite' ),
 				'id'      => $prefix . 'page_layout',
 				'type' 	  => 'custom_layout_sidebars',
 				'default' => 0

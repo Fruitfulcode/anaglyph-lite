@@ -255,10 +255,10 @@ class cmb_Meta_Box {
 				wp_register_script( 'iris', admin_url( 'js/iris.min.js' ), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), self::CMB_VERSION );
 				wp_register_script( 'wp-color-picker', admin_url( 'js/color-picker.min.js' ), array( 'iris' ), self::CMB_VERSION );
 				wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', array(
-					'clear'         => __( 'Clear', 'anaglyph' ),
-					'defaultString' => __( 'Default', 'anaglyph' ),
-					'pick'          => __( 'Select Color', 'anaglyph' ),
-					'current'       => __( 'Current Color', 'anaglyph' ),
+					'clear'         => __( 'Clear', 'anaglyph-lite' ),
+					'defaultString' => __( 'Default', 'anaglyph-lite' ),
+					'pick'          => __( 'Select Color', 'anaglyph-lite' ),
+					'current'       => __( 'Current Color', 'anaglyph-lite' ),
 				) );
 			}
 		} else {
@@ -290,7 +290,7 @@ class cmb_Meta_Box {
 			'ajaxurl'         => admin_url( '/admin-ajax.php' ),
 			'up_arrow'        => '<span class="order-up"></span>',
 			'down_arrow'      => '<span class="order-down"></span>',
-			'check_toggle'    => __( 'Select / Deselect All', 'anaglyph' ),
+			'check_toggle'    => __( 'Select / Deselect All', 'anaglyph-lite' ),
 		) ) );
 
 		wp_register_style( 'cmb-check',  CMB_META_BOX_URL 	. 'js/check/skins/minimal/_all.css');
@@ -1184,7 +1184,7 @@ function cmb_metabox_form( $meta_box, $object_id, $echo = true ) {
 
 	$form_format = apply_filters( 'cmb_frontend_form_format', '<form class="cmb-form" method="post" id="%s" enctype="multipart/form-data" encoding="multipart/form-data"><input type="hidden" name="object_id" value="%s">%s<input type="submit" name="submit-cmb" value="%s" class="button-primary"></form>', $object_id, $meta_box, $form );
 
-	$form = sprintf( $form_format, $meta_box['id'], $object_id, $form, __( 'Save', 'anaglyph' ) );
+	$form = sprintf( $form_format, $meta_box['id'], $object_id, $form, __( 'Save', 'anaglyph-lite' ) );
 
 	if ( $echo )
 		echo $form;

@@ -7,8 +7,8 @@
 class Anaglyph_Widget_Recent_Posts extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array('classname' => 'recent-posts', 'description' => __( "Your site&#8217;s most recent Posts.", 'anaglyph') );
-		parent::__construct('anaglyph-wrp', __('Anaglyph Recent Posts', 'anaglyph'), $widget_ops);
+		$widget_ops = array('classname' => 'recent-posts', 'description' => __( "Your site&#8217;s most recent Posts.", 'anaglyph-lite') );
+		parent::__construct('anaglyph-wrp', __('Anaglyph Recent Posts', 'anaglyph-lite'), $widget_ops);
 		$this->alt_option_name = 'anaglyph-wrp';
 
 		add_action( 'save_post', array($this, 'flush_widget_cache') );
@@ -33,7 +33,7 @@ class Anaglyph_Widget_Recent_Posts extends WP_Widget {
 		ob_start();
 		extract($args);
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts', 'anaglyph' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts', 'anaglyph-lite' );
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 		$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
 		if ( ! $number ) $number = 10;
@@ -112,17 +112,17 @@ class Anaglyph_Widget_Recent_Posts extends WP_Widget {
 		$show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
 		$show_comments 	= isset( $instance['show_comments'] ) ? (bool) $instance['show_comments'] : false;
 ?>
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'anaglyph' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'anaglyph-lite' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'anaglyph' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'anaglyph-lite' ); ?></label>
 		<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
 
 		<p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?', 'anaglyph' ); ?></label></p>
+		<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?', 'anaglyph-lite' ); ?></label></p>
 		
 		<p><input class="checkbox" type="checkbox" <?php checked( $show_comments ); ?> id="<?php echo $this->get_field_id( 'show_comments' ); ?>" name="<?php echo $this->get_field_name( 'show_comments' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'show_comments' ); ?>"><?php _e( 'Display post comments count?', 'anaglyph' ); ?></label></p>
+		<label for="<?php echo $this->get_field_id( 'show_comments' ); ?>"><?php _e( 'Display post comments count?', 'anaglyph-lite' ); ?></label></p>
 <?php
 	}
 }
@@ -136,8 +136,8 @@ class Anaglyph_Widget_Recent_Posts extends WP_Widget {
 class Anaglyph_Widget_Tag_Cloud extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array( 'description' => __( "A cloud of your most used tags.", 'anaglyph') );
-		parent::__construct('anaglyph_tc', __('Anaglyph Tag Cloud', 'anaglyph'), $widget_ops);
+		$widget_ops = array( 'description' => __( "A cloud of your most used tags.", 'anaglyph-lite') );
+		parent::__construct('anaglyph_tc', __('Anaglyph Tag Cloud', 'anaglyph-lite'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {
@@ -147,7 +147,7 @@ class Anaglyph_Widget_Tag_Cloud extends WP_Widget {
 			$title = $instance['title'];
 		} else {
 			if ( 'post_tag' == $current_taxonomy ) {
-				$title = __('Tags', 'anaglyph');
+				$title = __('Tags', 'anaglyph-lite');
 			} else {
 				$tax = get_taxonomy($current_taxonomy);
 				$title = $tax->labels->name;
@@ -180,9 +180,9 @@ class Anaglyph_Widget_Tag_Cloud extends WP_Widget {
 	function form( $instance ) {
 		$current_taxonomy = $this->_get_current_taxonomy($instance);
 ?>
-	<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'anaglyph') ?></label>
+	<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'anaglyph-lite') ?></label>
 	<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php if (isset ( $instance['title'])) {echo esc_attr( $instance['title'] );} ?>" /></p>
-	<p><label for="<?php echo $this->get_field_id('taxonomy'); ?>"><?php _e('Taxonomy:', 'anaglyph') ?></label>
+	<p><label for="<?php echo $this->get_field_id('taxonomy'); ?>"><?php _e('Taxonomy:', 'anaglyph-lite') ?></label>
 	<select class="widefat" id="<?php echo $this->get_field_id('taxonomy'); ?>" name="<?php echo $this->get_field_name('taxonomy'); ?>">
 	<?php foreach ( get_taxonomies() as $taxonomy ) :
 				$tax = get_taxonomy($taxonomy);

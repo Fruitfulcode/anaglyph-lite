@@ -11,7 +11,7 @@ get_header();
 	<!-- Page Title -->
 	<section id="page-title">
 		<div class="title">
-			<h1 class="reset-margin"><?php printf( __( 'Search Results for: %s', 'anaglyph' ), get_search_query() ); ?></h1>
+			<h1 class="reset-margin"><?php printf( __( 'Search Results for: %s', 'anaglyph-lite' ), get_search_query() ); ?></h1>
 		</div>
 		<?php anaglyph_custom_image('search-image'); ?>
 	</section>

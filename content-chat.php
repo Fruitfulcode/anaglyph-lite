@@ -27,7 +27,7 @@
 	<?php anaglyph_get_post_date(); ?>	
 	<div class="blog-post-content entry-summary">
 		<?php do_action('anaglyph_post_meta'); ?>
-		<?php the_content( __( '&#8230;', 'anaglyph' ) ); ?>
+		<?php the_content( __( '&#8230;', 'anaglyph-lite' ) ); ?>
 		<?php anaglyph_get_post_readmore(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
@@ -42,7 +42,7 @@
 		<section class="post-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array(
-						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'anaglyph' ) . '</span>',
+						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'anaglyph-lite' ) . '</span>',
 						'after'       => '</div>',
 						'link_before' => '<span>',
 						'link_after'  => '</span>',

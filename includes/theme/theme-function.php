@@ -29,17 +29,17 @@ function anaglyph_setup() {
 	 *
 	 * Translations can be added to the /languages/ directory.
 	 * If you're building a theme based on Anaglyph Theme, use a find and
-	 * replace to change 'anaglyph' to the name of your theme in all
+	 * replace to change 'anaglyph-lite' to the name of your theme in all
 	 * template files.
 	 */
 	 
-	load_theme_textdomain( 'anaglyph', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'anaglyph-lite', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 750, 360, true );
 	
 	register_nav_menus( array(
-		'primary'   => __( 'Top primary menu', 'anaglyph' )
+		'primary'   => __( 'Top primary menu', 'anaglyph-lite' )
 	) );
 
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery', 'chat'));
@@ -116,7 +116,7 @@ function anaglyph_customize_register( $wp_customize ) {
 			?>
 				<label>
 					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-					<input class="button button-primary save link_to_options" type="button" value="<?php _e('Anaglyph Options', 'anaglyph'); ?>" onclick="javascript:location.href='<?php echo esc_url(admin_url('admin.php?page=anaglyph_options')); ?>'"/>
+					<input class="button button-primary save link_to_options" type="button" value="<?php _e('Anaglyph Options', 'anaglyph-lite'); ?>" onclick="javascript:location.href='<?php echo esc_url(admin_url('admin.php?page=anaglyph_options')); ?>'"/>
 				</label>
 			<?php
 		}
@@ -131,7 +131,7 @@ function anaglyph_customize_register( $wp_customize ) {
 	$wp_customize->remove_section( 'header_image');
 	$wp_customize->remove_section( 'background_image');
 	$wp_customize->add_section('anaglyph_themeoptions_link', array(
-							   'title' => __('Anaglyph Options', 'anaglyph'),
+							   'title' => __('Anaglyph Options', 'anaglyph-lite'),
 							   'priority' => 10,
 							));
 	
@@ -180,9 +180,9 @@ if ( ! function_exists( 'anaglyph_widgets_init' ) ) :
 function anaglyph_widgets_init() {
 	
 	register_sidebar( array(
-		'name'          => __( 'Single Page Sidebar', 'anaglyph' ),
+		'name'          => __( 'Single Page Sidebar', 'anaglyph-lite' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Additional blog page sidebar.', 'anaglyph' ),
+		'description'   => __( 'Additional blog page sidebar.', 'anaglyph-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -191,9 +191,9 @@ function anaglyph_widgets_init() {
 	
 	if (anaglyph_is_woocommerce_activated()) {
 		register_sidebar( array(
-			'name'          => __( 'Shop Page Sidebar', 'anaglyph' ),
+			'name'          => __( 'Shop Page Sidebar', 'anaglyph-lite' ),
 			'id'            => 'shop',
-			'description'   => __( 'WooCommerce shop page sidebar.', 'anaglyph' ),
+			'description'   => __( 'WooCommerce shop page sidebar.', 'anaglyph-lite' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -417,7 +417,7 @@ function anaglyph_wp_title( $title, $sep ) {
 	}
 	
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'anaglyph' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'anaglyph-lite' ), max( $paged, $page ) );
 	}
 
 	return $title;
@@ -458,7 +458,7 @@ function anaglyph_list_authors() {
 					<?php echo get_the_author_meta( 'description', $contributor_id ); ?>
 				</p>
 				<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $contributor_id ) ); ?>">
-					<?php printf( _n( '%d Article', '%d Articles', $post_count, 'anaglyph' ), $post_count ); ?>
+					<?php printf( _n( '%d Article', '%d Articles', $post_count, 'anaglyph-lite' ), $post_count ); ?>
 				</a>
 			</div><!-- .contributor-summary -->
 		</div><!-- .contributor-info -->
@@ -583,7 +583,7 @@ function anaglyph_search_form( $form ) {
 	$form = '';
 	$form .= '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >';
 		$form .= '<div>';
-			$form .= '<input type="search" value="' . get_search_query() . '" name="s" id="s" placeholder="'.__('Search', 'anaglyph').'"/>';
+			$form .= '<input type="search" value="' . get_search_query() . '" name="s" id="s" placeholder="'.__('Search', 'anaglyph-lite').'"/>';
 		$form .= '</div>';
     $form .= '</form>';
     return $form;
@@ -636,46 +636,46 @@ if ( ! function_exists( 'anaglyph_send_mail' ) ) {
 		} else {
 			$to = get_option('admin_email');
 		}
-		$subject = sprintf(__('Message From %1s Contact Form', 'anaglyph'), get_bloginfo('name'));
+		$subject = sprintf(__('Message From %1s Contact Form', 'anaglyph-lite'), get_bloginfo('name'));
 
 		if (!empty($name)) {
 			$body = "";
-			$body .= __("Name", 'anaglyph') . ': ';
+			$body .= __("Name", 'anaglyph-lite') . ': ';
 			$body .= $name;
 			$body .= "\n\n";
 		}
 
 		if (!empty($phone)) {
 			$body .= "";
-			$body .= __("Phone", 'anaglyph') . ': ';
+			$body .= __("Phone", 'anaglyph-lite') . ': ';
 			$body .= $phone;
 			$body .= "\n";
 		}	
 		
 		if (!empty($mobile)) {
 			$body .= "";
-			$body .= __("Mobile", 'anaglyph') . ': ';
+			$body .= __("Mobile", 'anaglyph-lite') . ': ';
 			$body .= $mobile;
 			$body .= "\n";
 		}	
 		
 		if (!empty($message)) {
 			$body .= "";
-			$body .= __("Message", 'anaglyph') . ': ';
+			$body .= __("Message", 'anaglyph-lite') . ': ';
 			$body .= $message;
 			$body .= "\n";
 		}	
 
-		$headers = sprintf(__('From: %1s', 'anaglyph'),  $email) . "\r\n";
+		$headers = sprintf(__('From: %1s', 'anaglyph-lite'),  $email) . "\r\n";
 
 		if (is_email( $email )) {
 			if (mail($to, $subject, $body, $headers)) {
-				echo __('<span id="valid"><i class="icon icon-check"></i>Your Email was sent!</span>', 'anaglyph');
+				echo __('<span id="valid"><i class="icon icon-check"></i>Your Email was sent!</span>', 'anaglyph-lite');
 			} else {
-				echo __('<span id="valid"><i class="icon icon-check"></i>Error! Your Email not sent!</span>', 'anaglyph');
+				echo __('<span id="valid"><i class="icon icon-check"></i>Error! Your Email not sent!</span>', 'anaglyph-lite');
 			}
 		} else {
-			echo __('<span id="invalid">Invalid Email, please provide a correct email.</span>', 'anaglyph');
+			echo __('<span id="invalid">Invalid Email, please provide a correct email.</span>', 'anaglyph-lite');
 		}
 		
 		die('');
@@ -754,20 +754,20 @@ if ( ! function_exists( 'anaglyph_get_contact_form' ) ) {
 			if (!empty($fields)) {
 				foreach ($fields['enabled'] as $key=>$value) {
 					switch($key) {
-						case 'name': $fields_html[] = array('col' => 'col-md-6',  'html' => get_control_group_html('<input type="text" name="name" id="name" placeholder="'.__('Name', 'anaglyph').'" required>'));
+						case 'name': $fields_html[] = array('col' => 'col-md-6',  'html' => get_control_group_html('<input type="text" name="name" id="name" placeholder="'.__('Name', 'anaglyph-lite').'" required>'));
 						break;
-						case 'email': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<input type="email" name="email" id="email" placeholder="'.__('E-mail', 'anaglyph').'" required>'));
+						case 'email': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<input type="email" name="email" id="email" placeholder="'.__('E-mail', 'anaglyph-lite').'" required>'));
 						break;
-						case 'phone': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<input type="tel" name="phone" id="phone" placeholder="'.__('Phone', 'anaglyph').'" required>'));
+						case 'phone': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<input type="tel" name="phone" id="phone" placeholder="'.__('Phone', 'anaglyph-lite').'" required>'));
 						break;
-						case 'mob': $fields_html[]   = array('col' => 'col-md-6',  'html' => get_control_group_html('<input type="tel" name="mobile" id="mobile" placeholder="'.__('Mobile', 'anaglyph').'">'));
+						case 'mob': $fields_html[]   = array('col' => 'col-md-6',  'html' => get_control_group_html('<input type="tel" name="mobile" id="mobile" placeholder="'.__('Mobile', 'anaglyph-lite').'">'));
 						break;
 						case 'captcha': {
 							$fields_html[] = array('col' => 'col-md-12', 
-												  'html' => '<div class="row"><div class="col-md-2 col-md-offset-4">' . anaglyph_get_captcha_html() . '</div><div class="col-md-6">'.get_control_group_html('<input type="text" maxlength="6" name="form_captcha" id="form_captcha" placeholder="'.__('Please enter Captcha symbols', 'anaglyph').'" required>') . '</div></div>');
+												  'html' => '<div class="row"><div class="col-md-2 col-md-offset-4">' . anaglyph_get_captcha_html() . '</div><div class="col-md-6">'.get_control_group_html('<input type="text" maxlength="6" name="form_captcha" id="form_captcha" placeholder="'.__('Please enter Captcha symbols', 'anaglyph-lite').'" required>') . '</div></div>');
 						}
 						break;  
-						case 'message': $fields_html[] = array('col' => 'col-md-12', 'html' => get_control_group_html('<textarea name="message" id="message" placeholder="'.__('Message', 'anaglyph').'" required></textarea>'));
+						case 'message': $fields_html[] = array('col' => 'col-md-12', 'html' => get_control_group_html('<textarea name="message" id="message" placeholder="'.__('Message', 'anaglyph-lite').'" required></textarea>'));
 						break;  
 					}
 				}
@@ -811,7 +811,7 @@ if ( ! function_exists( 'anaglyph_get_contact_form' ) ) {
 						if (!empty($anaglyph_config['contact-submit']))
 							$out_ .= '<input type="submit" class="btn btn-color-primary" id="submit" value="'.$anaglyph_config['contact-submit'].'">';
 						else
-							$out_ .= '<input type="submit" class="btn btn-color-primary" id="submit" value="'.__('Send a Message', 'anaglyph').'">';
+							$out_ .= '<input type="submit" class="btn btn-color-primary" id="submit" value="'.__('Send a Message', 'anaglyph-lite').'">';
 					$out_ .= '</div><!-- /.form-actions -->';
 					
 					if (!empty($anaglyph_config['contact-description'])) $out_ .= '<span class="pull-left form-description">'.$anaglyph_config['contact-description'].'</span>';
@@ -1101,7 +1101,7 @@ function anaglyph_breadcrumbs_generate($args = array()) {
 		'before' 		  => false,
 		'after'  		  => false,
 		'front_page' 	  => true,
-		'show_home' 	  => __( 'Home', 'anaglyph' ),
+		'show_home' 	  => __( 'Home', 'anaglyph-lite' ),
 		'echo' 			  => true, 
 		'show_posts_page' => true
 	);
@@ -1242,13 +1242,13 @@ function anaglyph_breadcrumbs_generate($args = array()) {
 		elseif ( is_time() ) {
 
 			if ( get_query_var( 'minute' ) && get_query_var( 'hour' ) )
-				$trail['trail_end'] = get_the_time( __( 'g:i a', 'anaglyph' ) );
+				$trail['trail_end'] = get_the_time( __( 'g:i a', 'anaglyph-lite' ) );
 
 			elseif ( get_query_var( 'minute' ) )
-				$trail['trail_end'] = sprintf( __( 'Minute %1$s', 'anaglyph' ), get_the_time( __( 'i', 'anaglyph' ) ) );
+				$trail['trail_end'] = sprintf( __( 'Minute %1$s', 'anaglyph-lite' ), get_the_time( __( 'i', 'anaglyph-lite' ) ) );
 
 			elseif ( get_query_var( 'hour' ) )
-				$trail['trail_end'] = get_the_time( __( 'g a', 'anaglyph' ) );
+				$trail['trail_end'] = get_the_time( __( 'g a', 'anaglyph-lite' ) );
 		}
 
 		/* If viewing a date-based archive. */
@@ -1259,34 +1259,34 @@ function anaglyph_breadcrumbs_generate($args = array()) {
 				$trail = array_merge( $trail, anaglyph_breadcrumbs_get_parents( '', $wp_rewrite->front ) );
 
 			if ( is_day() ) {
-				$trail[] = '<li><a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . get_the_time( esc_attr__( 'Y', 'anaglyph' ) ) . '">' . get_the_time( __( 'Y', 'anaglyph' ) ) . '</a></li>';
-				$trail[] = '<li><a href="' . get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ) . '" title="' . get_the_time( esc_attr__( 'F', 'anaglyph' ) ) . '">' . get_the_time( __( 'F', 'anaglyph' ) ) . '</a></li>';
-				$trail['trail_end'] = get_the_time( __( 'j', 'anaglyph' ) ) ;
+				$trail[] = '<li><a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . get_the_time( esc_attr__( 'Y', 'anaglyph-lite' ) ) . '">' . get_the_time( __( 'Y', 'anaglyph-lite' ) ) . '</a></li>';
+				$trail[] = '<li><a href="' . get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ) . '" title="' . get_the_time( esc_attr__( 'F', 'anaglyph-lite' ) ) . '">' . get_the_time( __( 'F', 'anaglyph-lite' ) ) . '</a></li>';
+				$trail['trail_end'] = get_the_time( __( 'j', 'anaglyph-lite' ) ) ;
 			}
 
 			elseif ( get_query_var( 'w' ) ) {
-				$trail[] = '<li><a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . get_the_time( esc_attr__( 'Y', 'anaglyph' ) ) . '">' . get_the_time( __( 'Y', 'anaglyph' ) ) . '</a></li>';
-				$trail['trail_end'] = sprintf( __( 'Week %1$s', 'anaglyph' ), get_the_time( esc_attr__( 'W', 'anaglyph' ) ) );
+				$trail[] = '<li><a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . get_the_time( esc_attr__( 'Y', 'anaglyph-lite' ) ) . '">' . get_the_time( __( 'Y', 'anaglyph-lite' ) ) . '</a></li>';
+				$trail['trail_end'] = sprintf( __( 'Week %1$s', 'anaglyph-lite' ), get_the_time( esc_attr__( 'W', 'anaglyph-lite' ) ) );
 			}
 
 			elseif ( is_month() ) {
-				$trail[] = '<li><a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . get_the_time( esc_attr__( 'Y', 'anaglyph' ) ) . '">' . get_the_time( __( 'Y', 'anaglyph' ) ) . '</a></li>';
-				$trail['trail_end'] = get_the_time( __( 'F', 'anaglyph' ) );
+				$trail[] = '<li><a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . get_the_time( esc_attr__( 'Y', 'anaglyph-lite' ) ) . '">' . get_the_time( __( 'Y', 'anaglyph-lite' ) ) . '</a></li>';
+				$trail['trail_end'] = get_the_time( __( 'F', 'anaglyph-lite' ) );
 			}
 
 			elseif ( is_year() ) {
-				$trail['trail_end'] = get_the_time( __( 'Y', 'anaglyph' ) ) ;
+				$trail['trail_end'] = get_the_time( __( 'Y', 'anaglyph-lite' ) ) ;
 			}
 		}
 	}
 
 	/* If viewing search results. */
 	elseif ( is_search() )
-		$trail['trail_end'] = '<li>' . sprintf( __( 'Search results for &quot;%1$s&quot;', 'anaglyph' ), esc_attr( get_search_query() ) ) . '</li>';
+		$trail['trail_end'] = '<li>' . sprintf( __( 'Search results for &quot;%1$s&quot;', 'anaglyph-lite' ), esc_attr( get_search_query() ) ) . '</li>';
 
 	/* If viewing a 404 error page. */
 	elseif ( is_404() )
-		$trail['trail_end'] =  __( '404 Not Found', 'anaglyph' );
+		$trail['trail_end'] =  __( '404 Not Found', 'anaglyph-lite' );
 
 	/* Connect the breadcrumb trail if there are items in the trail. */
 	if ( is_array( $trail ) ) {
@@ -1460,7 +1460,7 @@ if ( ! function_exists( 'anaglyph_get_post_share' ) ) {
 	?>
 			<div class="social">
 				<div class="icons">
-					<span><?php _e('Share this post:', 'anaglyph'); ?></span>
+					<span><?php _e('Share this post:', 'anaglyph-lite'); ?></span>
 					<a title="Twitter" 		href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank"><i class="icon social_twitter"></i></a>
 					<a title="Facebook" 	href="http://www.facebook.com/sharer.php?u<?php the_permalink(); ?>" target="_blank"><i class="icon social_facebook"></i></a>
 					<a title="Pinterest" 	href="//pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $src[0]; ?>&description=<?php the_title(); ?>"><i class="icon social_pinterest"></i></a>
@@ -1604,7 +1604,7 @@ if ( ! function_exists( 'anaglyph_get_post_author' ) ) {
 		if (!empty($anaglyph_config['pp-authors']) || !$is_redux_active) {
 			if ($anaglyph_config['pp-authors'] || !$is_redux_active) {
 	?>
-			<div class="author"><?php _e('By:', 'anaglyph'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php echo get_the_author_link(); ?></a></div>
+			<div class="author"><?php _e('By:', 'anaglyph-lite'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php echo get_the_author_link(); ?></a></div>
 	<?php	
 			} else {
 	?>		
@@ -1625,7 +1625,7 @@ if ( ! function_exists( 'anaglyph_get_post_tags' ) ) {
 				if ($posttags) {
 					$out_ .= '<div class="tags">';
 						if (is_single()) {
-							$out_ .= '<span>' . __('Tags:', 'anaglyph') . '</span>';
+							$out_ .= '<span>' . __('Tags:', 'anaglyph-lite') . '</span>';
 						}
 						foreach($posttags as $tag) {
 							$out_ .= '<a href="'.get_tag_link($tag->term_id).'"><div class="tag">'.$tag->name.'</div></a>';
@@ -1645,7 +1645,7 @@ if ( ! function_exists( 'anaglyph_get_post_readmore' ) ) {
 	?>
 		<div class="divider background-color-secondary"></div>
 		<div class="read-more">
-			<a title="<?php echo __('Read', 'anaglyph') .' '.esc_html(get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php _e('Read More', 'anaglyph'); ?></a>
+			<a title="<?php echo __('Read', 'anaglyph-lite') .' '.esc_html(get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php _e('Read More', 'anaglyph-lite'); ?></a>
 		</div>
 	<?php	
 	}										
@@ -1757,13 +1757,13 @@ if ( ! function_exists( 'anaglyph_password_protect_form' ) ) {
 		$label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
 		
 		$out .= '<form class="protected-form" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">';
-			$out .= '<div class="title">' . __('This is password protected post', 'anaglyph') . '</div>';
-			$out .=  '<div class="info">' . __( "This content is password protected. To view it please enter your password below:", 'anaglyph' ) . '</div>';
+			$out .= '<div class="title">' . __('This is password protected post', 'anaglyph-lite') . '</div>';
+			$out .=  '<div class="info">' . __( "This content is password protected. To view it please enter your password below:", 'anaglyph-lite' ) . '</div>';
 			
 			$out .= '<div class="element-box">';
-				$out .= '<input name="post_password" id="'. $label .'" type="password" size="20" maxlength="20" placeholder="'.__('Password', 'anaglyph').'"/>';
+				$out .= '<input name="post_password" id="'. $label .'" type="password" size="20" maxlength="20" placeholder="'.__('Password', 'anaglyph-lite').'"/>';
 				$out .= '<div class="pull-right">';
-					$out .= '<input type="submit" name="Submit" class="btn btn-color-primary" value="' . esc_attr__( "Submit", 'anaglyph' ) . '" />';
+					$out .= '<input type="submit" name="Submit" class="btn btn-color-primary" value="' . esc_attr__( "Submit", 'anaglyph-lite' ) . '" />';
 				$out .= '</div>';
 			$out .= '</div>';
 		$out .= '</form>';

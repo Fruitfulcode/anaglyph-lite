@@ -24,8 +24,8 @@ function anaglyph_paging_nav() {
 	if( $wp_query->max_num_pages <= 1 ) return;
 	
 
-	$previous_post_label = __('Previous', 'anaglyph');
-	$next_post_label = __('Next', 'anaglyph');
+	$previous_post_label = __('Previous', 'anaglyph-lite');
+	$next_post_label = __('Next', 'anaglyph-lite');
 	
 	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
 	$max   = intval( $wp_query->max_num_pages );
@@ -93,14 +93,14 @@ function anaglyph_post_nav() {
 
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'anaglyph' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'anaglyph-lite' ); ?></h1>
 		<div class="nav-links">
 			<?php
 			if ( is_attachment() ) :
-				previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'anaglyph' ) );
+				previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'anaglyph-lite' ) );
 			else :
-				previous_post_link( '%link', __( '<span class="meta-nav">Previous Post</span>%title', 'anaglyph' ) );
-				next_post_link( '%link', __( '<span class="meta-nav">Next Post</span>%title', 'anaglyph' ) );
+				previous_post_link( '%link', __( '<span class="meta-nav">Previous Post</span>%title', 'anaglyph-lite' ) );
+				next_post_link( '%link', __( '<span class="meta-nav">Next Post</span>%title', 'anaglyph-lite' ) );
 			endif;
 			?>
 		</div><!-- .nav-links -->
