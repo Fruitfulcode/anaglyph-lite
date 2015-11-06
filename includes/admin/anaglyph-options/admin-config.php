@@ -1638,7 +1638,7 @@ if (!class_exists('anaglyph_config')) {
                         'type'      => 'editor',
                         'title'     => __('Copyright section', 'anaglyph-framework'),
                         'subtitle'  => __('Replace default theme copyright information and links', 'anaglyph-framework'),
-                        'default'   => '&#169; <a target="_blank" title="WordPress Development" href="http://fruitfulcode.com/">Fruitful Code</a>, Powered by <a target="_blank" href="http://wordpress.org/">WordPress</a>',
+                        'default'   => '&#169; <a title="WordPress Development" href="http://fruitfulcode.com/">Fruitful Code</a>, Powered by <a href="http://wordpress.org/">WordPress</a>',
                     ),
 					array(
                         'id'        => 'footer-color',
@@ -1845,7 +1845,7 @@ if (!class_exists('anaglyph_config')) {
 					 array(
 						'id'       => 'opt-raw',
 						'type'     => 'raw',
-						'content'  => '<a href="http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode" target="_blank" style="text-decoration: none;" title=""><h4>ANAGLYPH - One page / Multi Page WordPress Theme </h4><img src="' . $extended_image . '" alt="Extended version" /></a>'
+						'content'  => '<a href="http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode" style="text-decoration: none;" title=""><h4>ANAGLYPH - One page / Multi Page WordPress Theme </h4><img src="' . $extended_image . '" alt="Extended version" /></a>'
 					),
                 ),
             );  

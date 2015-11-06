@@ -20,13 +20,13 @@ if ( post_password_required() ) {
 
 <section id="comments" class="comments-area comments">
 	<?php if ( have_comments() ) : ?>
-	<h3 class="comments-title">
+	<h2 class="comments-title">
 		<?php printf( _n( 'One comment', '%1$s comments', get_comments_number(), 'anaglyph-lite' ), number_format_i18n(get_comments_number())); ?>
-	</h3>
+	</h2>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'anaglyph-lite' ); ?></h1>
+		<h3 class="screen-reader-text"><?php _e( 'Comment navigation', 'anaglyph-lite' ); ?></h3>
 		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'anaglyph-lite' ) ); ?></div>
 		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'anaglyph-lite' ) ); ?></div>
 	</nav><!-- #comment-nav-above -->
@@ -68,13 +68,13 @@ if ( post_password_required() ) {
 					'class_submit' => 'btn btn-color-primary',
 					'fields'  => apply_filters( 'comment_form_default_fields', 
 						 array(
-							'author'  => '<div class="row"><div class="col-md-6"><div class="control-group"><div class="controls"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' placeholder="'.__('Name', 'anaglyph-lite').'" /></div></div></div>',
-							'email'   => '<div class="col-md-6"><div class="control-group"><div class="controls"><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' placeholder="'.__('Email', 'anaglyph-lite').'" /></div></div></div></div>',
+							'author'  => '<div class="row"><div class="col-md-6"><div class="control-group"><div class="controls"><label for="author" class="screen-reader-text">'.__('Name', 'anaglyph-lite').'</label><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' placeholder="'.__('Name', 'anaglyph-lite').'" /></div></div></div>',
+							'email'   => '<div class="col-md-6"><div class="control-group"><div class="controls"><label for="email" class="screen-reader-text">'.__('Email', 'anaglyph-lite').'</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' placeholder="'.__('Email', 'anaglyph-lite').'" /></div></div></div></div>',
 						)	
 					),
 					'comment_notes_before' => '',
 					'comment_notes_after'  => '',
-					'comment_field' =>  '<div class="row"><div class="col-md-12"><div class="control-group"><div class="controls"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="' . __('Message', 'anaglyph-lite') . '"></textarea></div></div></div></div>',					
+					'comment_field' =>  '<div class="row"><div class="col-md-12"><div class="control-group"><div class="controls"><label for="comment" class="screen-reader-text">'.__('Message', 'anaglyph-lite').'</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="' . __('Message', 'anaglyph-lite') . '"></textarea></div></div></div></div>',					
 				);	
 		anaglyph_comment_form($args); 
 	?>

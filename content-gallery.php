@@ -27,7 +27,7 @@
 	<?php anaglyph_get_post_date(); ?>	
 	<div class="blog-post-content entry-summary">
 		<?php do_action('anaglyph_post_meta'); ?>
-		<?php the_content( __( '&#8230;', 'anaglyph-lite' ) ); ?>
+		<?php the_content( '&#8230;<span class="screen-reader-text">  '.get_the_title().'</span>' ); ?>
 		<?php anaglyph_get_post_readmore(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>

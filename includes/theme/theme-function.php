@@ -426,51 +426,6 @@ function anaglyph_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'anaglyph_wp_title', 10, 2 );
 endif; //anaglyph_wp_title
 
-
-if ( ! function_exists( 'anaglyph_list_authors' ) ) :
-/**
- * Print a list of all site contributors who published at least one post.
- * @since Anaglyph Theme 1.0
- * @return void
- */
-function anaglyph_list_authors() {
-	$contributor_ids = get_users( array(
-		'fields'  => 'ID',
-		'orderby' => 'post_count',
-		'order'   => 'DESC',
-		'who'     => 'authors',
-	) );
-
-	foreach ( $contributor_ids as $contributor_id ) :
-		$post_count = count_user_posts( $contributor_id );
-
-		// Move on if user has not published a post (yet).
-		if ( ! $post_count ) {
-			continue;
-		}
-	?>
-
-	<div class="contributor">
-		<div class="contributor-info">
-			<div class="contributor-avatar"><?php echo get_avatar( $contributor_id, 132 ); ?></div>
-			<div class="contributor-summary">
-				<h2 class="contributor-name"><?php echo get_the_author_meta( 'display_name', $contributor_id ); ?></h2>
-				<p class="contributor-bio">
-					<?php echo get_the_author_meta( 'description', $contributor_id ); ?>
-				</p>
-				<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $contributor_id ) ); ?>">
-					<?php printf( _n( '%d Article', '%d Articles', $post_count, 'anaglyph-lite' ), $post_count ); ?>
-				</a>
-			</div><!-- .contributor-summary -->
-		</div><!-- .contributor-info -->
-	</div><!-- .contributor -->
-
-	<?php
-	endforeach;
-}
-endif; //anaglyph_list_authors
-
-
 /**
  * Getter function for Featured Content Plugin.
  * @since Anaglyph Theme 1.0
@@ -559,7 +514,7 @@ function anaglyph_get_hslider() {
 								$out_ .= '<div class="slide-content">';
 									$out_ .= '<div class="'.implode(' ', $run_classes).'">';
 										if (!empty($url)) $out_ .= '<a href="'.esc_url($url).'">';
-										$out_ .= '<h1 class="reset-margin">'.$title.'</h1>';
+										$out_ .= '<h2 class="reset-margin">'.$title.'</h2>';
 										if (!empty($description)) {
 											$out_ .= '<h3 class="description">'.$description.'</h3>';
 										}	
@@ -584,7 +539,9 @@ function anaglyph_search_form( $form ) {
 	$form = '';
 	$form .= '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >';
 		$form .= '<div>';
+			$form .= '<label for="s" class="screen-reader-text">'.__('Search', 'anaglyph-lite').'</label>';
 			$form .= '<input type="search" value="' . get_search_query() . '" name="s" id="s" placeholder="'.__('Search', 'anaglyph-lite').'"/>';
+			$form .= '<input type="submit" class="screen-reader-text" value="'.__('Search', 'anaglyph-lite').'" />';
 		$form .= '</div>';
     $form .= '</form>';
     return $form;
@@ -611,7 +568,7 @@ function anaglyph_kses_data($text = null) {
 
 if ( ! function_exists( 'anaglyph_change_excerpt_more' ) ) {
 function anaglyph_change_excerpt_more( $more ) {
-	return '&#8230;';
+	return '&#8230;<span class="screen-reader-text">  '.get_the_title().'</span>';
 }
 add_filter('excerpt_more', 'anaglyph_change_excerpt_more');
 }
@@ -755,20 +712,20 @@ if ( ! function_exists( 'anaglyph_get_contact_form' ) ) {
 			if (!empty($fields)) {
 				foreach ($fields['enabled'] as $key=>$value) {
 					switch($key) {
-						case 'name': $fields_html[] = array('col' => 'col-md-6',  'html' => get_control_group_html('<input type="text" name="name" id="name" placeholder="'.__('Name', 'anaglyph-lite').'" required>'));
+						case 'name': $fields_html[] = array('col' => 'col-md-6',  'html' => get_control_group_html('<label for="name" class="screen-reader-text">'.__('Name', 'anaglyph-lite').'</label><input type="text" name="name" id="name" placeholder="'.__('Name', 'anaglyph-lite').'" required>'));
 						break;
-						case 'email': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<input type="email" name="email" id="email" placeholder="'.__('E-mail', 'anaglyph-lite').'" required>'));
+						case 'email': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<label for="email" class="screen-reader-text">'.__('E-mail', 'anaglyph-lite').'</label><input type="email" name="email" id="email" placeholder="'.__('E-mail', 'anaglyph-lite').'" required>'));
 						break;
-						case 'phone': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<input type="tel" name="phone" id="phone" placeholder="'.__('Phone', 'anaglyph-lite').'" required>'));
+						case 'phone': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<label for="phone" class="screen-reader-text">'.__('Phone', 'anaglyph-lite').'</label><input type="tel" name="phone" id="phone" placeholder="'.__('Phone', 'anaglyph-lite').'" required>'));
 						break;
-						case 'mob': $fields_html[]   = array('col' => 'col-md-6',  'html' => get_control_group_html('<input type="tel" name="mobile" id="mobile" placeholder="'.__('Mobile', 'anaglyph-lite').'">'));
+						case 'mob': $fields_html[]   = array('col' => 'col-md-6',  'html' => get_control_group_html('<label for="mobile" class="screen-reader-text">'.__('Mobile', 'anaglyph-lite').'</label><input type="tel" name="mobile" id="mobile" placeholder="'.__('Mobile', 'anaglyph-lite').'">'));
 						break;
 						case 'captcha': {
 							$fields_html[] = array('col' => 'col-md-12', 
-												  'html' => '<div class="row"><div class="col-md-2 col-md-offset-4">' . anaglyph_get_captcha_html() . '</div><div class="col-md-6">'.get_control_group_html('<input type="text" maxlength="6" name="form_captcha" id="form_captcha" placeholder="'.__('Please enter Captcha symbols', 'anaglyph-lite').'" required>') . '</div></div>');
+												  'html' => '<div class="row"><div class="col-md-2 col-md-offset-4">' . anaglyph_get_captcha_html() . '</div><div class="col-md-6">'.get_control_group_html('<label for="form_captcha" class="screen-reader-text">'.__('Please enter Captcha symbols', 'anaglyph-lite').'</label><input type="text" maxlength="6" name="form_captcha" id="form_captcha" placeholder="'.__('Please enter Captcha symbols', 'anaglyph-lite').'" required>') . '</div></div>');
 						}
 						break;  
-						case 'message': $fields_html[] = array('col' => 'col-md-12', 'html' => get_control_group_html('<textarea name="message" id="message" placeholder="'.__('Message', 'anaglyph-lite').'" required></textarea>'));
+						case 'message': $fields_html[] = array('col' => 'col-md-12', 'html' => get_control_group_html('<label for="message" class="screen-reader-text">'.__('Message', 'anaglyph-lite').'</label><textarea name="message" id="message" placeholder="'.__('Message', 'anaglyph-lite').'" required></textarea>'));
 						break;  
 					}
 				}
@@ -865,9 +822,9 @@ function anaglyph_get_footer_contact_form() {
 							if (!empty($sub_title)) {
 								$class_title = 'has-subtitle';
 							}
-								$out_ .='<h2 class="font-color-light '.$class_title.'">'.$title.'</h2>';
+								$out_ .='<h3 class="font-color-light '.$class_title.'">'.$title.'</h2>';
 								if ($class_title != '') {
-									$out_ .='<h3 class="has-opacity font-color-light additional">'.$sub_title.'</h3>';
+									$out_ .='<h4 class="has-opacity font-color-light additional">'.$sub_title.'</h3>';
 								}	
 								
 							$out_ .='</div><!-- /.section-title -->';
@@ -947,7 +904,7 @@ function anaglyph_get_social() {
 	if (!empty($anaglyph_config['footer-text'])) {
 		$ftext = anaglyph_kses_data(stripslashes($anaglyph_config['footer-text']));
 	} elseif (!$is_redux_active) {
-		$ftext = '&#169; <a target="_blank" title="WordPress Development" href="http://fruitfulcode.com/">Fruitful Code</a>, Powered by <a target="_blank" href="http://wordpress.org/">WordPress</a>';
+		$ftext = '&#169; <a title="WordPress Development" href="http://fruitfulcode.com/">Fruitful Code</a>, Powered by <a href="http://wordpress.org/">WordPress</a>';
 	}
 		
 		if (is_home() || is_front_page()) {
@@ -963,23 +920,23 @@ function anaglyph_get_social() {
 		if ($anaglyph_config['footer-issocial']) {
 			$fsocial .= '<div class="social pull-right">';
                 $fsocial .= '<div class="icons">';
-					if (!empty($anaglyph_config['facebook-url'])) 	{ $fsocial .= '<a title="Facebook" 	href="'.esc_url($anaglyph_config['facebook-url']).'" target="_blank"><i class="icon social_facebook"></i></a>'; }	
-					if (!empty($anaglyph_config['twitter-url'])) 	{ $fsocial .= '<a title="Twitter" 	href="'.esc_url($anaglyph_config['twitter-url']).'" target="_blank"><i class="icon social_twitter"></i></a>'; }	
-					if (!empty($anaglyph_config['linkedin-url'])) 	{ $fsocial .= '<a title="Linked In" href="'.esc_url($anaglyph_config['linkedin-url']).'" target="_blank"><i class="icon social_linkedin"></i></a>'; }	
-					if (!empty($anaglyph_config['myspace-url'])) 	{ $fsocial .= '<a title="My space" 	href="'.esc_url($anaglyph_config['myspace-url']).'" target="_blank"><i class="icon social_myspace"></i></a>'; }	
-					if (!empty($anaglyph_config['gplus-url'])) 		{ $fsocial .= '<a title="Google+" 	href="'.esc_url($anaglyph_config['gplus-url']).'" target="_blank"><i class="icon social_googleplus"></i></a>'; }	
-					if (!empty($anaglyph_config['dribbble-url'])) 	{ $fsocial .= '<a title="Dribble" 	href="'.esc_url($anaglyph_config['dribbble-url']).'" target="_blank"><i class="icon social_dribbble"></i></a>';	}						
-					if (!empty($anaglyph_config['flickr-url'])) 	{ $fsocial .= '<a title="Flickr" 	href="'.esc_url($anaglyph_config['flickr-url']).'" target="_blank"><i class="icon social_flickr"></i></a>'; }						
-					if (!empty($anaglyph_config['youtube-url'])) 	{ $fsocial .= '<a title="YouTube" 	href="'.esc_url($anaglyph_config['youtube-url']).'" target="_blank"><i class="icon social_youtube"></i></a>'; }						
-					if (!empty($anaglyph_config['delicious-url'])) 	{ $fsocial .= '<a title="Delicious" href="'.esc_url($anaglyph_config['delicious-url']).'" target="_blank"><i class="icon social_delicious"></i></a>'; }						
-					if (!empty($anaglyph_config['deviantart-url']))	{ $fsocial .= '<a title="Deviantart" href="'.esc_url($anaglyph_config['deviantart-url']).'" target="_blank"><i class="icon social_deviantart"></i></a>'; }						
+					if (!empty($anaglyph_config['facebook-url'])) 	{ $fsocial .= '<a title="Facebook" 	href="'.esc_url($anaglyph_config['facebook-url']).'"><i class="icon social_facebook"></i></a>'; }	
+					if (!empty($anaglyph_config['twitter-url'])) 	{ $fsocial .= '<a title="Twitter" 	href="'.esc_url($anaglyph_config['twitter-url']).'"><i class="icon social_twitter"></i></a>'; }	
+					if (!empty($anaglyph_config['linkedin-url'])) 	{ $fsocial .= '<a title="Linked In" href="'.esc_url($anaglyph_config['linkedin-url']).'"><i class="icon social_linkedin"></i></a>'; }	
+					if (!empty($anaglyph_config['myspace-url'])) 	{ $fsocial .= '<a title="My space" 	href="'.esc_url($anaglyph_config['myspace-url']).'"><i class="icon social_myspace"></i></a>'; }	
+					if (!empty($anaglyph_config['gplus-url'])) 		{ $fsocial .= '<a title="Google+" 	href="'.esc_url($anaglyph_config['gplus-url']).'"><i class="icon social_googleplus"></i></a>'; }	
+					if (!empty($anaglyph_config['dribbble-url'])) 	{ $fsocial .= '<a title="Dribble" 	href="'.esc_url($anaglyph_config['dribbble-url']).'"><i class="icon social_dribbble"></i></a>';	}						
+					if (!empty($anaglyph_config['flickr-url'])) 	{ $fsocial .= '<a title="Flickr" 	href="'.esc_url($anaglyph_config['flickr-url']).'"><i class="icon social_flickr"></i></a>'; }						
+					if (!empty($anaglyph_config['youtube-url'])) 	{ $fsocial .= '<a title="YouTube" 	href="'.esc_url($anaglyph_config['youtube-url']).'"><i class="icon social_youtube"></i></a>'; }						
+					if (!empty($anaglyph_config['delicious-url'])) 	{ $fsocial .= '<a title="Delicious" href="'.esc_url($anaglyph_config['delicious-url']).'"><i class="icon social_delicious"></i></a>'; }						
+					if (!empty($anaglyph_config['deviantart-url']))	{ $fsocial .= '<a title="Deviantart" href="'.esc_url($anaglyph_config['deviantart-url']).'"><i class="icon social_deviantart"></i></a>'; }						
 					if (!empty($anaglyph_config['rss-url'])) 		{ $fsocial .= '<a title="RSS" 		href="'.esc_url($anaglyph_config['rss-url']).'"><i class="icon social_rss"></i></a>'; }						
-					if (!empty($anaglyph_config['instagram-url']))  { $fsocial .= '<a title="Instagram" href="'.esc_url($anaglyph_config['instagram-url']).'" target="_blank"><i class="icon social_instagram"></i></a>'; }						
-					if (!empty($anaglyph_config['pinterest-url']))  { $fsocial .= '<a title="Pinterset" href="'.esc_url($anaglyph_config['pinterest-url']).'" target="_blank"><i class="icon social_pinterest"></i></a>'; }						
-					if (!empty($anaglyph_config['vimeo-url'])) 		{ $fsocial .= '<a title="Vimeo" 	href="'.esc_url($anaglyph_config['vimeo-url']).'" target="_blank"><i class="icon social_vimeo"></i></a>'; }						
-					if (!empty($anaglyph_config['picassa-url'])) 	{ $fsocial .= '<a title="Picassa" 	href="'.esc_url($anaglyph_config['picassa-url']).'" target="_blank"><i class="icon social_picassa"></i></a>'; }						
-					if (!empty($anaglyph_config['social_tumblr']))	{ $fsocial .= '<a title="Tumblr" 	href="'.esc_url($anaglyph_config['social_tumblr']).'" target="_blank"><i class="icon social_tumblr"></i></a>'; }						
-					if (!empty($anaglyph_config['email-address']))  { $fsocial .= '<a title="Email" 	href="mailto:'.esc_attr($anaglyph_config['email-address']).'" target="_blank"><i class="icon icon_mail_alt"></i></a>'; }						
+					if (!empty($anaglyph_config['instagram-url']))  { $fsocial .= '<a title="Instagram" href="'.esc_url($anaglyph_config['instagram-url']).'"><i class="icon social_instagram"></i></a>'; }						
+					if (!empty($anaglyph_config['pinterest-url']))  { $fsocial .= '<a title="Pinterset" href="'.esc_url($anaglyph_config['pinterest-url']).'"><i class="icon social_pinterest"></i></a>'; }						
+					if (!empty($anaglyph_config['vimeo-url'])) 		{ $fsocial .= '<a title="Vimeo" 	href="'.esc_url($anaglyph_config['vimeo-url']).'"><i class="icon social_vimeo"></i></a>'; }						
+					if (!empty($anaglyph_config['picassa-url'])) 	{ $fsocial .= '<a title="Picassa" 	href="'.esc_url($anaglyph_config['picassa-url']).'"><i class="icon social_picassa"></i></a>'; }						
+					if (!empty($anaglyph_config['social_tumblr']))	{ $fsocial .= '<a title="Tumblr" 	href="'.esc_url($anaglyph_config['social_tumblr']).'"><i class="icon social_tumblr"></i></a>'; }						
+					if (!empty($anaglyph_config['email-address']))  { $fsocial .= '<a title="Email" 	href="mailto:'.esc_attr($anaglyph_config['email-address']).'"><i class="icon icon_mail_alt"></i></a>'; }						
 					if (!empty($anaglyph_config['skype-username'])) { $fsocial .= '<a title="Call to '.esc_attr($anaglyph_config['skype-username']).'" href="href="skype:'.esc_attr($anaglyph_config['skype-username']).'?call"><i class="icon social_skype"></i></a>'; }						
                 $fsocial .= '</div><!-- /.icons -->';
             $fsocial .= '</div><!-- /.social -->';
@@ -1462,8 +1419,8 @@ if ( ! function_exists( 'anaglyph_get_post_share' ) ) {
 			<div class="social">
 				<div class="icons">
 					<span><?php _e('Share this post:', 'anaglyph-lite'); ?></span>
-					<a title="Twitter" 		href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank"><i class="icon social_twitter"></i></a>
-					<a title="Facebook" 	href="http://www.facebook.com/sharer.php?u<?php the_permalink(); ?>" target="_blank"><i class="icon social_facebook"></i></a>
+					<a title="Twitter" 		href="https://twitter.com/share?url=<?php the_permalink(); ?>"><i class="icon social_twitter"></i></a>
+					<a title="Facebook" 	href="http://www.facebook.com/sharer.php?u<?php the_permalink(); ?>"><i class="icon social_facebook"></i></a>
 					<a title="Pinterest" 	href="//pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $src[0]; ?>&description=<?php the_title(); ?>"><i class="icon social_pinterest"></i></a>
 					<a title="Google +" 	href="https://plus.google.com/share?url={URL}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon social_googleplus"></i></a>
 				</div>
@@ -1594,7 +1551,7 @@ if ( ! function_exists( 'anaglyph_get_post_title' ) ) {
 	function anaglyph_get_post_title() {
 		global $anaglyph_config;
 	?>
-		<h4><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+		<h2><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 	<?php	
 	}
 }
@@ -1762,6 +1719,7 @@ if ( ! function_exists( 'anaglyph_password_protect_form' ) ) {
 			$out .=  '<div class="info">' . __( "This content is password protected. To view it please enter your password below:", 'anaglyph-lite' ) . '</div>';
 			
 			$out .= '<div class="element-box">';
+				$out .= '<label for="post_password" class="screen-reader-text">'.__('Password', 'anaglyph-lite').'</label>';
 				$out .= '<input name="post_password" id="'. $label .'" type="password" size="20" maxlength="20" placeholder="'.__('Password', 'anaglyph-lite').'"/>';
 				$out .= '<div class="pull-right">';
 					$out .= '<input type="submit" name="Submit" class="btn btn-color-primary" value="' . esc_attr__( "Submit", 'anaglyph-lite' ) . '" />';

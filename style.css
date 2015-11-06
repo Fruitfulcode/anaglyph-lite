@@ -58,6 +58,15 @@ i.icon {
   -o-animation-delay: 3s;
 }
 
+.screen-reader-text, .screen-reader-text span {
+    height: 1px;
+    left: -1000em;
+    overflow: hidden;
+    position: absolute;
+    top: -1000em;
+    width: 1px;
+}
+
 .navigation-wrapper {
   margin-top: 0px;
   position: fixed;
@@ -992,6 +1001,9 @@ p.cite {
   display: none;
 }
 
+#page-footer .section-title h4 {
+	margin: 10px 0 80px
+}
 
 #slider {
    height: 900px;
@@ -1023,14 +1035,16 @@ p.cite {
   position: relative;
   z-index: 4;
 }
-.slides .slide-content .slide-wrapper h1 {
+.slides .slide-content .slide-wrapper h1,
+.slides .slide-content .slide-wrapper h2 {
   color: #fff;
   display: inline-block;
   margin: 20px 0;
   padding: 15px 20px;
   position: relative;
 }
-.slides .slide-content .slide-wrapper h1:after {
+.slides .slide-content .slide-wrapper h1:after,
+.slides .slide-content .slide-wrapper h2:after {
   bottom: -20px;
   content: "";
   height: 8px;
@@ -1041,7 +1055,8 @@ p.cite {
   width: 175px;
 }
 
-.slides .slide-content .slide-wrapper h1:before {
+.slides .slide-content .slide-wrapper h1:before,
+.slides .slide-content .slide-wrapper h2:before {
   content: "";
   height: 8px;
   left: 0;
@@ -1447,7 +1462,7 @@ footer#page-footer textarea:focus {
   color: #fff !important;
 }
 
-.site  footer .section-title h2 {
+.site  footer .section-title h3 {
 	margin-top:20px;
 }
 
@@ -1664,12 +1679,15 @@ img.size-full, img.size-large, img.wp-post-image {
 }
 
 .single #blog-post h3, 
-.woocommerce-page #shop-sidebar h3 {
+.single #blog-post h2, 
+.woocommerce-page #shop-sidebar h3,
+.woocommerce-page #shop-sidebar h2 {
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
-.woocommerce-page #shop-sidebar > aside:first-child h3 {
+.woocommerce-page #shop-sidebar > aside:first-child h3,
+.woocommerce-page #shop-sidebar > aside:first-child h2 {
   margin-top: 0;
 }
 
@@ -2146,7 +2164,8 @@ footer#page-footer, footer#page-footer p {
 .navigation-wrapper .navigation .nav li a::after {
     background-color: #face00;
 }
-.slides .slide-content .slide-wrapper h1, .slides .slide-content .slide-wrapper h1::before, .slides .slide-content .slide-wrapper h1::after {
+.slides .slide-content .slide-wrapper h1, .slides .slide-content .slide-wrapper h1::before, .slides .slide-content .slide-wrapper h1::after,
+.slides .slide-content .slide-wrapper h2, .slides .slide-content .slide-wrapper h2::before, .slides .slide-content .slide-wrapper h2::after {
     background-color: rgba(0, 0, 0, 0.9);
 }
 .section-title h1::before, .section-title h2::before, .section-title h3::before, .section-title h4::before, .section-title h5::before, .section-title h6::before, .background-color-secondary {
