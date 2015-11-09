@@ -1443,7 +1443,7 @@ if ( ! function_exists( 'anaglyph_get_single_content' ) ) {
 		
 		function get_content_part() {
 			?>
-			<div id="main">
+			<div id="content" role="main">
 				<?php
 					// Start the Loop.
 					while ( have_posts() ) : the_post();
@@ -1493,7 +1493,7 @@ if ( ! function_exists( 'anaglyph_default_page_content' ) ) {
 	function anaglyph_default_page_content() {
 		global $post, $posts_count, $time_post_delay, $row_heading;
 	?>	
-		<section id="from-the-blog" class="block">
+		<section id="content" class="block" role="main">
 			<div class="container">
 				<div class="col-md-12">
 					<div class="section-content">

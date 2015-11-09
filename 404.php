@@ -21,7 +21,7 @@ get_header(); ?>
 	<!-- end Page Title -->
 	<?php anaglyph_add_breadcrumbs(); ?>
 	
-	<section id="not-found" class="block">
+	<section id="not-found" class="block" role="main">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

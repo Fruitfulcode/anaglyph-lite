@@ -28,6 +28,8 @@
 </head>
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'anaglyph-lite' ); ?></a>
+		
 		<div class="navigation-wrapper">
 			<div class="navigation">
 				<header class="navbar" id="top" role="banner">
@@ -42,25 +44,24 @@
 							<?php anaglyph_get_logo(); ?>
 						</div>
 
-						<?php 	if ( has_nav_menu( 'primary' ) ) {
+						<nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation" aria-label="<?php _e( 'Primary Navigation', 'anaglyph-lite' ); ?>">
+							<?php 	if ( has_nav_menu( 'primary' ) ) {
 									   wp_nav_menu( array( 
 														'theme_location' 	=> 'primary', 
 														'menu_class' 	 	=> 'nav navbar-nav', 
-														'container'		 	=> 'nav', 
-														'container_class' 	=> 'collapse navbar-collapse bs-navbar-collapse navbar-right', 
+														'container'		 	=> false, 
 														'walker' 			=> new anaglyph_submenu_class())); 
 								} else {
 								?>
-									<nav class="collapse navbar-collapse bs-navbar-collapse navbar-right">
-										<ul class="nav navbar-nav">
-											<?php
-												wp_list_pages(array('title_li' => '', 'sort_column' => 'ID', 'walker' => new Anaglyph_Page_Walker()));
-											?>	
-										</ul>
-									</nav>	
+									<ul class="nav navbar-nav">
+										<?php
+											wp_list_pages(array('title_li' => '', 'sort_column' => 'ID', 'walker' => new Anaglyph_Page_Walker()));
+										?>	
+									</ul>
 								<?php	
 								}							  
-						?>
+							?>
+						</nav>	
 					</div><!-- /.container -->
 				</header><!-- /.navbar -->
 			</div><!-- /.navigation -->

@@ -43,7 +43,7 @@ function anaglyph_paging_nav() {
 		$links[] = $paged + 1;
 	}
 
-	$gen_nav_text = '<div class="center" role="navigation">';
+	$gen_nav_text = '<div class="center" role="navigation" aria-label="'.__( 'Paging Navigation', 'anaglyph-lite' ).'">';
 		$gen_nav_text .= '<ul class="pagination loop-pagination">';
 
 	if ( get_previous_posts_link() ) $gen_nav_text .=  sprintf( '<li>%s</li>' . "\n", get_previous_posts_link($previous_post_label) );
@@ -92,7 +92,7 @@ function anaglyph_post_nav() {
 	}
 
 	?>
-	<nav class="navigation post-navigation" role="navigation">
+	<nav class="navigation post-navigation" role="navigation" aria-label="<?php _e( 'Post Navigation', 'anaglyph-lite' ); ?>">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'anaglyph-lite' ); ?></h1>
 		<div class="nav-links">
 			<?php

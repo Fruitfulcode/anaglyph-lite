@@ -3,8 +3,8 @@
  * The Shop Sidebar containing Widget areas for Shop Page.
  *
  * @package WordPress
- * @subpackage Fruitful theme
- * @since Fruitful theme 1.0
+ * @subpackage Anaglyph_Theme
+ * @since Anaglyph Theme 1.0
  */
 ?>
 <div id="secondary">		

@@ -11,7 +11,7 @@
 ?>
 	</div><!-- #main -->
 	<!-- Footer -->
-	<footer id="page-footer">
+	<footer id="page-footer" role="contentinfo">
 		<?php do_action('custom_footer_elements'); ?>	
 	</footer>
 		

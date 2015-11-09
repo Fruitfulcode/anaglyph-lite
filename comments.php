@@ -25,7 +25,7 @@ if ( post_password_required() ) {
 	</h2>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation" aria-label="<?php _e( 'Comment Above Navigation', 'anaglyph-lite' ); ?>">
 		<h3 class="screen-reader-text"><?php _e( 'Comment navigation', 'anaglyph-lite' ); ?></h3>
 		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'anaglyph-lite' ) ); ?></div>
 		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'anaglyph-lite' ) ); ?></div>
@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 	</ol><!-- .comment-list -->
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation" aria-label="<?php _e( 'Comment Below Navigation', 'anaglyph-lite' ); ?>">
 			<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'anaglyph-lite' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'anaglyph-lite' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
