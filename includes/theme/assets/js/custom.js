@@ -183,6 +183,11 @@ $(document).ready(function($) {
 			}	
 	}
 	
+	// Focus styles for menus.
+		$( '.primary-navigation' ).find( 'a' ).on( 'focus blur', function() {
+			$( this ).parents('li').toggleClass( 'focus' );
+		} );
+	
 	
 	if ($('.primary-sidebar.widget-area .widget select').length > 0) {
 		$('.primary-sidebar.widget-area .widget select').each(function() {

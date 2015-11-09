@@ -44,7 +44,7 @@
 							<?php anaglyph_get_logo(); ?>
 						</div>
 
-						<nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation" aria-label="<?php _e( 'Primary Navigation', 'anaglyph-lite' ); ?>">
+						<nav class="primary-navigation collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation" aria-label="<?php _e( 'Primary Navigation', 'anaglyph-lite' ); ?>">
 							<?php 	if ( has_nav_menu( 'primary' ) ) {
 									   wp_nav_menu( array( 
 														'theme_location' 	=> 'primary', 

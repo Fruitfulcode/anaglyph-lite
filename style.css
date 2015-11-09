@@ -78,6 +78,9 @@ i.icon {
     text-decoration: none;
     text-transform: none;
     top: -9999em;
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
 }
 .logged-in .site .skip-link {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -184,8 +187,8 @@ i.icon {
 }
 .navigation-wrapper .navigation .nav li:hover .child-navigation, 
 .navigation-wrapper .navigation .nav li:hover .child-navigation li:hover .child-navigation,
-.navigation-wrapper .navigation .nav li a:focus + .child-navigation, 
-.navigation-wrapper .navigation .nav li a:focus + .child-navigation li:hover .child-navigation {
+.navigation-wrapper .navigation .nav li.focus .child-navigation, 
+.navigation-wrapper .navigation .nav li.focus .child-navigation li.focus .child-navigation {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   visibility: visible;
