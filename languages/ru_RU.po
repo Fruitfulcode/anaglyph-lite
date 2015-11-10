@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: anaglyph-lite\n"
-"POT-Creation-Date: 2015-09-18 16:36+0300\n"
-"PO-Revision-Date: 2015-09-18 16:36+0300\n"
+"POT-Creation-Date: 2015-11-10 12:02+0200\n"
+"PO-Revision-Date: 2015-11-10 12:02+0200\n"
 "Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode.com\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -70,6 +70,10 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
+#: comments.php:28
+msgid "Comment Above Navigation"
+msgstr ""
+
 #: comments.php:29
 msgid "Comment navigation"
 msgstr "Навигация по комментариям"
@@ -80,6 +84,10 @@ msgstr ""
 
 #: comments.php:31
 msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:47
+msgid "Comment Below Navigation"
 msgstr ""
 
 #: comments.php:48
@@ -100,7 +108,7 @@ msgstr "Ответить"
 
 #: comments.php:71 includes/admin/anaglyph-options/admin-config.php:1507
 #: includes/theme/theme-comment-form.php:15
-#: includes/theme/theme-function.php:643 includes/theme/theme-function.php:757
+#: includes/theme/theme-function.php:601 includes/theme/theme-function.php:715
 #: woocommerce/single-product-reviews.php:66
 msgid "Name"
 msgstr "Имя"
@@ -112,15 +120,9 @@ msgid "Email"
 msgstr ""
 
 #: comments.php:77 includes/admin/anaglyph-options/admin-config.php:1509
-#: includes/theme/theme-function.php:664 includes/theme/theme-function.php:770
+#: includes/theme/theme-function.php:622 includes/theme/theme-function.php:728
 msgid "Message"
 msgstr "Сообщение"
-
-#: content-aside.php:30 content-audio.php:30 content-chat.php:30
-#: content-gallery.php:30 content-image.php:30 content-link.php:30
-#: content-quote.php:30 content-video.php:30
-msgid "&#8230;"
-msgstr ""
 
 #: content-aside.php:45 content-audio.php:45 content-chat.php:45
 #: content-gallery.php:45 content-image.php:45 content-link.php:45
@@ -154,8 +156,16 @@ msgstr ""
 msgid "Edit"
 msgstr "Редактировать"
 
-#: header.php:37
+#: header.php:31
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:39
 msgid "Toggle navigation"
+msgstr ""
+
+#: header.php:47
+msgid "Primary Navigation"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:53
@@ -793,7 +803,7 @@ msgid "Tumblr"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1289
-#: includes/theme/theme-function.php:759
+#: includes/theme/theme-function.php:717
 msgid "E-mail"
 msgstr ""
 
@@ -1043,12 +1053,12 @@ msgid "Select the order and fields for the contact form."
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1512
-#: includes/theme/theme-function.php:657 includes/theme/theme-function.php:763
+#: includes/theme/theme-function.php:615 includes/theme/theme-function.php:721
 msgid "Mobile"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1513
-#: includes/theme/theme-function.php:650 includes/theme/theme-function.php:761
+#: includes/theme/theme-function.php:608 includes/theme/theme-function.php:719
 msgid "Phone"
 msgstr "Телефон"
 
@@ -1389,28 +1399,28 @@ msgstr "Отметить / Снять Все"
 msgid "Save"
 msgstr "Сохранить"
 
-#: includes/admin/libs/tgm/class-tgm-init.php:71
+#: includes/admin/libs/tgm/class-tgm-init.php:77
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:333
 msgid "Install Required Plugins"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:72
+#: includes/admin/libs/tgm/class-tgm-init.php:78
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:334
 msgid "Install Plugins"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:73
+#: includes/admin/libs/tgm/class-tgm-init.php:79
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:335
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:74
+#: includes/admin/libs/tgm/class-tgm-init.php:80
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:336
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:75
+#: includes/admin/libs/tgm/class-tgm-init.php:81
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:338
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
@@ -1419,7 +1429,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:76
+#: includes/admin/libs/tgm/class-tgm-init.php:82
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:343
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
@@ -1428,7 +1438,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:77
+#: includes/admin/libs/tgm/class-tgm-init.php:83
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
@@ -1442,7 +1452,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:78
+#: includes/admin/libs/tgm/class-tgm-init.php:84
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:368
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
@@ -1451,7 +1461,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:79
+#: includes/admin/libs/tgm/class-tgm-init.php:85
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:373
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
@@ -1460,7 +1470,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:80
+#: includes/admin/libs/tgm/class-tgm-init.php:86
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
@@ -1474,7 +1484,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:81
+#: includes/admin/libs/tgm/class-tgm-init.php:87
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:353
 #, php-format
 msgid ""
@@ -1487,7 +1497,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:82
+#: includes/admin/libs/tgm/class-tgm-init.php:88
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -1501,7 +1511,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:83
+#: includes/admin/libs/tgm/class-tgm-init.php:89
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:383
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
@@ -1509,7 +1519,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:84
+#: includes/admin/libs/tgm/class-tgm-init.php:90
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:393
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
@@ -1517,18 +1527,18 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:85
+#: includes/admin/libs/tgm/class-tgm-init.php:91
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:397
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:86
+#: includes/admin/libs/tgm/class-tgm-init.php:92
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:399
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3034
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3029
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-init.php:87
+#: includes/admin/libs/tgm/class-tgm-init.php:93
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
@@ -1588,7 +1598,7 @@ msgid "Return to the dashboard"
 msgstr ""
 
 #: includes/admin/libs/tgm/class-tgm-plugin-activation.php:400
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2837
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2832
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
@@ -1632,93 +1642,93 @@ msgstr ""
 msgid "Set the parent_slug config variable instead."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:833
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3443
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:828
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3438
 msgid "Return to the Dashboard"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:940
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:935
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:940
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:943
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:935
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:938
 msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:943
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:938
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1121
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2833
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1116
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2828
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1886
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:1881
 #, php-format
 msgctxt "%s = version number"
 msgid "TGMPA v%s"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2172
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2167
 msgid "Required"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2175
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2170
 msgid "Recommended"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2191
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2186
 msgid "WordPress Repository"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2194
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2189
 msgid "External Source"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2197
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2192
 msgid "Pre-Packaged"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2214
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2209
 msgid "Not Installed"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2218
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2213
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2220
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2215
 msgid "Active"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2226
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2221
 msgid "Required Update not Available"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2229
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2224
 msgid "Requires Update"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2232
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2227
 msgid "Update recommended"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2240
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2235
 #, php-format
 msgctxt "%1$s = install status, %2$s = update status"
 msgid "%1$s, %2$s"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2285
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2280
 #, php-format
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
@@ -1727,7 +1737,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2288
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2283
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
@@ -1735,7 +1745,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2291
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2286
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
@@ -1743,7 +1753,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2294
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2289
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
@@ -1751,173 +1761,173 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2376
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2371
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2384
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2379
 msgid "Installed version:"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2392
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2387
 msgid "Minimum required version:"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2404
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2399
 msgid "Available version:"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2427
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2422
 #, php-format
 msgid ""
 "No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
 "Dashboard</a>"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2441
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2436
 msgid "Plugin"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2442
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2437
 msgid "Source"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2443
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2438
 msgid "Type"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2447
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2442
 msgid "Version"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2448
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2443
 msgid "Status"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2496
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2491
 #, php-format
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Install %2$s"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2500
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2495
 #, php-format
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Update %2$s"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2505
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2500
 #, php-format
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Activate %2$s"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2575
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2570
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2608
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2603
 msgid "Install"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2614
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2609
 msgid "Update"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2617
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2612
 msgid "Activate"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2648
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2643
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2650
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2645
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2686
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2681
 msgid "No plugins are available to be installed at this time."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2688
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2683
 msgid "No plugins are available to be updated at this time."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2793
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2788
 msgid "No plugins were selected to be activated. No action taken."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2819
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:2814
 msgid "No plugins are available to be activated at this time."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3033
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3028
 msgid "Plugin activation failed."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3367
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3362
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3369
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3364
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3370
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3365
 #, php-format
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3374
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3369
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3375
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3370
 #, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3375
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3381
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3370
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3376
 msgid "Show Details"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3375
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3381
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3370
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3376
 msgid "Hide Details"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3376
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3371
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3377
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3372
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3380
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3375
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3381
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3376
 #, php-format
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3382
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3377
 msgid "All installations have been completed."
 msgstr ""
 
-#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3383
+#: includes/admin/libs/tgm/class-tgm-plugin-activation.php:3378
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
@@ -1929,6 +1939,14 @@ msgstr "Предыдущие"
 #: includes/theme/extensions/template-tags.php:28
 msgid "Next"
 msgstr "Следующие"
+
+#: includes/theme/extensions/template-tags.php:46
+msgid "Paging Navigation"
+msgstr ""
+
+#: includes/theme/extensions/template-tags.php:95
+msgid "Post Navigation"
+msgstr ""
 
 #: includes/theme/extensions/template-tags.php:96
 msgid "Post navigation"
@@ -2012,172 +2030,166 @@ msgstr "Редактировать коменнтарий"
 msgid "Your comment is awaiting moderation."
 msgstr "Ваш комментарий ожидает модерации."
 
-#: includes/theme/theme-function.php:42
+#: includes/theme/theme-function.php:43
 msgid "Top primary menu"
 msgstr ""
 
-#: includes/theme/theme-function.php:119 includes/theme/theme-function.php:134
+#: includes/theme/theme-function.php:120 includes/theme/theme-function.php:135
 msgid "Anaglyph Options"
 msgstr ""
 
-#: includes/theme/theme-function.php:183
+#: includes/theme/theme-function.php:184
 msgid "Single Page Sidebar"
 msgstr ""
 
-#: includes/theme/theme-function.php:185
+#: includes/theme/theme-function.php:186
 msgid "Additional blog page sidebar."
 msgstr ""
 
-#: includes/theme/theme-function.php:194
+#: includes/theme/theme-function.php:195
 msgid "Shop Page Sidebar"
 msgstr ""
 
-#: includes/theme/theme-function.php:196
+#: includes/theme/theme-function.php:197
 msgid "WooCommerce shop page sidebar."
 msgstr ""
 
-#: includes/theme/theme-function.php:420
+#: includes/theme/theme-function.php:421
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: includes/theme/theme-function.php:461
-#, php-format
-msgid "%d Article"
-msgid_plural "%d Articles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: includes/theme/theme-function.php:586
+#: includes/theme/theme-function.php:542 includes/theme/theme-function.php:543
+#: includes/theme/theme-function.php:544
 msgid "Search"
 msgstr ""
 
-#: includes/theme/theme-function.php:639
+#: includes/theme/theme-function.php:597
 #, php-format
 msgid "Message From %1s Contact Form"
 msgstr ""
 
-#: includes/theme/theme-function.php:669
+#: includes/theme/theme-function.php:627
 #, fuzzy, php-format
 msgid "From: %1s"
 msgstr "От"
 
-#: includes/theme/theme-function.php:673
+#: includes/theme/theme-function.php:631
 msgid ""
 "<span id=\"valid\"><i class=\"icon icon-check\"></i>Your Email was sent!</"
 "span>"
 msgstr ""
 
-#: includes/theme/theme-function.php:675
+#: includes/theme/theme-function.php:633
 msgid ""
 "<span id=\"valid\"><i class=\"icon icon-check\"></i>Error! Your Email not "
 "sent!</span>"
 msgstr ""
 
-#: includes/theme/theme-function.php:678
+#: includes/theme/theme-function.php:636
 msgid ""
 "<span id=\"invalid\">Invalid Email, please provide a correct email.</span>"
 msgstr ""
 
-#: includes/theme/theme-function.php:767
+#: includes/theme/theme-function.php:725
 msgid "Please enter Captcha symbols"
 msgstr ""
 
-#: includes/theme/theme-function.php:814
+#: includes/theme/theme-function.php:772
 msgid "Send a Message"
 msgstr "Отправить"
 
-#: includes/theme/theme-function.php:1104
+#: includes/theme/theme-function.php:1062
 msgid "Home"
 msgstr ""
 
-#: includes/theme/theme-function.php:1245
+#: includes/theme/theme-function.php:1203
 msgid "g:i a"
 msgstr ""
 
-#: includes/theme/theme-function.php:1248
+#: includes/theme/theme-function.php:1206
 #, php-format
 msgid "Minute %1$s"
 msgstr ""
 
-#: includes/theme/theme-function.php:1248
+#: includes/theme/theme-function.php:1206
 msgid "i"
 msgstr ""
 
-#: includes/theme/theme-function.php:1251
+#: includes/theme/theme-function.php:1209
 msgid "g a"
 msgstr ""
 
-#: includes/theme/theme-function.php:1262
-#: includes/theme/theme-function.php:1268
-#: includes/theme/theme-function.php:1273
-#: includes/theme/theme-function.php:1278
+#: includes/theme/theme-function.php:1220
+#: includes/theme/theme-function.php:1226
+#: includes/theme/theme-function.php:1231
+#: includes/theme/theme-function.php:1236
 msgid "Y"
 msgstr ""
 
-#: includes/theme/theme-function.php:1263
-#: includes/theme/theme-function.php:1274
+#: includes/theme/theme-function.php:1221
+#: includes/theme/theme-function.php:1232
 msgid "F"
 msgstr ""
 
-#: includes/theme/theme-function.php:1264
+#: includes/theme/theme-function.php:1222
 msgid "j"
 msgstr ""
 
-#: includes/theme/theme-function.php:1269
+#: includes/theme/theme-function.php:1227
 #, php-format
 msgid "Week %1$s"
 msgstr ""
 
-#: includes/theme/theme-function.php:1269
+#: includes/theme/theme-function.php:1227
 msgid "W"
 msgstr ""
 
-#: includes/theme/theme-function.php:1285
+#: includes/theme/theme-function.php:1243
 #, php-format
 msgid "Search results for &quot;%1$s&quot;"
 msgstr ""
 
-#: includes/theme/theme-function.php:1289
+#: includes/theme/theme-function.php:1247
 msgid "404 Not Found"
 msgstr ""
 
-#: includes/theme/theme-function.php:1463
+#: includes/theme/theme-function.php:1421
 msgid "Share this post:"
 msgstr ""
 
-#: includes/theme/theme-function.php:1607
+#: includes/theme/theme-function.php:1565
 msgid "By:"
 msgstr ""
 
-#: includes/theme/theme-function.php:1628
+#: includes/theme/theme-function.php:1586
 msgid "Tags:"
 msgstr "Метки:"
 
-#: includes/theme/theme-function.php:1648
+#: includes/theme/theme-function.php:1606
 msgid "Read"
 msgstr "Читать"
 
-#: includes/theme/theme-function.php:1648
+#: includes/theme/theme-function.php:1606
 msgid "Read More"
 msgstr ""
 
-#: includes/theme/theme-function.php:1760
+#: includes/theme/theme-function.php:1718
 msgid "This is password protected post"
 msgstr ""
 
-#: includes/theme/theme-function.php:1761
+#: includes/theme/theme-function.php:1719
 msgid ""
 "This content is password protected. To view it please enter your password "
 "below:"
 msgstr ""
 
-#: includes/theme/theme-function.php:1764
+#: includes/theme/theme-function.php:1722
+#: includes/theme/theme-function.php:1723
 msgid "Password"
 msgstr "Пароль"
 
-#: includes/theme/theme-function.php:1766
+#: includes/theme/theme-function.php:1725
 #: woocommerce/single-product-reviews.php:71
 msgid "Submit"
 msgstr ""
