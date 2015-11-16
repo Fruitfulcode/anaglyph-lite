@@ -1272,7 +1272,7 @@ function anaglyph_breadcrumbs_generate($args = array()) {
 	}
 
 	
-	$breadcrumb = '<!-- Breadcrumb --><section id="breadcrumb"><div class="container"><ol class="breadcrumb">' . $breadcrumb . '</ol></div></section>';
+	$breadcrumb = '<!-- Breadcrumb --><section id="breadcrumb"><div class="container"><nav class="nav-breadcrumb" role="navigation" aria-label="'.__( 'Breadcrumb Navigation', 'anaglyph-lite' ).'" ><ol class="breadcrumb">' . $breadcrumb . '</ol></nav></div></section>';
 
 	/* Output the breadcrumb. */
 	if ( $echo ) echo $breadcrumb; else return $breadcrumb;
@@ -1603,7 +1603,7 @@ if ( ! function_exists( 'anaglyph_get_post_readmore' ) ) {
 	?>
 		<div class="divider background-color-secondary"></div>
 		<div class="read-more">
-			<a title="<?php echo __('Read', 'anaglyph-lite') .' '.esc_html(get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php _e('Read More', 'anaglyph-lite'); ?></a>
+			<a title="<?php echo __('Read', 'anaglyph-lite') .' '.esc_html(get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php _e('Read More', 'anaglyph-lite'); ?><span class="screen-reader-text"> <?php echo get_the_title(); ?></span></a>
 		</div>
 	<?php	
 	}										

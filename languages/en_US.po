@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: anaglyph-lite\n"
-"POT-Creation-Date: 2015-11-10 12:02+0200\n"
-"PO-Revision-Date: 2015-11-10 12:02+0200\n"
+"POT-Creation-Date: 2015-11-16 15:52+0200\n"
+"PO-Revision-Date: 2015-11-16 15:52+0200\n"
 "Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode.com <mail@fruitfulcode.com>\n"
 "Language: en_GB\n"
@@ -347,7 +347,7 @@ msgid "Single post layout"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:362
-#: includes/admin/anaglyph-options/admin-config.php:1774
+#: includes/admin/anaglyph-options/admin-config.php:1760
 msgid "Select main content and sidebar alignment."
 msgstr ""
 
@@ -380,27 +380,27 @@ msgid "Select animation for posts."
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:390
-#: includes/admin/anaglyph-options/admin-config.php:1811
+#: includes/admin/anaglyph-options/admin-config.php:1797
 msgid "Top"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:391
-#: includes/admin/anaglyph-options/admin-config.php:1812
+#: includes/admin/anaglyph-options/admin-config.php:1798
 msgid "Left"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:392
-#: includes/admin/anaglyph-options/admin-config.php:1813
+#: includes/admin/anaglyph-options/admin-config.php:1799
 msgid "Right"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:393
-#: includes/admin/anaglyph-options/admin-config.php:1814
+#: includes/admin/anaglyph-options/admin-config.php:1800
 msgid "Bottom"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:394
-#: includes/admin/anaglyph-options/admin-config.php:1815
+#: includes/admin/anaglyph-options/admin-config.php:1801
 msgid "None"
 msgstr ""
 
@@ -845,97 +845,97 @@ msgid "Contact section address icon color."
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1366
-#: includes/admin/anaglyph-options/admin-config.php:1660
+#: includes/admin/anaglyph-options/admin-config.php:1646
 msgid "Select section opacity"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1368
-#: includes/admin/anaglyph-options/admin-config.php:1662
+#: includes/admin/anaglyph-options/admin-config.php:1648
 msgid "opacity-1"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1369
-#: includes/admin/anaglyph-options/admin-config.php:1663
+#: includes/admin/anaglyph-options/admin-config.php:1649
 msgid "opacity-2"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1370
-#: includes/admin/anaglyph-options/admin-config.php:1664
+#: includes/admin/anaglyph-options/admin-config.php:1650
 msgid "opacity-3"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1371
-#: includes/admin/anaglyph-options/admin-config.php:1665
+#: includes/admin/anaglyph-options/admin-config.php:1651
 msgid "opacity-4"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1372
-#: includes/admin/anaglyph-options/admin-config.php:1666
+#: includes/admin/anaglyph-options/admin-config.php:1652
 msgid "opacity-5"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1373
-#: includes/admin/anaglyph-options/admin-config.php:1667
+#: includes/admin/anaglyph-options/admin-config.php:1653
 msgid "opacity-6"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1374
-#: includes/admin/anaglyph-options/admin-config.php:1668
+#: includes/admin/anaglyph-options/admin-config.php:1654
 msgid "opacity-7"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1375
-#: includes/admin/anaglyph-options/admin-config.php:1669
+#: includes/admin/anaglyph-options/admin-config.php:1655
 msgid "opacity-8"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1376
-#: includes/admin/anaglyph-options/admin-config.php:1670
+#: includes/admin/anaglyph-options/admin-config.php:1656
 msgid "opacity-9"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1377
-#: includes/admin/anaglyph-options/admin-config.php:1671
+#: includes/admin/anaglyph-options/admin-config.php:1657
 msgid "opacity-10"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1378
-#: includes/admin/anaglyph-options/admin-config.php:1672
+#: includes/admin/anaglyph-options/admin-config.php:1658
 msgid "opacity-20"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1379
-#: includes/admin/anaglyph-options/admin-config.php:1673
+#: includes/admin/anaglyph-options/admin-config.php:1659
 msgid "opacity-30"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1380
-#: includes/admin/anaglyph-options/admin-config.php:1674
+#: includes/admin/anaglyph-options/admin-config.php:1660
 msgid "opacity-40"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1381
-#: includes/admin/anaglyph-options/admin-config.php:1675
+#: includes/admin/anaglyph-options/admin-config.php:1661
 msgid "opacity-50"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1382
-#: includes/admin/anaglyph-options/admin-config.php:1676
+#: includes/admin/anaglyph-options/admin-config.php:1662
 msgid "opacity-60"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1383
-#: includes/admin/anaglyph-options/admin-config.php:1677
+#: includes/admin/anaglyph-options/admin-config.php:1663
 msgid "opacity-70"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1384
-#: includes/admin/anaglyph-options/admin-config.php:1678
+#: includes/admin/anaglyph-options/admin-config.php:1664
 msgid "opacity-80"
 msgstr ""
 
 #: includes/admin/anaglyph-options/admin-config.php:1385
-#: includes/admin/anaglyph-options/admin-config.php:1679
+#: includes/admin/anaglyph-options/admin-config.php:1665
 msgid "opacity-90"
 msgstr ""
 
@@ -1045,221 +1045,213 @@ msgstr ""
 msgid "Captcha"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1527
-msgid "Color submit button"
-msgstr ""
-
-#: includes/admin/anaglyph-options/admin-config.php:1528
-msgid "Choose color for submit button on contact form."
-msgstr ""
-
-#: includes/admin/anaglyph-options/admin-config.php:1540
+#: includes/admin/anaglyph-options/admin-config.php:1526
 msgid "Animation"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1541
+#: includes/admin/anaglyph-options/admin-config.php:1527
 msgid "On"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1552
+#: includes/admin/anaglyph-options/admin-config.php:1538
 msgid "Default pages"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1559
+#: includes/admin/anaglyph-options/admin-config.php:1545
 msgid "Single Post header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1566
+#: includes/admin/anaglyph-options/admin-config.php:1552
 msgid "Page header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1573
+#: includes/admin/anaglyph-options/admin-config.php:1559
 msgid "Search header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1580
+#: includes/admin/anaglyph-options/admin-config.php:1566
 msgid "404 header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1586
+#: includes/admin/anaglyph-options/admin-config.php:1572
 msgid "404 logo."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1587
+#: includes/admin/anaglyph-options/admin-config.php:1573
 msgid "Upload a banner for your 404 page."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1593
+#: includes/admin/anaglyph-options/admin-config.php:1579
 msgid "404 page text."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1594
+#: includes/admin/anaglyph-options/admin-config.php:1580
 msgid "Enter the text you want to show in your 404 page here."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1595
+#: includes/admin/anaglyph-options/admin-config.php:1581
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1601
+#: includes/admin/anaglyph-options/admin-config.php:1587
 msgid "Category header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1608
+#: includes/admin/anaglyph-options/admin-config.php:1594
 msgid "Archive header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1615
+#: includes/admin/anaglyph-options/admin-config.php:1601
 msgid "Author archive header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1622
+#: includes/admin/anaglyph-options/admin-config.php:1608
 msgid "Tag archive header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1632
+#: includes/admin/anaglyph-options/admin-config.php:1618
 msgid "Footer"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1639
+#: includes/admin/anaglyph-options/admin-config.php:1625
 msgid "Copyright section"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1640
+#: includes/admin/anaglyph-options/admin-config.php:1626
 msgid "Replace default theme copyright information and links"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1646
+#: includes/admin/anaglyph-options/admin-config.php:1632
 msgid "Footer Background Color"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1647
+#: includes/admin/anaglyph-options/admin-config.php:1633
 msgid "Pick a background color for the footer."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1655
+#: includes/admin/anaglyph-options/admin-config.php:1641
 msgid "Footer background image"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1686
+#: includes/admin/anaglyph-options/admin-config.php:1672
 msgid "Social icons"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1687
+#: includes/admin/anaglyph-options/admin-config.php:1673
 msgid "Enable social icons."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1694
+#: includes/admin/anaglyph-options/admin-config.php:1680
 msgid "See the contact information in the footer"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1695
+#: includes/admin/anaglyph-options/admin-config.php:1681
 msgid "Enable contact information"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1702
+#: includes/admin/anaglyph-options/admin-config.php:1688
 msgid "Footer Font Style."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1711
+#: includes/admin/anaglyph-options/admin-config.php:1697
 msgid "Select typography for footer."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1729
+#: includes/admin/anaglyph-options/admin-config.php:1715
 msgid "Custom Code"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1736
+#: includes/admin/anaglyph-options/admin-config.php:1722
 msgid "CSS Code"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1737
+#: includes/admin/anaglyph-options/admin-config.php:1723
 msgid "Paste your CSS code here."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1746
+#: includes/admin/anaglyph-options/admin-config.php:1732
 msgid "JS Code"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1747
+#: includes/admin/anaglyph-options/admin-config.php:1733
 msgid "Paste your JS code here."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1759
+#: includes/admin/anaglyph-options/admin-config.php:1745
 msgid "WooCommerce"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1766
+#: includes/admin/anaglyph-options/admin-config.php:1752
 msgid "Shop header image."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1773
+#: includes/admin/anaglyph-options/admin-config.php:1759
 msgid "Shop layout"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1786
+#: includes/admin/anaglyph-options/admin-config.php:1772
 msgid "Products per page"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1787
+#: includes/admin/anaglyph-options/admin-config.php:1773
 msgid "Change number of products displayed per page."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1796
+#: includes/admin/anaglyph-options/admin-config.php:1782
 msgid "Products per row"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1797
+#: includes/admin/anaglyph-options/admin-config.php:1783
 msgid "Change number of products per row."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1799
+#: includes/admin/anaglyph-options/admin-config.php:1785
 msgid "2 Columns"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1800
+#: includes/admin/anaglyph-options/admin-config.php:1786
 msgid "3 Columns"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1801
+#: includes/admin/anaglyph-options/admin-config.php:1787
 msgid "4 Columns"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1809
+#: includes/admin/anaglyph-options/admin-config.php:1795
 msgid "Select animation for products."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1825
+#: includes/admin/anaglyph-options/admin-config.php:1811
 msgid "Import / Export"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1826
+#: includes/admin/anaglyph-options/admin-config.php:1812
 msgid ""
 "Import and Export your anaglyph Framework settings from file, text or URL."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1841
+#: includes/admin/anaglyph-options/admin-config.php:1827
 msgid "Extended version"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1871
-#: includes/admin/anaglyph-options/admin-config.php:1872
+#: includes/admin/anaglyph-options/admin-config.php:1857
+#: includes/admin/anaglyph-options/admin-config.php:1858
 msgid "Anaglyph options"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1902
+#: includes/admin/anaglyph-options/admin-config.php:1888
 msgid "Anaglyph Options panel created using \"Reduxe Framework\"."
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1910
+#: includes/admin/anaglyph-options/admin-config.php:1896
 msgid "Support"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1911
+#: includes/admin/anaglyph-options/admin-config.php:1897
 msgid "Documentation"
 msgstr ""
 
-#: includes/admin/anaglyph-options/admin-config.php:1912
+#: includes/admin/anaglyph-options/admin-config.php:1898
 msgid "Faq"
 msgstr ""
 
@@ -2106,6 +2098,10 @@ msgstr ""
 
 #: includes/theme/theme-function.php:1247
 msgid "404 Not Found"
+msgstr ""
+
+#: includes/theme/theme-function.php:1275
+msgid "Breadcrumb Navigation"
 msgstr ""
 
 #: includes/theme/theme-function.php:1421

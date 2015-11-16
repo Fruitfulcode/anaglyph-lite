@@ -778,6 +778,13 @@ section.wpb_row .row .wpb_wrapper section.wpb_row {
   font-size: 10px;
 }
 
+.breadcrumb > li + li::before {
+    color: #767676;
+}
+.breadcrumb > .active {
+    color: #767676;
+}
+
 .divider {
   display: inline-block;
   height: 3px;
@@ -1237,8 +1244,16 @@ p.cite {
 }
 .btn.btn-color-primary {
   color: #fff;
-  background-color: #e23a00;
-  border-color: #e23a00;
+  background-color: #ff4100;
+  border-color: #ff4100;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.btn.btn-color-primary:hover, .btn.btn-color-primary:focus {
+	background-color: #cc3400;
+	border-color: #cc3400;
 }
 .btn.btn-color-secondary {
   color: #fff;
@@ -1465,8 +1480,8 @@ footer#page-footer textarea:focus {
 .wpcf7-form .wpcf7-form-control.wpcf7-submit {
 	color: #FFF;
 	background: none;
-	background-color: #E23A00;
-	border-color: #E23A00;
+	background-color: #ff4100;
+	border-color: #ff4100;
 	-webkit-transition: 0.2s;
 	-moz-transition: 0.2s;
 	-o-transition: 0.2s;
@@ -1479,12 +1494,10 @@ footer#page-footer textarea:focus {
 	z-index: 1;
 }
 
-.wpcf7-form .wpcf7-form-control.wpcf7-submit:hover {
-	-webkit-border-radius: 6px !important;
-	-moz-border-radius: 6px !important;
-	-ms-border-radius: 6px !important;
-	-o-border-radius: 6px !important;
-	border-radius: 6px !important;
+.wpcf7-form .wpcf7-form-control.wpcf7-submit:hover,
+.wpcf7-form .wpcf7-form-control.wpcf7-submit:focus {
+	background-color: #cc3400;
+	border-color: #cc3400;
 }	
 
 
@@ -1605,8 +1618,8 @@ footer#page-footer textarea:focus {
 }
 
 .blog-post .blog-post-content .author {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
   font-size: 11px;
 }
 
@@ -2242,7 +2255,7 @@ footer#page-footer, footer#page-footer p {
     background-color: #e23a00;
 }
 .blog-posts .blog-post .blog-post-content p, .container p {
-    opacity: 0.5;
+    opacity: 0.65;
 }
 #nav-contact-us .background {
     background-color: #181818;
@@ -2251,8 +2264,16 @@ footer#page-footer, footer#page-footer p {
     color: #e23a00;
 }
 #page-footer #nav-contact-us #contactform input#submit {
-    background-color: #e23a00;
-    border-color: #e23a00;
+    background-color: #ff4100;
+    border-color: #ff4100;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+#page-footer #nav-contact-us #contactform input#submit:hover, #page-footer #nav-contact-us #contactform input#submit:focus {
+	background-color: #cc3400;
+	border-color: #cc3400;
 }
 #footer-bottom .background {
     background-color: #181818;

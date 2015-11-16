@@ -967,7 +967,7 @@ if (!class_exists('anaglyph_config')) {
 								'type'          => 'slider',
 								'title'         => __('Transparency for content', 'anaglyph-framework'),
 								'subtitle'      => __('Set the opacity for the content part', 'anaglyph-framework'),
-								'default'       => .5,
+								'default'       => .65,
 								'min'           => 0,
 								'step'          => .1,
 								'max'           => 1,
@@ -1384,7 +1384,7 @@ if (!class_exists('anaglyph_config')) {
 							__("opacity-80", "anaglyph-lite") => "opacity-80", 
 							__("opacity-90", "anaglyph-lite") => "opacity-90", 
                         ),
-                        'default'   => 'opacity-5'
+                        'default'   => 'opacity-7'
                     ),
 					array(
                         'id'        => 'contact-information',
@@ -1515,20 +1515,6 @@ if (!class_exists('anaglyph_config')) {
 									),
 								),	
 								
-						'required'  => array(
-										array('contact-information', '=', '1'),
-										array('contact-section-cform', '<', '0'),
-									),	
-                    ),
-					
-					array(
-                        'id'        => 'contact-form-btncolor',
-                        'type'      => 'color',
-                        'title'     => __('Color submit button', 'anaglyph-framework'),
-                        'subtitle'  => __('Choose color for submit button on contact form.', 'anaglyph-framework'),
-                        'default'   => '#E23A00',
-                        'validate'  => 'color',
-						'transparent' => false,
 						'required'  => array(
 										array('contact-information', '=', '1'),
 										array('contact-section-cform', '<', '0'),
@@ -1678,7 +1664,7 @@ if (!class_exists('anaglyph_config')) {
 							__("opacity-80", "anaglyph-lite") => "opacity-80", 
 							__("opacity-90", "anaglyph-lite") => "opacity-90", 
                         ),
-                        'default'   => 'opacity-3'
+                        'default'   => 'opacity-7'
                     ),
 					array(
                         'id'        => 'footer-issocial',
