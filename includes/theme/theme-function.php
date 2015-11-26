@@ -1,13 +1,13 @@
 <?php
 
-global 	$inc_theme_url, $prefix, $posts_count, $row_heading, $time_post_delay, $is_redux_active;
+global 	$inc_theme_url, $prefix, $posts_count, $row_heading, $time_post_delay, $anaglyph_is_redux_active;
 		$inc_theme_url = get_template_directory_uri() . '/includes/theme/';
 		
 		$row_heading = true;
 		$posts_count = 1;
 		$time_post_delay = 0;
 		$prefix = '_anaglyph_';
-		$is_redux_active = class_exists('ReduxFramework');
+		$anaglyph_is_redux_active = class_exists('ReduxFramework');
 
 		add_theme_support( 'woocommerce' );
 		
@@ -898,12 +898,12 @@ function anaglyph_get_footer_contact_form() {
 if ( ! function_exists( 'anaglyph_get_social' ) ) {
 add_action('custom_footer_elements', 'anaglyph_get_social', 2);
 function anaglyph_get_social() {
-	global $anaglyph_config, $is_redux_active;
+	global $anaglyph_config, $anaglyph_is_redux_active;
 	$ftext = $fsocial = $out_ftext = ''; 
 	
 	if (!empty($anaglyph_config['footer-text'])) {
 		$ftext = anaglyph_kses_data(stripslashes($anaglyph_config['footer-text']));
-	} elseif (!$is_redux_active) {
+	} elseif (!$anaglyph_is_redux_active) {
 		$ftext = '&#169; <a title="WordPress Development" href="http://fruitfulcode.com/">Fruitful Code</a>, Powered by <a href="http://wordpress.org/">WordPress</a>';
 	}
 		
@@ -1030,15 +1030,15 @@ function anaglyph_get_post_additional_title() {
 if ( ! function_exists( 'anaglyph_visibilty_comments' ) ) {
 add_action('anaglyph_comments_template', 'anaglyph_visibilty_comments');
 function anaglyph_visibilty_comments() {
-	global $anaglyph_config, $post, $is_redux_active;
+	global $anaglyph_config, $post, $anaglyph_is_redux_active;
 	
-	if (!empty($anaglyph_config['pp-comments']) || !$is_redux_active) {
+	if (!empty($anaglyph_config['pp-comments']) || !$anaglyph_is_redux_active) {
 		$is_comment = $anaglyph_config['pp-comments'];
-		if ( ( $is_comment == 'page' || $is_comment == 'both' || !$is_redux_active ) && is_page() ) { 
+		if ( ( $is_comment == 'page' || $is_comment == 'both' || !$anaglyph_is_redux_active ) && is_page() ) { 
 			if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) { comments_template(); }
 		}	
 		
-		if ( ( $is_comment == 'post' || $is_comment == 'both' || !$is_redux_active ) && is_single() ) { 
+		if ( ( $is_comment == 'post' || $is_comment == 'both' || !$anaglyph_is_redux_active ) && is_single() ) { 
 			if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) { comments_template(); }
 		}	
 	}	
@@ -1339,9 +1339,9 @@ function anaglyph_breadcrumbs_get_term_parents( $parent_id = '', $taxonomy = '' 
 
 if ( ! function_exists( 'anaglyph_add_breadcrumbs' ) ) {
 function anaglyph_add_breadcrumbs() {
-	global $anaglyph_config, $is_redux_active;
-	if (!empty($anaglyph_config['pp-breadcrumbs']) || !$is_redux_active) {
-		if ($anaglyph_config['pp-breadcrumbs'] || !$is_redux_active) {
+	global $anaglyph_config, $anaglyph_is_redux_active;
+	if (!empty($anaglyph_config['pp-breadcrumbs']) || !$anaglyph_is_redux_active) {
+		if ($anaglyph_config['pp-breadcrumbs'] || !$anaglyph_is_redux_active) {
 			anaglyph_breadcrumbs_generate();
 		}
 	}
@@ -1351,12 +1351,12 @@ function anaglyph_add_breadcrumbs() {
 /*Blog posts*/
 if ( ! function_exists( 'anaglyph_get_post_date' ) ) {
 	function anaglyph_get_post_date() {
-		global $anaglyph_config, $post, $is_redux_active;
+		global $anaglyph_config, $post, $anaglyph_is_redux_active;
 		$day_ 	= date_i18n( 'd', strtotime(get_the_date()) );
 		$month_ = date_i18n( 'M', strtotime(get_the_date()) );
 		
-		if (!empty($anaglyph_config['pp-date']) || !$is_redux_active) {
-			if ($anaglyph_config['pp-date'] || !is_single() || !$is_redux_active) {
+		if (!empty($anaglyph_config['pp-date']) || !$anaglyph_is_redux_active) {
+			if ($anaglyph_config['pp-date'] || !is_single() || !$anaglyph_is_redux_active) {
 				
 		
 	?>	
@@ -1374,12 +1374,12 @@ if ( ! function_exists( 'anaglyph_get_post_date' ) ) {
 
 if ( ! function_exists( 'anaglyph_get_post_info' ) ) {
 	function anaglyph_get_post_info() {
-		global $post, $anaglyph_config, $is_redux_active;
+		global $post, $anaglyph_config, $anaglyph_is_redux_active;
 		$comments_class = array();
 		$comments_class[] = 'post-comments';
 		
 	?>
-			<?php if (!empty($anaglyph_config['pp-authors']) || !$is_redux_active) { ?>
+			<?php if (!empty($anaglyph_config['pp-authors']) || !$anaglyph_is_redux_active) { ?>
 				<div class="post-author">
 					<i class="icon icon_profile"></i>
 					<a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php echo get_the_author_link(); ?></a>	
@@ -1390,7 +1390,7 @@ if ( ! function_exists( 'anaglyph_get_post_info' ) ) {
 			?>	
 		
 			<?php 
-				if (!empty($anaglyph_config['pp-num-comments']) || !$is_redux_active) { 
+				if (!empty($anaglyph_config['pp-num-comments']) || !$anaglyph_is_redux_active) { 
 					$comments = 0;
 					$comments_count  = wp_count_comments($post->ID);
 					$comments = (int) $comments_count->total_comments;
@@ -1407,9 +1407,9 @@ if ( ! function_exists( 'anaglyph_get_post_info' ) ) {
 
 if ( ! function_exists( 'anaglyph_get_post_share' ) ) {
 	function anaglyph_get_post_share() {
-		global $anaglyph_config, $post, $is_redux_active;
-		if (!empty($anaglyph_config['pp-share']) || !$is_redux_active) {
-			if ($anaglyph_config['pp-share'] || !$is_redux_active) {
+		global $anaglyph_config, $post, $anaglyph_is_redux_active;
+		if (!empty($anaglyph_config['pp-share']) || !$anaglyph_is_redux_active) {
+			if ($anaglyph_config['pp-share'] || !$anaglyph_is_redux_active) {
 			$src = '';
 			$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), false, '' );	
 			if (!empty($src)) {
@@ -1435,10 +1435,10 @@ if ( ! function_exists( 'anaglyph_get_post_share' ) ) {
 /*Single template layouts*/
 if ( ! function_exists( 'anaglyph_get_single_content' ) ) {
 	function anaglyph_get_single_content() {
-		global $anaglyph_config, $post, $is_redux_active;
+		global $anaglyph_config, $post, $anaglyph_is_redux_active;
 			   $post_layout = (int) $anaglyph_config['pp-post'];
 			
-			if (!$is_redux_active)
+			if (!$anaglyph_is_redux_active)
 				$post_layout = 3;
 		
 		function get_content_part() {
@@ -1558,9 +1558,9 @@ if ( ! function_exists( 'anaglyph_get_post_title' ) ) {
 
 if ( ! function_exists( 'anaglyph_get_post_author' ) ) {	
 	function anaglyph_get_post_author() {
-		global $anaglyph_config, $is_redux_active;
-		if (!empty($anaglyph_config['pp-authors']) || !$is_redux_active) {
-			if ($anaglyph_config['pp-authors'] || !$is_redux_active) {
+		global $anaglyph_config, $anaglyph_is_redux_active;
+		if (!empty($anaglyph_config['pp-authors']) || !$anaglyph_is_redux_active) {
+			if ($anaglyph_config['pp-authors'] || !$anaglyph_is_redux_active) {
 	?>
 			<div class="author"><?php _e('By:', 'anaglyph-lite'); ?>&nbsp;<a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php echo get_the_author_link(); ?></a></div>
 	<?php	
@@ -1575,10 +1575,10 @@ if ( ! function_exists( 'anaglyph_get_post_author' ) ) {
 
 if ( ! function_exists( 'anaglyph_get_post_tags' ) ) {	
 	function anaglyph_get_post_tags() {
-		global $anaglyph_config, $is_redux_active;
+		global $anaglyph_config, $anaglyph_is_redux_active;
 		$out_ = '';
-		if (!empty($anaglyph_config['pp-tags']) || !$is_redux_active) {
-			if ($anaglyph_config['pp-tags'] || !$is_redux_active) {
+		if (!empty($anaglyph_config['pp-tags']) || !$anaglyph_is_redux_active) {
+			if ($anaglyph_config['pp-tags'] || !$anaglyph_is_redux_active) {
 				$posttags = get_the_tags();
 				if ($posttags) {
 					$out_ .= '<div class="tags">';
@@ -1621,12 +1621,12 @@ if ( ! function_exists( 'anaglyph_custom_image' ) ) {
 
 if ( ! function_exists( 'anaglyph_post_column_before_classes' ) ) {												
 	function anaglyph_post_column_before_classes() {
-		global $anaglyph_config, $posts_count, $row_heading, $is_redux_active;			
+		global $anaglyph_config, $posts_count, $row_heading, $anaglyph_is_redux_active;			
 			   $post_before = null;
 		if (!is_single()) {
 			if (!empty($anaglyph_config['pp-columns'])) {
 				$col = (int) esc_attr($anaglyph_config['pp-columns']);
-			} elseif (!$is_redux_active) {
+			} elseif (!$anaglyph_is_redux_active) {
 				$col = 2;
 			}
 				
@@ -1652,13 +1652,13 @@ if ( ! function_exists( 'anaglyph_post_column_before_classes' ) ) {
 
 if ( ! function_exists( 'anaglyph_post_column_after_classes' ) ) {			
 	function anaglyph_post_column_after_classes() {
-		global $anaglyph_config, $posts_count, $row_heading, $time_post_delay, $is_redux_active;			
+		global $anaglyph_config, $posts_count, $row_heading, $time_post_delay, $anaglyph_is_redux_active;			
 		$postsperpage = get_option('posts_per_page');
 		$post_after = null;
 		if (!is_single()) {
 			if (!empty($anaglyph_config['pp-columns'])) {
 				$col = (int) esc_attr($anaglyph_config['pp-columns']);
-			} elseif (!$is_redux_active) {
+			} elseif (!$anaglyph_is_redux_active) {
 				$col = 2;	
 			}
 			if ($col > 1) {

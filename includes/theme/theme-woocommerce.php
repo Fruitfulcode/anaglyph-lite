@@ -181,9 +181,13 @@ if ( ! function_exists( 'anaglyph_woo_set_product_per_page' ) ) {
 add_filter('loop_shop_columns', 'anaglyph_woo_loop_columns');
 if (!function_exists('anaglyph_woo_loop_columns')) {
 	function anaglyph_woo_loop_columns() {
-		global $anaglyph_config;	
-		if ((int) $anaglyph_config['shop-product-perrow'] > 0) {
-			return (int) $anaglyph_config['shop-product-perrow'];
+		global $anaglyph_config, $anaglyph_is_redux_active;	
+		if ($anaglyph_is_redux_active ) {
+			if ((int) $anaglyph_config['shop-product-perrow'] > 0) {
+				return (int) $anaglyph_config['shop-product-perrow'];
+			}
+		} else {
+			return 4;
 		}
 	}
 }
@@ -216,16 +220,21 @@ if (!function_exists('anaglyph_woo_set_image_size')) {
 
 if ( ! function_exists( 'anaglyph_woo_breadcrumbs' ) ) {
 	function anaglyph_woo_breadcrumbs() {
-		$args = array();
-		$args = apply_filters( 'woocommerce_breadcrumb_defaults', array(
-			'delimiter'   => '',
-			'wrap_before' => '<section id="breadcrumb"' . ( is_single() ? 'itemprop="breadcrumb"' : '' ) . '><div class="container"><ol class="breadcrumb">',
-			'wrap_after'  => '</ol></div></section>',
-			'before'      => '<li>',
-			'after'       => '</li>',
-			'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
-		) );
-			woocommerce_breadcrumb($args); 
+		global $anaglyph_config, $anaglyph_is_redux_active;
+		if (!empty($anaglyph_config['pp-breadcrumbs']) || !$anaglyph_is_redux_active) {
+			if ($anaglyph_config['pp-breadcrumbs'] || !$anaglyph_is_redux_active) {
+				$args = array();
+				$args = apply_filters( 'woocommerce_breadcrumb_defaults', array(
+					'delimiter'   => '',
+					'wrap_before' => '<section id="breadcrumb"' . ( is_single() ? 'itemprop="breadcrumb"' : '' ) . '><div class="container"><ol class="breadcrumb">',
+					'wrap_after'  => '</ol></div></section>',
+					'before'      => '<li>',
+					'after'       => '</li>',
+					'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+				) );
+					woocommerce_breadcrumb($args); 
+			}
+		}
 	}
 }
 

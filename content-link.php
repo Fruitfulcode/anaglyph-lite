@@ -10,10 +10,10 @@
 
 <?php do_action('anaglyph_before_post_content'); ?>
 <?php
-	global $anaglyph_config, $time_post_delay, $is_redux_active;
+	global $anaglyph_config, $time_post_delay, $anaglyph_is_redux_active;
 	$post_layout 		= (int) $anaglyph_config['pp-post'];
 	$animation_class 	= esc_attr($anaglyph_config['pp-animations']); 
-	if (!$is_redux_active) $animation_class = 'bottom';  
+	if (!$anaglyph_is_redux_active) $animation_class = 'bottom';  
 	$delay_interval 	= anaglyph_get_delay_interval($time_post_delay);
 	if (!is_single() && ($animation_class != 'none')) {
 		$animation_class = 'data-scroll-reveal="enter '.$animation_class.' and move 50px '.$delay_interval.'"';
