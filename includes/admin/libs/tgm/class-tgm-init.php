@@ -42,11 +42,6 @@ function my_theme_register_required_plugins() {
             'slug'      => 'maintenance',
             'required'  => false
         ),
-		array(
-            'name'      => 'WP Retina 2x',
-            'slug'      => 'wp-retina-2x',
-            'required'  => false
-        ),
 		
 		array(
             'name'      => 'Redux Framework',
@@ -58,7 +53,13 @@ function my_theme_register_required_plugins() {
             'name'      => 'Fruitful Shortcodes',
             'slug'      => 'fruitful-shortcodes',
             'required'  => false
-        )
+        ),
+		
+		array(
+            'name'      => 'WooCommerce - excelling eCommerce',
+            'slug'        => 'woocommerce',
+            'required'  => false,
+        ),
 		
     );
 
