@@ -541,6 +541,20 @@ img.aligncenter,
 	margin-bottom:10px;
 }
 
+.alignleft {
+    display: inline;
+    float: left;
+}
+.alignright {
+    display: inline;
+    float: right;
+}
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 section {
   overflow: hidden;
   position: relative;
