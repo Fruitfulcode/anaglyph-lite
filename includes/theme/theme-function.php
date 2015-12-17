@@ -411,9 +411,9 @@ function anaglyph_wp_title( $title, $sep ) {
 	if ( is_feed() ) {
 		return $title;
 	}
-	$title .= get_bloginfo( 'name' );
 	$site_description = get_bloginfo( 'description', 'display' );
 	if ( $site_description && ( is_home() || is_front_page() ) ) {
+		$title = get_bloginfo( 'name' );
 		$title = "$title $sep $site_description";
 	}
 	
@@ -522,7 +522,7 @@ function anaglyph_get_hslider() {
 									$out_ .= '</div>';
 								$out_ .= '</div>';
 							}
-							$out_ .= '<img src="'.esc_url($slide['image']).'" class="slider-bg">';
+							$out_ .= '<img src="'.esc_url($slide['image']).'" class="slider-bg" alt="'.$title.'">';
 						$out_ .= '</li>';
 					}
 				$out_ .= '</ul>';
@@ -583,11 +583,11 @@ if ( ! function_exists( 'anaglyph_send_mail' ) ) {
 		$phone = $name = $email = $message = $mobile;
 		
 		
-		if (!empty($data['name'])) $name = $data['name'];
-		if (!empty($data['email'])) $email = $data['email'];
-		if (!empty($data['message'])) $message = $data['message'];
-		if (!empty($data['phone'])) $phone = $data['phone'];
-		if (!empty($data['mobile'])) $mobile = $data['mobile']; 
+		if (!empty($data['cff-name'])) $name = $data['cff-name'];
+		if (!empty($data['cff-email'])) $email = $data['cff-email'];
+		if (!empty($data['cff-message'])) $message = $data['cff-message'];
+		if (!empty($data['cff-phone'])) $phone = $data['cff-phone'];
+		if (!empty($data['cff-mobile'])) $mobile = $data['cff-mobile']; 
 		
 		if (!empty($anaglyph_config['contact-email'])) {
 			$to = esc_attr($anaglyph_config['contact-email']);
@@ -712,20 +712,20 @@ if ( ! function_exists( 'anaglyph_get_contact_form' ) ) {
 			if (!empty($fields)) {
 				foreach ($fields['enabled'] as $key=>$value) {
 					switch($key) {
-						case 'name': $fields_html[] = array('col' => 'col-md-6',  'html' => get_control_group_html('<label for="name" class="screen-reader-text">'.__('Name', 'anaglyph-lite').'</label><input type="text" name="name" id="name" placeholder="'.__('Name', 'anaglyph-lite').'" required>'));
+						case 'name': $fields_html[] = array('col' => 'col-md-6',  'html' => get_control_group_html('<label for="cff-name" class="screen-reader-text">'.__('Name', 'anaglyph-lite').'</label><input type="text" name="cff-name" id="cff-name" placeholder="'.__('Name', 'anaglyph-lite').'" required>'));
 						break;
-						case 'email': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<label for="email" class="screen-reader-text">'.__('E-mail', 'anaglyph-lite').'</label><input type="email" name="email" id="email" placeholder="'.__('E-mail', 'anaglyph-lite').'" required>'));
+						case 'email': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<label for="cff-email" class="screen-reader-text">'.__('E-mail', 'anaglyph-lite').'</label><input type="email" name="cff-email" id="cff-email" placeholder="'.__('E-mail', 'anaglyph-lite').'" required>'));
 						break;
-						case 'phone': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<label for="phone" class="screen-reader-text">'.__('Phone', 'anaglyph-lite').'</label><input type="tel" name="phone" id="phone" placeholder="'.__('Phone', 'anaglyph-lite').'" required>'));
+						case 'phone': $fields_html[] = array('col' => 'col-md-6', 'html' => get_control_group_html('<label for="cff-phone" class="screen-reader-text">'.__('Phone', 'anaglyph-lite').'</label><input type="tel" name="cff-phone" id="cff-phone" placeholder="'.__('Phone', 'anaglyph-lite').'" required>'));
 						break;
-						case 'mob': $fields_html[]   = array('col' => 'col-md-6',  'html' => get_control_group_html('<label for="mobile" class="screen-reader-text">'.__('Mobile', 'anaglyph-lite').'</label><input type="tel" name="mobile" id="mobile" placeholder="'.__('Mobile', 'anaglyph-lite').'">'));
+						case 'mob': $fields_html[]   = array('col' => 'col-md-6',  'html' => get_control_group_html('<label for="cff-mobile" class="screen-reader-text">'.__('Mobile', 'anaglyph-lite').'</label><input type="tel" name="cff-mobile" id="cff-mobile" placeholder="'.__('Mobile', 'anaglyph-lite').'">'));
 						break;
 						case 'captcha': {
 							$fields_html[] = array('col' => 'col-md-12', 
 												  'html' => '<div class="row"><div class="col-md-2 col-md-offset-4">' . anaglyph_get_captcha_html() . '</div><div class="col-md-6">'.get_control_group_html('<label for="form_captcha" class="screen-reader-text">'.__('Please enter Captcha symbols', 'anaglyph-lite').'</label><input type="text" maxlength="6" name="form_captcha" id="form_captcha" placeholder="'.__('Please enter Captcha symbols', 'anaglyph-lite').'" required>') . '</div></div>');
 						}
 						break;  
-						case 'message': $fields_html[] = array('col' => 'col-md-12', 'html' => get_control_group_html('<label for="message" class="screen-reader-text">'.__('Message', 'anaglyph-lite').'</label><textarea name="message" id="message" placeholder="'.__('Message', 'anaglyph-lite').'" required></textarea>'));
+						case 'message': $fields_html[] = array('col' => 'col-md-12', 'html' => get_control_group_html('<label for="cff-message" class="screen-reader-text">'.__('Message', 'anaglyph-lite').'</label><textarea name="cff-message" id="cff-message" placeholder="'.__('Message', 'anaglyph-lite').'" required></textarea>'));
 						break;  
 					}
 				}
@@ -767,9 +767,9 @@ if ( ! function_exists( 'anaglyph_get_contact_form' ) ) {
 					$out_ .= $out_fields_;
 					$out_ .= '<div class="form-actions pull-right">';
 						if (!empty($anaglyph_config['contact-submit']))
-							$out_ .= '<input type="submit" class="btn btn-color-primary" id="submit" value="'.$anaglyph_config['contact-submit'].'">';
+							$out_ .= '<input type="submit" class="btn btn-color-primary" id="cff-submit" value="'.$anaglyph_config['contact-submit'].'">';
 						else
-							$out_ .= '<input type="submit" class="btn btn-color-primary" id="submit" value="'.__('Send a Message', 'anaglyph-lite').'">';
+							$out_ .= '<input type="submit" class="btn btn-color-primary" id="cff-submit" value="'.__('Send a Message', 'anaglyph-lite').'">';
 					$out_ .= '</div><!-- /.form-actions -->';
 					
 					if (!empty($anaglyph_config['contact-description'])) $out_ .= '<span class="pull-left form-description">'.$anaglyph_config['contact-description'].'</span>';

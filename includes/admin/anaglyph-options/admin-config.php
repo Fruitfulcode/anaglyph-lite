@@ -250,8 +250,7 @@ if (!class_exists('anaglyph_config')) {
 						 array(
 							'id'                => 'logo-dimensions',
 							'type'              => 'dimensions',
-							'units'    => array('em','px','%'),
-							'units_extended'    => 'true',  
+							'units'    			=> false,
 							'title'             => __('Original Logo (Width/Height)', 'anaglyph-framework'),
 							'subtitle'          => __("If Retina Logo uploaded, please enter the (width/height) of the Standard Logo you've uploaded (not the Retina Logo)", 'anaglyph-framework'),
 							'default'           => array(

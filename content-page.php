@@ -12,7 +12,7 @@
 	<?php do_action('anaglyph_before_page_entry_content')?>
 	<div class="entry-content">
 		
-		<section id="page" class="block">
+		<section id="page-content" class="block">
 			<div class="container">
 				<div class="row">
 					<div id="content" role="main">

@@ -30,7 +30,7 @@ $(document).ready(function($) {
 	} 
 
 //  Contact Form with validation
-	$('#contactform.footer-form .form-actions input#submit.btn').click(function(){
+	$('#contactform.footer-form .form-actions input#cff-submit.btn').click(function(){
         $("#contactform").validate({
 			rules: {
 				form_captcha: {
