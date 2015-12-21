@@ -253,7 +253,7 @@ function anaglyph_scripts() {
 	
 	/*Custom Css*/
 	wp_enqueue_style( 'anaglyph-elegantFonts', 	$inc_theme_url . 'assets/icons/elegant-font/style.css');
-	wp_enqueue_style( 'anaglyph-bootsrap', 	 	$inc_theme_url . 'assets/bootstrap/css/bootstrap.min.css');
+	wp_enqueue_style( 'anaglyph-bootstrap',  	$inc_theme_url . 'assets/bootstrap/css/bootstrap.min.css');
 	wp_enqueue_style( 'anaglyph-vanillabox', 	$inc_theme_url . 'assets/css/vanillabox/vanillabox.css');
 	wp_enqueue_style( 'anaglyph-flexslider', 	$inc_theme_url . 'assets/css/flexslider.css');
 	wp_enqueue_style( 'anaglyph-animate', 	 	$inc_theme_url . 'assets/css/animate.css');
@@ -265,7 +265,7 @@ function anaglyph_scripts() {
 	}
 	
 	/*Custom Js*/
-	wp_enqueue_script( 'anaglyph-bootsrap', 	$inc_theme_url . 'assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '20130402', true );
+	wp_enqueue_script( 'anaglyph-bootstrap', 	$inc_theme_url . 'assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '20130402', true );
 	wp_enqueue_script( 'anaglyph-flexslider', 	$inc_theme_url . 'assets/js/jquery.flexslider-min.js',	 array( 'jquery' ), '20130402', true );
 	wp_enqueue_script( 'anaglyph-html5',		$inc_theme_url . 'assets/js/html5.js',	 array( 'jquery' ), '20130402', true );
 
