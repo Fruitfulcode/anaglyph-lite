@@ -63,11 +63,19 @@ Files: en_US.po, en_US.mo, ru_Ru.po, ru_Ru.mo, fr_FR.mo, fr_FR.po icluded. Defau
     Changelog
 -------------------------------------------------------
 
+= 1.2 =
+23.12.2015
+
+- Bug fix: Image alignment
+- Bug fix: Duplicated title
+- Bug fix: Cart widget
+- Bug fix: Logo width and height attributes
+
 = 1.1 =
 05.12.2015
 
-- WooCommerce included in TGM
-- Image of extended version
+- New: WooCommerce included in TGM
+- New: Image of extended version
 - Bug fix: WooCommerce styles
 
 = 1.0 =
