@@ -104,7 +104,7 @@ $(document).ready(function($) {
 	
 	
      $(window).scroll(function () {
-        if (AnaglyphGlobal.headerFixedVartiation != '3') {
+        if ((AnaglyphGlobal.headerFixedVartiation == '1') && AnaglyphGlobal.slider_on) {
 			if ($(window).scrollTop() > 1) {
 				$('.navigation').addClass('header-solid');
 			} else {
@@ -234,7 +234,8 @@ $(document).ready(function($) {
 	
 				
 	if (AnaglyphGlobal.headerFixedVartiation == '2' ||
-		AnaglyphGlobal.headerFixedVartiation == '3'
+		AnaglyphGlobal.headerFixedVartiation == '3' ||
+		((AnaglyphGlobal.headerFixedVartiation == '1') && !AnaglyphGlobal.slider_on)
 	) {
 		$('.navigation').addClass('header-solid');
 		

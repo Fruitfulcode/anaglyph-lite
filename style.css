@@ -263,6 +263,9 @@ i.icon {
   height: auto;
   min-height: 400px;
 }
+.home .navigation-wrapper + .site-main {
+	padding-top: 40px;
+}
 
 .navigation-wrapper   .navigation .nav li .child-navigation li .child-navigation li a {
   padding: 10px 20px;
@@ -527,18 +530,17 @@ img {
 img.alignleft,
 .wp-caption.alignleft {
 	margin: 10px 24px 10px 0;
+	float: left;
 }
-
 img.alignright, 
 .wp-caption.alignright {
 	margin: 10px 0 10px 24px;
+	float: right;
 }
-
-
 img.aligncenter,
 .wp-caption.aligncenter {
-	margin-top: 10px;
-	margin-bottom:10px;
+	margin: 10px auto;
+	display: block;
 }
 
 section {

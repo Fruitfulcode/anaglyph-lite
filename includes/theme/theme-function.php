@@ -215,6 +215,7 @@ endif; //anaglyph_widgets_init
 if ( ! function_exists( 'anaglyph_scripts' ) ) :
 function anaglyph_scripts() {
 	global 	$inc_theme_url, $anaglyph_config;
+	$slider_on = false;
 	$slideshowSpeed    = 8000;
 	$animationSpeed    = 1000;
 	$smoothscroll  	   = false;
@@ -222,6 +223,11 @@ function anaglyph_scripts() {
 	$animationeffectin = $animationeffectout = '';
 	$is_mobile         = false;
 	if ( wp_is_mobile()) $is_mobile = true;
+	
+	if (!empty($anaglyph_config['switch-slider'])) {
+		$slider_on = $anaglyph_config['switch-slider'];
+	}
+	$slider_on = ($slider_on) ? true : false;
 	
 	if (!empty($anaglyph_config['pp-animation-mobile'])) {
 		if ( $anaglyph_config['pp-animation-mobile'] == '1' )
@@ -294,6 +300,7 @@ function anaglyph_scripts() {
 																	   'is_mobile' => $is_mobile,
 																	   'disable_animation_mobile' => $disable_animation_mobile,
 																	   'headerFixedVartiation'	=> esc_js($headerFixedVartiation),
+																	   'slider_on' => $slider_on,
 																	   'sliderParam' => array (
 																			'slideshowSpeed' => esc_js($slideshowSpeed),
 																			'animationSpeed' => esc_js($animationSpeed),

@@ -789,7 +789,7 @@ if (!class_exists('anaglyph_config')) {
                         'title'     => __('Header background color', 'anaglyph-framework'),
                         'default'   => '#FFFFFF',
                         'validate'  => 'color',
-						'transparent'	=> false
+						'transparent'	=> true
                     ),
 					
 					array(
