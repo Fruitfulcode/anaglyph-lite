@@ -1008,7 +1008,15 @@ function anaglyph_get_page_title() {
 if ( ! function_exists( 'anaglyph_get_post_additional_title' ) ) {
 function anaglyph_get_post_additional_title() {
 	global $anaglyph_config, $prefix;
-	$add_title 	= get_post_meta(get_the_ID() , $prefix . 'image_title_text', true);	
+	$add_title 	= get_post_meta(get_the_ID() , $prefix . 'image_title_text', true);
+	if (get_post_type() == "post") {
+		$cs = wp_get_post_categories();
+		if (empty($cs)) {
+			$add_title = get_the_title();
+		} else {
+			$add_title = get_category($cs[0])->name . ": " . get_the_title();
+		}
+	}
 	$add_img 	= get_post_meta(get_the_ID() , $prefix . 'image_title_img', true);	
 	$def_img 	= esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg');
 ?>
