@@ -745,8 +745,7 @@ if (!class_exists('anaglyph_config')) {
 								'text-align'  => false,	
 								'text-transform' => true,
 								'subsets'		=> true,
-								'output'    => array('#slider .flexslider .slides .slide .slide-content .slide-wrapper h1',
-													 '#slider .flexslider .slides .slide .slide-content .slide-wrapper h3'),
+								'output'    => array('#slider .flexslider .slides .slide .slide-content .slide-wrapper h1'),
 								'units'       =>'px',
 								'subtitle'	  => __('Select typography for general text.', 'anaglyph-framework'),
 								'default'     => array(
@@ -759,6 +758,32 @@ if (!class_exists('anaglyph_config')) {
 												),
 								'preview' => array('text' => 'sample text')				
 					),
+
+					array(
+ 								'id'          => 'slider-sub-typography',
+ 								'type'        => 'typography', 
+ 								'title'       => __('Slider subtitle', 'anaglyph-framework'),
+ 								'required'  => array('switch-slider', '=', '1'),
+ 								'google'      => true, 
+ 								'subsets'	  => false,
+ 								'font-backup' => false,
+ 								'line-height' => false,	
+ 								'text-align'  => false,	
+ 								'text-transform' => true,
+ 								'subsets'		=> true,
+ 								'output'    => array('#slider .flexslider .slides .slide .slide-content .slide-wrapper h3'),
+ 								'units'       =>'px',
+ 								'subtitle'	  => __('Select typography for subtitle.', 'anaglyph-framework'),
+ 								'default'     => array(
+ 														'color'       => '#fff', 
+ 														'font-style'  => '400', 
+ 														'font-family' => 'Montserrat', 
+ 														'google'      => true,
+ 														'font-size'   => '36px',
+ 														'text-transform' => 'uppercase'														
+ 												),
+ 								'preview' => array('text' => 'sample text')				
+ 					),
 					
 					array(
                         'id'        	=> 'slider-title-bg-color',
