@@ -66,7 +66,7 @@ Files: en_US.po, en_US.mo, ru_Ru.po, ru_Ru.mo, fr_FR.mo, fr_FR.po icluded. Defau
 = 1.3 =
 10.02.2016
 
-- New: theme options: slider subtitle font styling
+- New: slider subtitle font styling
 - Update: Woocommerce templates
 - Improvements: Fixed header options
 
