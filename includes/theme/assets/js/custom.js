@@ -115,14 +115,16 @@ $(document).ready(function($) {
         var scrollAmount = $(window).scrollTop();
 			scrollAmount = Math.round(scrollAmount);
 			
-			if(AnaglyphGlobal.headerFixedVartiation == '3') {
-				if (scrollAmount > 0 && scrollAmount > $('.navigation-wrapper').outerHeight()) {
-					$('.home #slider .slides').css('margin-top', parseInt((scrollAmount/2) - ($('.navigation-wrapper').outerHeight()/2)) + 'px');
+			if (AnaglyphGlobal.sliderParam.sliderParallaxOn) {
+				if(AnaglyphGlobal.headerFixedVartiation == '3') {
+					if (scrollAmount > 0 && scrollAmount > $('.navigation-wrapper').outerHeight()) {
+						$('.home #slider .slides').css('margin-top', parseInt((scrollAmount/2) - ($('.navigation-wrapper').outerHeight()/2)) + 'px');
+					} else {
+						$('.home #slider .slides').css('margin-top', 0);
+					}
 				} else {
-					$('.home #slider .slides').css('margin-top', 0);
+					$('.home #slider .slides').css('margin-top', scrollAmount/2 + 'px');
 				}
-			} else {
-				$('.home #slider .slides').css('margin-top', scrollAmount/2 + 'px');
 			}
 
 		if (AnaglyphGlobal.headerFixedVartiation != 3) {

@@ -132,7 +132,7 @@ if (!class_exists('anaglyph_config')) {
                     <p class="theme-description"><?php echo $this->theme->display('Description'); ?></p>
             <?php
             if ($this->theme->parent()) {
-                printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'anaglyph-framework'), $this->theme->parent()->display('Name'));
+                printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.', 'anaglyph-framework') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'anaglyph-framework'), $this->theme->parent()->display('Name'));
             }
             ?>
 
@@ -329,6 +329,19 @@ if (!class_exists('anaglyph_config')) {
                     ),		
 					
 					array(
+                        'id'        => 'excerpt',
+                        'type'      => 'select',
+                        'title'     => __('Select Post Preview', 'anaglyph-framework'),
+                        'subtitle'  => __('Select showing full post, excerpt or title only', 'anaglyph-framework'),
+                        'options'   =>  array(
+                            '1'     => __("Full post (before <-more->)", "anaglyph-framework"),
+                            '2'     => __("Excerpt", "anaglyph-framework"),
+                            '3'     => __("Only Title", "anaglyph-framework"),
+                        ),
+                        'default'   => '2'
+                    ),
+					
+					array(
                         'id'        => 'pp-comments',
                         'type'      => 'select',
                         'title'     => __('Display Comments', 'anaglyph-framework'),
@@ -353,6 +366,19 @@ if (!class_exists('anaglyph_config')) {
 						'class'		=> 'icheck',
                         'default'   => '1'
                     ),		
+					
+					array(
+                        'id'        => 'pp-blog',
+                        'type'      => 'image_select',
+                        'title'     => __('Blog page layout', 'anaglyph-framework'),
+                        'subtitle'  => __('Select main content and sidebar alignment.', 'anaglyph-framework'),
+                        'options'   => array(
+                            '1' => array('alt' => '1 Column',       'img' => ReduxFramework::$_url . 'assets/img/1col.png'),
+                            '2' => array('alt' => '2 Column Left',  'img' => ReduxFramework::$_url . 'assets/img/2cl.png'),
+                            '3' => array('alt' => '2 Column Right', 'img' => ReduxFramework::$_url . 'assets/img/2cr.png'),
+                        ),
+                        'default'   => '1'
+                    ),
 					
 					array(
                         'id'        => 'pp-post',
@@ -704,6 +730,17 @@ if (!class_exists('anaglyph_config')) {
                             'url'           => __('Url', 'anaglyph-framework'),
                         ),
                     ),
+					
+					array(
+                        'id'        => 'slider-parallax',
+                        'type'      => 'checkbox',
+                        'title'     => __('Enable parallax', 'anaglyph-framework'),
+                        'subtitle'  => __('Select to enable parallax effect.', 'anaglyph-framework'),
+                        'desc'      => __('Yes', 'anaglyph-framework'),
+						'class'		=> 'icheck',
+                        'default'   => '1',
+						'data'		=> null
+                    ),		
 					
 					array(
                         'id'            => 'slider-showspeed',
@@ -1894,7 +1931,6 @@ if (!class_exists('anaglyph_config')) {
                 
                 // OPTIONAL -> Give you extra features
                 'page_priority'     => null,                    // Order where the menu appears in the admin area. If there is any conflict, something will not show. Warning.
-                'page_parent'       => 'themes.php',            // For a full list of options, visit: http://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
                 'page_permissions'  => 'manage_options',        // Permissions needed to access the options panel.
                 'menu_icon'         => $source_path . 'anaglyph-icon.png',  // Specify a custom URL to an icon
                 'last_tab'          => '',                      // Force your panel to always open to a specific tab (by id)

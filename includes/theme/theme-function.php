@@ -181,6 +181,16 @@ if ( ! function_exists( 'anaglyph_widgets_init' ) ) :
 function anaglyph_widgets_init() {
 	
 	register_sidebar( array(
+		'name'          => __( 'Main sidebar', 'anaglyph-lite' ),
+		'id'            => 'sidebar-blog',
+		'description'   => __( 'Main blog sidebar.', 'anaglyph-lite' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	
+	register_sidebar( array(
 		'name'          => __( 'Single Page Sidebar', 'anaglyph-lite' ),
 		'id'            => 'sidebar-1',
 		'description'   => __( 'Additional blog page sidebar.', 'anaglyph-lite' ),
@@ -216,6 +226,7 @@ if ( ! function_exists( 'anaglyph_scripts' ) ) :
 function anaglyph_scripts() {
 	global 	$inc_theme_url, $anaglyph_config;
 	$slider_on = false;
+	$slider_parallax_on = false;
 	$slideshowSpeed    = 8000;
 	$animationSpeed    = 1000;
 	$smoothscroll  	   = false;
@@ -228,6 +239,11 @@ function anaglyph_scripts() {
 		$slider_on = $anaglyph_config['switch-slider'];
 	}
 	$slider_on = ($slider_on) ? true : false;
+	
+	if (!empty($anaglyph_config['slider-parallax'])) {
+		$slider_parallax_on = $anaglyph_config['slider-parallax'];
+	}
+	$slider_parallax_on = ($slider_parallax_on) ? true : false;
 	
 	if (!empty($anaglyph_config['pp-animation-mobile'])) {
 		if ( $anaglyph_config['pp-animation-mobile'] == '1' )
@@ -302,10 +318,11 @@ function anaglyph_scripts() {
 																	   'headerFixedVartiation'	=> esc_js($headerFixedVartiation),
 																	   'slider_on' => $slider_on,
 																	   'sliderParam' => array (
-																			'slideshowSpeed' => esc_js($slideshowSpeed),
-																			'animationSpeed' => esc_js($animationSpeed),
-																			'directionNav' 	 => false,
-																			'controlNav' 	 => true,	
+																			'sliderParallaxOn'		=> $slider_parallax_on,
+																			'slideshowSpeed' 		=> esc_js($slideshowSpeed),
+																			'animationSpeed' 		=> esc_js($animationSpeed),
+																			'directionNav' 	 		=> false,
+																			'controlNav' 			=> true,	
 																			'animationeffectin'		=> esc_js($animationeffectin),
 																			'animationeffectout'	=> esc_js($animationeffectout),
 																		)
@@ -1438,6 +1455,15 @@ if ( ! function_exists( 'anaglyph_get_post_share' ) ) {
 	}
 }
 
+if ( ! function_exists( 'get_sidebar_part' ) ) {
+	function get_sidebar_part($sidebar_template = '') {
+		?>
+		<div class="sidebar">
+			<?php get_sidebar($sidebar_template); ?>
+		</div>
+		<?php
+	}
+}
 
 /*Single template layouts*/
 if ( ! function_exists( 'anaglyph_get_single_content' ) ) {
@@ -1462,21 +1488,13 @@ if ( ! function_exists( 'anaglyph_get_single_content' ) ) {
 			</div>
 			<?php						
 		}
-		
-		function get_sidebar_part() {
-			?>
-			<div class="sidebar">
-				<?php get_sidebar(); ?>
-			</div>
-			<?php
-		}
 
 		if ($post_layout == 1) {
 			get_content_part();
 		} else if ($post_layout == 2) {
 			echo '<div class="row">';
 				echo '<div class="col-md-4">';
-					get_sidebar_part();					
+					get_sidebar_part('single');					
 				echo '</div>';
 				echo '<div class="col-md-8">';
 					get_content_part();					
@@ -1488,43 +1506,80 @@ if ( ! function_exists( 'anaglyph_get_single_content' ) ) {
 					get_content_part();					
 				echo '</div>';
 				echo '<div class="col-md-4">';
-					get_sidebar_part();					
+					get_sidebar_part('single');					
 				echo '</div>';
 			echo '</div>';
 		}
 	}
 }
 
+if ( ! function_exists( 'anaglyph_get_blog_content_part' ) ) {
+	function anaglyph_get_blog_content_part() {
+		global $post, $posts_count, $time_post_delay, $row_heading;
+		
+		?>
+			<div class="col-md-12">
+				<div class="section-content">
+					<div class="row">
+						<div class="blog-posts">
+						<?php
+							if ( have_posts() ) {
+								if (is_author()) rewind_posts();
+								while ( have_posts() ) : the_post();
+									get_template_part( 'content', get_post_format() );
+									$time_post_delay += 0.2;
+									$posts_count++;
+								endwhile;
+								if (!$row_heading) echo '</div>';
+							} else {
+								get_template_part( 'content', 'none' );
+							}
+						?>
+						</div>
+					</div>	
+					<?php anaglyph_paging_nav(); ?>
+				</div>	
+			</div>	
+		<?php
+	}
+}
+
 /*Default page conent parts (seacrh, category, etc)*/
 if ( ! function_exists( 'anaglyph_default_page_content' ) ) {
 	function anaglyph_default_page_content() {
-		global $post, $posts_count, $time_post_delay, $row_heading;
+		global $anaglyph_config, $post, $anaglyph_is_redux_active, $posts_count, $time_post_delay, $row_heading;
+		
+		$blog_layout = (int) $anaglyph_config['pp-blog'];
+			
+		if (!$anaglyph_is_redux_active)
+			$blog_layout = 1;
+		
 	?>	
 		<section id="content" class="block" role="main">
 			<div class="container">
-				<div class="col-md-12">
-					<div class="section-content">
-						<div class="row">
-							<div class="blog-posts">
-							<?php
-								if ( have_posts() ) {
-									if (is_author()) rewind_posts();
-									while ( have_posts() ) : the_post();
-										get_template_part( 'content', get_post_format() );
-										$time_post_delay += 0.2;
-										$posts_count++;
-									endwhile;
-									if (!$row_heading) echo '</div>';
-								} else {
-									get_template_part( 'content', 'none' );
-								}
-							?>
-							</div>
-						</div>	
-					</div>	
-				</div>	
-			</div>	
-				<?php anaglyph_paging_nav(); ?>
+				<?php 
+					if ($blog_layout == 1) {
+						anaglyph_get_blog_content_part();
+					} else if ($blog_layout == 2) {
+						echo '<div class="row">';
+							echo '<div class="col-md-4">';
+								get_sidebar_part();					
+							echo '</div>';
+							echo '<div class="col-md-8">';
+								anaglyph_get_blog_content_part();					
+							echo '</div>';
+						echo '</div>';
+					} else if ($blog_layout == 3) {
+						echo '<div class="row">';
+							echo '<div class="col-md-8">';
+								anaglyph_get_blog_content_part();					
+							echo '</div>';
+							echo '<div class="col-md-4">';
+								get_sidebar_part();					
+							echo '</div>';
+						echo '</div>';
+					}
+				?>
 			</div>	
 		</section>	
 	<?php 
@@ -1829,3 +1884,21 @@ if ( ! function_exists( 'anaglyph_compress_code' ) ) {
 		return $code;
 	}
 }  
+
+if ( ! function_exists( 'anaglyph_blog_post_preview()' ) ) {
+	function anaglyph_blog_post_preview() {
+		global $anaglyph_config;
+		if (!empty($anaglyph_config['excerpt'])) {
+			if ($anaglyph_config['excerpt'] == 1 ) {
+				echo '<div class="blog-post-preview clearfix">';
+					the_content( '&#8230;<span class="screen-reader-text">  '.get_the_title().'</span>' );
+				echo '</div>';
+			}
+			if ($anaglyph_config['excerpt'] == 2 ) {
+				the_excerpt();
+			}
+		} else {
+			the_excerpt();
+		}
+	}
+}
