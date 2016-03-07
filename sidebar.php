@@ -1,6 +1,6 @@
 <?php
 /**
- * The Sidebar containing the main widget area
+ * The Sidebar containing the main blog widget area
  *
  * @package WordPress
  * @subpackage Anaglyph_Theme
