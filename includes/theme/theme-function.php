@@ -1885,7 +1885,7 @@ if ( ! function_exists( 'anaglyph_compress_code' ) ) {
 	}
 }  
 
-if ( ! function_exists( 'anaglyph_blog_post_preview()' ) ) {
+if ( ! function_exists( 'anaglyph_blog_post_preview' ) ) {
 	function anaglyph_blog_post_preview() {
 		global $anaglyph_config;
 		if (!empty($anaglyph_config['excerpt'])) {
