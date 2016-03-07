@@ -1614,6 +1614,9 @@ footer#page-footer textarea:focus {
   padding-left: 100px;
   padding-top: 5px;
 }
+.blog-post .blog-post-content h2 {
+	margin-bottom: 20px;
+}
 
 .blog-post.with-out-date .blog-post-content {
  padding-left: 0;
