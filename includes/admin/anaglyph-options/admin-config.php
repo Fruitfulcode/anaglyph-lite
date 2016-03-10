@@ -17,9 +17,11 @@ if (!class_exists('anaglyph_config')) {
             }
 
         }
-	function disable_redux_notice() {
-		   echo '<style>.redux-notice{ display: none;}</style>';
+		
+		function disable_redux_notice() {
+			echo '<style>.redux-notice, .rAds, .rAds span, #redux_rAds { display: none;}</style>';
 		}
+		
         public function initSettings() {
             add_action('admin_head', array($this,'disable_redux_notice'));
             $this->theme = wp_get_theme();
@@ -28,7 +30,6 @@ if (!class_exists('anaglyph_config')) {
             $this->setSections();
             if (!isset($this->args['opt_name'])) return;
             add_action( 'anaglyph/loaded', array( $this, 'remove_demo' ) );
-			add_action('admin_head', array( $this, 'remove_ads'));
 			
             $this->ReduxFramework = new ReduxFramework($this->sections, $this->args);
         }
@@ -85,14 +86,6 @@ if (!class_exists('anaglyph_config')) {
 					remove_action( 'admin_notices', array( ReduxFrameworkPlugin::instance(), 'admin_notices' ) );
 			}
         }
-		
-		function remove_ads() {
-		?>
-			<style type="text/css">
-				.rAds, .rAds span { display: none !important; }
-			</style>
-		<?php
-		}
 		
 
         public function setSections() {
