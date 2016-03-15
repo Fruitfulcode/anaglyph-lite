@@ -1376,8 +1376,8 @@ function anaglyph_add_breadcrumbs() {
 if ( ! function_exists( 'anaglyph_get_post_date' ) ) {
 	function anaglyph_get_post_date() {
 		global $anaglyph_config, $post, $anaglyph_is_redux_active;
-		$day_ 	= date_i18n( 'd', strtotime(get_the_date()) );
-		$month_ = date_i18n( 'M', strtotime(get_the_date()) );
+		$day_ 	= get_the_date('d');
+		$month_ = get_the_date('M');
 		
 		if (!empty($anaglyph_config['pp-date']) || !$anaglyph_is_redux_active) {
 			if ($anaglyph_config['pp-date'] || !is_single() || !$anaglyph_is_redux_active) {
