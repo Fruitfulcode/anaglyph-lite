@@ -6,6 +6,10 @@ We have created a theme based on our necessities and experience, we will be glad
 Our code is hand-made, so if you find a bug or have a wish to modify something, feel free to send us your feedback.
 We want to make our product even better and better and we need users support and feedbacks.
 
+Theme demo  http://themes.fruitfulcode.com/anaglyph-lite/
+Documentation http://themes.fruitfulcode.com/anaglyph-lite/documentation/
+Support http://support.fruitfulcode.com/hc/en-us/requests/new
+
 Don't forget to visit our website http://fruitfulcode.com
 
 Thank you.
@@ -17,8 +21,6 @@ Thank you.
 Anaglyph-lite is a free WordPress responsive theme with theme options panel, designed and developed in Fruitful Code (www.fruitfulcode.com)
 Feel free to use and modify this theme as you like.
 Anaglyph-lite is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
-
-
 
 
 -------------------------------------------------------
@@ -62,6 +64,14 @@ Files: en_US.po, en_US.mo, ru_Ru.po, ru_Ru.mo, fr_FR.mo, fr_FR.po icluded. Defau
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
+
+= 1.4 =
+21.03.2016
+
+- New: Option for slide, disable parallax effect
+- New: Display options, post preview: Full post, excerpt, only title
+- Bug fix: post date for some languages
+- Improvements: theme check
 
 = 1.3 =
 10.02.2016
