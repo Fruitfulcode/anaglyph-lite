@@ -17,7 +17,7 @@ Thank you.
 Anaglyph-lite is a free WordPress responsive theme with theme options panel, designed and developed in Fruitful Code (www.fruitfulcode.com)
 Feel free to use and modify this theme as you like.
 Anaglyph-lite is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
-Extended or full version of Anaglyph http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode
+
 
 
 

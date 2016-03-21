@@ -1876,20 +1876,6 @@ if (!class_exists('anaglyph_config')) {
                     ),
                 ),
             );  
-
-			 $arr_section['extended'] = array(
-                'title'     => __('Extended version', 'anaglyph-framework'),
-                'icon'      => $sample_patterns_url . 'images/icons/anaglyph.png',
-				'icon_type' => 'image',
-                'fields'    => array(
-					 array(
-						'id'       => 'opt-raw',
-						'type'     => 'raw',
-						'content'  => '<a href="http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode" style="text-decoration: none;" title=""><h4>ANAGLYPH - One page / Multi Page WordPress Theme </h4><img src="' . $sample_patterns_url . 'images/anaglyph-banner.png" alt="Extended version" /></a>'
-					),
-                ),
-            );  
-            
 			
 			$fields = apply_filters( 'anaglyph_admin_fields', $arr_section);
 			$this->sections = $fields;
