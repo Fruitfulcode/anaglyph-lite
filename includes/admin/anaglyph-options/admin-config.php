@@ -727,6 +727,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'slider-parallax',
                         'type'      => 'checkbox',
+						'required'  => array('switch-slider', '=', '1'),
                         'title'     => __('Enable parallax', 'anaglyph-framework'),
                         'subtitle'  => __('Select to enable parallax effect.', 'anaglyph-framework'),
                         'desc'      => __('Yes', 'anaglyph-framework'),
