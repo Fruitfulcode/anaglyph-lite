@@ -1,6 +1,6 @@
 <?php
 /**
- * The Sidebar containing the main site widget area
+ * The Sidebar containing the main blog widget area
  *
  * @package WordPress
  * @subpackage Anaglyph_Theme
@@ -8,9 +8,9 @@
  */
 ?>
 <div id="secondary">
-	<?php if ( is_active_sidebar( 'sidebar-main' ) ) : ?>
+	<?php if ( is_active_sidebar( 'sidebar-blog' ) ) : ?>
 	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'sidebar-main' ); ?>
+		<?php dynamic_sidebar( 'sidebar-blog' ); ?>
 	</div><!-- #primary-sidebar -->
 	<?php endif; ?>
 </div><!-- #secondary -->

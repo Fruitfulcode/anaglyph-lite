@@ -46,19 +46,18 @@ function anaglph_all_metaboxes( array $meta_boxes ) {
 	);
 		
 	
-	/*
 	
-	Only with sidebar enabled
+	// Sidebar pages
 	$meta_boxes['anaglph_page_general_settings'] = array(
 		'id'         => 'anaglph_page_general_settings',
-		'title'      => __( 'Page settings', 'anaglyph-lite' ),
+		'title'      => __( 'Layout', 'anaglyph-lite' ),
 		'pages'      => array( 'page'), 
 		'context'    => 'side',
 		'priority'   => 'low',
 		'show_names' => true, 
 		'fields'     => array(
 			array(
-				'name'    => __( 'Layout', 'anaglyph-lite' ),
+				'name'    => __( 'Page layout', 'anaglyph-lite' ),
 				'subname'    => __( 'Select a specific layout for this page.', 'anaglyph-lite' ),
 				'id'      => $prefix . 'page_layout',
 				'type' 	  => 'custom_layout_sidebars',
@@ -66,7 +65,5 @@ function anaglph_all_metaboxes( array $meta_boxes ) {
 			),
 		),
 	);
-	
-	*/
 	return $meta_boxes;
 }	

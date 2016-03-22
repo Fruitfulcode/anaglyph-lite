@@ -182,8 +182,8 @@ function anaglyph_widgets_init() {
 	
 	register_sidebar( array(
 		'name'          => __( 'Main sidebar', 'anaglyph-lite' ),
-		'id'            => 'sidebar-blog',
-		'description'   => __( 'Main blog sidebar.', 'anaglyph-lite' ),
+		'id'            => 'sidebar-main',
+		'description'   => __( 'Main site sidebar.', 'anaglyph-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -191,7 +191,17 @@ function anaglyph_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'Single Page Sidebar', 'anaglyph-lite' ),
+		'name'          => __( 'Blog sidebar', 'anaglyph-lite' ),
+		'id'            => 'sidebar-blog',
+		'description'   => __( 'Blog sidebar.', 'anaglyph-lite' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	
+	register_sidebar( array(
+		'name'          => __( 'Single Post Sidebar', 'anaglyph-lite' ),
 		'id'            => 'sidebar-1',
 		'description'   => __( 'Additional blog page sidebar.', 'anaglyph-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -993,8 +1003,8 @@ function anaglyph_get_social() {
 }
 
 /*Generate page*/
-add_action('anaglyph_before_page_entry_content', 'anaglyph_get_page_title',  1);
-add_action('anaglyph_before_page_entry_content', 'anaglyph_add_breadcrumbs', 2);
+add_action('anaglyph_before_page_content', 'anaglyph_get_page_title',  1);
+add_action('anaglyph_before_page_content', 'anaglyph_add_breadcrumbs', 2);
 if ( ! function_exists( 'anaglyph_get_page_title' ) ) {
 function anaglyph_get_page_title() {
 	global $anaglyph_config
@@ -1563,7 +1573,7 @@ if ( ! function_exists( 'anaglyph_default_page_content' ) ) {
 					} else if ($blog_layout == 2) {
 						echo '<div class="row">';
 							echo '<div class="col-md-4">';
-								get_sidebar_part();					
+								get_sidebar_part('blog');					
 							echo '</div>';
 							echo '<div class="col-md-8">';
 								anaglyph_get_blog_content_part();					
@@ -1575,7 +1585,7 @@ if ( ! function_exists( 'anaglyph_default_page_content' ) ) {
 								anaglyph_get_blog_content_part();					
 							echo '</div>';
 							echo '<div class="col-md-4">';
-								get_sidebar_part();					
+								get_sidebar_part('blog');					
 							echo '</div>';
 						echo '</div>';
 					}
