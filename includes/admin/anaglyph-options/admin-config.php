@@ -54,8 +54,8 @@ if (!class_exists('anaglyph_config')) {
         function dynamic_section($sections) {
             //$sections = array();
             $sections[] = array(
-                'title' => __('Section via hook', 'anaglyph-framework'),
-                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'anaglyph-framework'),
+                'title' => __('Section via hook', 'anaglyph-lite'),
+                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'anaglyph-lite'),
                 'icon' => 'el-icon-paper-clip',
                 'fields' => array()
             );
@@ -73,7 +73,7 @@ if (!class_exists('anaglyph_config')) {
             return $args;
         }
 
-        // Remove the demo link and the notice of integrated demo from the anaglyph-framework plugin
+        // Remove the demo link and the notice of integrated demo from the Redux-framework plugin
         function remove_demo() {
 			// Used to hide the demo mode link from the plugin page. Only used when Anaglyph is a plugin.
 			if ( class_exists( 'ReduxFrameworkPlugin' ) ) {
@@ -101,31 +101,31 @@ if (!class_exists('anaglyph_config')) {
 			
 			
 
-            $customize_title = sprintf(__('Customize &#8220;%s&#8221;', 'anaglyph-framework'), $this->theme->display('Name'));
+            $customize_title = sprintf(__('Customize &#8220;%s&#8221;', 'anaglyph-lite'), $this->theme->display('Name'));
             
             ?>
             <div id="current-theme" class="<?php echo esc_attr($class); ?>">
             <?php if ($screenshot) : ?>
                 <?php if (current_user_can('edit_theme_options')) : ?>
                         <a href="<?php echo wp_customize_url(); ?>" class="load-customize hide-if-no-customize" title="<?php echo esc_attr($customize_title); ?>">
-                            <img src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview', 'anaglyph-framework'); ?>" />
+                            <img src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview', 'anaglyph-lite'); ?>" />
                         </a>
                 <?php endif; ?>
-                    <img class="hide-if-customize" src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview', 'anaglyph-framework'); ?>" />
+                    <img class="hide-if-customize" src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview', 'anaglyph-lite'); ?>" />
                 <?php endif; ?>
 
                 <h4><?php echo $this->theme->display('Name'); ?></h4>
 
                 <div>
                     <ul class="theme-info">
-                        <li><?php printf(__('By %s', 'anaglyph-framework'), $this->theme->display('Author')); ?></li>
-                        <li><?php printf(__('Version %s', 'anaglyph-framework'), $this->theme->display('Version')); ?></li>
-                        <li><?php echo '<strong>' . __('Tags', 'anaglyph-framework') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
+                        <li><?php printf(__('By %s', 'anaglyph-lite'), $this->theme->display('Author')); ?></li>
+                        <li><?php printf(__('Version %s', 'anaglyph-lite'), $this->theme->display('Version')); ?></li>
+                        <li><?php echo '<strong>' . __('Tags', 'anaglyph-lite') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
                     </ul>
                     <p class="theme-description"><?php echo $this->theme->display('Description'); ?></p>
             <?php
             if ($this->theme->parent()) {
-                printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.', 'anaglyph-framework') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'anaglyph-framework'), $this->theme->parent()->display('Name'));
+                printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.', 'anaglyph-lite') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'anaglyph-lite'), $this->theme->parent()->display('Name'));
             }
             ?>
 
@@ -220,7 +220,7 @@ if (!class_exists('anaglyph_config')) {
 			/*General Section*/
 			
 			$arr_section['general'] = array(
-                'title'     => __('General', 'anaglyph-framework'),
+                'title'     => __('General', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/general.png',
 				'icon_type'	=> 'image',
                 'fields'    => array (
@@ -228,8 +228,8 @@ if (!class_exists('anaglyph_config')) {
 							'id'        => 'logo',
 							'type'      => 'media',
 							'url'       => false,
-							'title'     => __('Logo', 'anaglyph-framework'),
-							'subtitle'  => __('Change your Logo here, upload or enter the URL to your logo image.', 'anaglyph-framework'),
+							'title'     => __('Logo', 'anaglyph-lite'),
+							'subtitle'  => __('Change your Logo here, upload or enter the URL to your logo image.', 'anaglyph-lite'),
 							'default'   => array('url' => $sample_patterns_url . 'images/logo.png'),
 							
 						),
@@ -238,8 +238,8 @@ if (!class_exists('anaglyph_config')) {
 							'id'        => 'logo-retina',
 							'type'      => 'media',
 							'url'       => false,
-							'title'     => __('Logo Retina ', 'anaglyph-framework'),
-							'subtitle'  => __('Upload your Retina Logo. This should be your Logo in double size (If your logo is 100 x 20px, it should be 200 x 40px)', 'anaglyph-framework'),
+							'title'     => __('Logo Retina ', 'anaglyph-lite'),
+							'subtitle'  => __('Upload your Retina Logo. This should be your Logo in double size (If your logo is 100 x 20px, it should be 200 x 40px)', 'anaglyph-lite'),
 							'default'   => array ('url' => $sample_patterns_url . 'images/logo@2x.png'),
 						),
 
@@ -247,8 +247,8 @@ if (!class_exists('anaglyph_config')) {
 							'id'                => 'logo-dimensions',
 							'type'              => 'dimensions',
 							'units'    			=> false,
-							'title'             => __('Original Logo (Width/Height)', 'anaglyph-framework'),
-							'subtitle'          => __("If Retina Logo uploaded, please enter the (width/height) of the Standard Logo you've uploaded (not the Retina Logo)", 'anaglyph-framework'),
+							'title'             => __('Original Logo (Width/Height)', 'anaglyph-lite'),
+							'subtitle'          => __("If Retina Logo uploaded, please enter the (width/height) of the Standard Logo you've uploaded (not the Retina Logo)", 'anaglyph-lite'),
 							'default'           => array(
 								'width'     => 129, 
 								'height'    => 18,
@@ -259,8 +259,8 @@ if (!class_exists('anaglyph_config')) {
 							'id'        => 'favicon',
 							'type'      => 'media',
 							'url'       => false,
-							'title'     => __('Favicon', 'anaglyph-framework'),
-							'subtitle'  => __('A favicon is a 16x16 pixel icon that represents your site; upload your custom Favicon here.', 'anaglyph-framework'),
+							'title'     => __('Favicon', 'anaglyph-lite'),
+							'subtitle'  => __('A favicon is a 16x16 pixel icon that represents your site; upload your custom Favicon here.', 'anaglyph-lite'),
 							'default'   => array('url' => $sample_patterns_url . 'favicon/favicon-16x16.png'),
 						),
 						
@@ -268,8 +268,8 @@ if (!class_exists('anaglyph_config')) {
 							'id'        => 'favicon-iphone',
 							'type'      => 'media',
 							'url'       => false,
-							'title'     => __('Favicon iPhone', 'anaglyph-framework'),
-							'subtitle'  => __('Upload a custom favicon for iPhone (57x57 pixel png).', 'anaglyph-framework'),
+							'title'     => __('Favicon iPhone', 'anaglyph-lite'),
+							'subtitle'  => __('Upload a custom favicon for iPhone (57x57 pixel png).', 'anaglyph-lite'),
 							'default'   => array('url' => $sample_patterns_url . 'favicon/favicon-57x57.png'),
 						),
 						
@@ -277,8 +277,8 @@ if (!class_exists('anaglyph_config')) {
 							'id'        => 'favicon-iphone-retina',
 							'type'      => 'media',
 							'url'       => false,
-							'title'     => __('Favicon iPhone Retina', 'anaglyph-framework'),
-							'subtitle'  => __('Upload a custom favicon for iPhone retina (114x114 pixel png).', 'anaglyph-framework'),
+							'title'     => __('Favicon iPhone Retina', 'anaglyph-lite'),
+							'subtitle'  => __('Upload a custom favicon for iPhone retina (114x114 pixel png).', 'anaglyph-lite'),
 							'default'   => array('url' => $sample_patterns_url . 'favicon/favicon-114x114.png'),
 						),
 						
@@ -286,8 +286,8 @@ if (!class_exists('anaglyph_config')) {
 							'id'        => 'favicon-ipad',
 							'type'      => 'media',
 							'url'       => false,
-							'title'     => __('Favicon iPad', 'anaglyph-framework'),
-							'subtitle'  => __('Upload a custom favicon for iPad (72x72 pixel png).', 'anaglyph-framework'),
+							'title'     => __('Favicon iPad', 'anaglyph-lite'),
+							'subtitle'  => __('Upload a custom favicon for iPad (72x72 pixel png).', 'anaglyph-lite'),
 							'default'   => array('url' => $sample_patterns_url . 'favicon/favicon-72x72.png'),
 						),
 						
@@ -295,8 +295,8 @@ if (!class_exists('anaglyph_config')) {
 							'id'        => 'favicon-ipad-retina',
 							'type'      => 'media',
 							'url'       => false,
-							'title'     => __('Favicon iPad Retina', 'anaglyph-framework'),
-							'subtitle'  => __('Upload a custom favicon for iPhone retina (144x144 pixel png).', 'anaglyph-framework'),
+							'title'     => __('Favicon iPad Retina', 'anaglyph-lite'),
+							'subtitle'  => __('Upload a custom favicon for iPhone retina (144x144 pixel png).', 'anaglyph-lite'),
 							'default'   => array('url' => $sample_patterns_url . 'favicon/favicon-144x144.png'),
 						),
 						 
@@ -305,7 +305,7 @@ if (!class_exists('anaglyph_config')) {
 			
 			/*Display options Section*/
 			$arr_section['display'] = array(
-                'title'     => __('Display options', 'anaglyph-framework'),
+                'title'     => __('Display options', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/display-options.png',
 				'icon_type'	=> 'image',
                 'fields'    => array (
@@ -313,9 +313,9 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'smoothscroll',
                         'type'      => 'checkbox',
-                        'title'     => __('Enhanced scrolling', 'anaglyph-framework'),
-                        'subtitle'  => __('Select to enable scrolling library.', 'anaglyph-framework'),
-                        'desc'      => __('Yes', 'anaglyph-framework'),
+                        'title'     => __('Enhanced scrolling', 'anaglyph-lite'),
+                        'subtitle'  => __('Select to enable scrolling library.', 'anaglyph-lite'),
+                        'desc'      => __('Yes', 'anaglyph-lite'),
 						'class'		=> 'icheck',
                         'default'   => '1',
 						'data'		=> null
@@ -324,12 +324,12 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'excerpt',
                         'type'      => 'select',
-                        'title'     => __('Select Post Preview', 'anaglyph-framework'),
-                        'subtitle'  => __('Select showing full post, excerpt or title only', 'anaglyph-framework'),
+                        'title'     => __('Select Post Preview', 'anaglyph-lite'),
+                        'subtitle'  => __('Select showing full post, excerpt or title only', 'anaglyph-lite'),
                         'options'   =>  array(
-                            '1'     => __("Full post (before <-more->)", "anaglyph-framework"),
-                            '2'     => __("Excerpt", "anaglyph-framework"),
-                            '3'     => __("Only Title", "anaglyph-framework"),
+                            '1'     => __("Full post (before <-more->)", "anaglyph-lite"),
+                            '2'     => __("Excerpt", "anaglyph-lite"),
+                            '3'     => __("Only Title", "anaglyph-lite"),
                         ),
                         'default'   => '2'
                     ),
@@ -337,15 +337,15 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'pp-comments',
                         'type'      => 'select',
-                        'title'     => __('Display Comments', 'anaglyph-framework'),
-                        'subtitle'  => __('Choose where users are allowed to post comment in your website.', 'anaglyph-framework'),
+                        'title'     => __('Display Comments', 'anaglyph-lite'),
+                        'subtitle'  => __('Choose where users are allowed to post comment in your website.', 'anaglyph-lite'),
 						'std'		=> 'post',
                         
                         'options'   => array(
-                            'post'  => __('Posts Only', 'anaglyph-framework'), 
-                            'page'  => __('Pages Only', 'anaglyph-framework'), 
-                            'both'  => __('Posts/Pages show', 'anaglyph-framework'), 
-							'none'	=> __('Hide all', 'anaglyph-framework'), 
+                            'post'  => __('Posts Only', 'anaglyph-lite'), 
+                            'page'  => __('Pages Only', 'anaglyph-lite'), 
+                            'both'  => __('Posts/Pages show', 'anaglyph-lite'), 
+							'none'	=> __('Hide all', 'anaglyph-lite'), 
                         ),
                         'default'   => 'post'
                     ),
@@ -353,9 +353,9 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'pp-breadcrumbs',
                         'type'      => 'checkbox',
-                        'title'     => __('Display Breadcrumbs', 'anaglyph-framework'),
-                        'subtitle'  => __('Display dynamic breadcrumbs on each page of your website.', 'anaglyph-framework'),
-                        'desc'      => __('Yes', 'anaglyph-framework'),
+                        'title'     => __('Display Breadcrumbs', 'anaglyph-lite'),
+                        'subtitle'  => __('Display dynamic breadcrumbs on each page of your website.', 'anaglyph-lite'),
+                        'desc'      => __('Yes', 'anaglyph-lite'),
 						'class'		=> 'icheck',
                         'default'   => '1'
                     ),		
@@ -363,8 +363,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'pp-blog',
                         'type'      => 'image_select',
-                        'title'     => __('Blog page layout', 'anaglyph-framework'),
-                        'subtitle'  => __('Select main content and sidebar alignment.', 'anaglyph-framework'),
+                        'title'     => __('Blog page layout', 'anaglyph-lite'),
+                        'subtitle'  => __('Select main content and sidebar alignment.', 'anaglyph-lite'),
                         'options'   => array(
                             '1' => array('alt' => '1 Column',       'img' => ReduxFramework::$_url . 'assets/img/1col.png'),
                             '2' => array('alt' => '2 Column Left',  'img' => ReduxFramework::$_url . 'assets/img/2cl.png'),
@@ -376,8 +376,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'pp-post',
                         'type'      => 'image_select',
-                        'title'     => __('Single post layout', 'anaglyph-framework'),
-                        'subtitle'  => __('Select main content and sidebar alignment.', 'anaglyph-framework'),
+                        'title'     => __('Single post layout', 'anaglyph-lite'),
+                        'subtitle'  => __('Select main content and sidebar alignment.', 'anaglyph-lite'),
                         'options'   => array(
                             '1' => array('alt' => '1 Column',       'img' => ReduxFramework::$_url . 'assets/img/1col.png'),
                             '2' => array('alt' => '2 Column Left',  'img' => ReduxFramework::$_url . 'assets/img/2cl.png'),
@@ -389,13 +389,13 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'pp-columns',
                         'type'      => 'select',
-                        'title'     => __('Select Columns', 'anaglyph-framework'),
-                        'subtitle'  => __('Select the number of columns for post showing.', 'anaglyph-framework'),
+                        'title'     => __('Select Columns', 'anaglyph-lite'),
+                        'subtitle'  => __('Select the number of columns for post showing.', 'anaglyph-lite'),
                         'options'   => array(
-                            '1' => __("Full width", "anaglyph-framework"), 
-                            '2' => __("2 columns",  "anaglyph-framework"), 
-                            '3' => __("3 columns",  "anaglyph-framework"),
-							'4' => __("4 columns",  "anaglyph-framework"),
+                            '1' => __("Full width", "anaglyph-lite"), 
+                            '2' => __("2 columns",  "anaglyph-lite"), 
+                            '3' => __("3 columns",  "anaglyph-lite"),
+							'4' => __("4 columns",  "anaglyph-lite"),
                         ),
                         'default'   => '2'
                     ),
@@ -403,80 +403,80 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'pp-animations',
                         'type'      => 'select',
-                        'title'     => __('Select animation for posts.', 'anaglyph-framework'),
+                        'title'     => __('Select animation for posts.', 'anaglyph-lite'),
                         'options'   => array(
-                            'top' => __("Top", "anaglyph-framework"), 
-                            'left' => __("Left", "anaglyph-framework"), 
-                            'right' => __("Right", "anaglyph-framework"),
-							'bottom' => __("Bottom", "anaglyph-framework"),
-							'none' => __("None", "anaglyph-framework"),
+                            'top' => __("Top", "anaglyph-lite"), 
+                            'left' => __("Left", "anaglyph-lite"), 
+                            'right' => __("Right", "anaglyph-lite"),
+							'bottom' => __("Bottom", "anaglyph-lite"),
+							'none' => __("None", "anaglyph-lite"),
                         ),
                         'default'   => 'bottom'
                     ),
 					array(
                         'id'        => 'pp-date',
                         'type'      => 'checkbox',
-                        'title'     => __('Display date for posts', 'anaglyph-framework'),
+                        'title'     => __('Display date for posts', 'anaglyph-lite'),
                         'default'   => true,
 						'class'		=> 'icheck',
-						'desc'      => __('Yes', 'anaglyph-framework'),
+						'desc'      => __('Yes', 'anaglyph-lite'),
                     ),	
 					array(
                         'id'        => 'pp-num-comments',
                         'type'      => 'checkbox',
-                        'title'     => __('Display comments count for posts', 'anaglyph-framework'),
+                        'title'     => __('Display comments count for posts', 'anaglyph-lite'),
                         'default'   => true,
 						'class'		=> 'icheck',
-						'desc'      => __('Yes', 'anaglyph-framework'),
+						'desc'      => __('Yes', 'anaglyph-lite'),
                     ),	
 					array(
                         'id'        => 'pp-thumbnail',
                         'type'      => 'checkbox',
-                        'title'     => __('Display thumbnails for posts', 'anaglyph-framework'),
+                        'title'     => __('Display thumbnails for posts', 'anaglyph-lite'),
                         'default'   => false,
 						'class'		=> 'icheck',
-						'desc'      => __('Yes', 'anaglyph-framework'),
+						'desc'      => __('Yes', 'anaglyph-lite'),
                     ),	
 					array(
                         'id'        => 'pp-thumbnail-single',
                         'type'      => 'checkbox',
-                        'title'     => __('Display thumbnails for single post page', 'anaglyph-framework'),
+                        'title'     => __('Display thumbnails for single post page', 'anaglyph-lite'),
                         'default'   => false,
 						'class'		=> 'icheck',
-						'desc'      => __('Yes', 'anaglyph-framework'),
+						'desc'      => __('Yes', 'anaglyph-lite'),
                     ),	
 					array(
                         'id'        => 'pp-tags',
                         'type'      => 'checkbox',
-                        'title'     => __('Display tags for posts', 'anaglyph-framework'),
+                        'title'     => __('Display tags for posts', 'anaglyph-lite'),
                         'default'   => true,
 						'class'		=> 'icheck',
-						'desc'      => __('Yes', 'anaglyph-framework'),
+						'desc'      => __('Yes', 'anaglyph-lite'),
                     ),	
 					
 					array(
                         'id'        => 'pp-authors',
                         'type'      => 'checkbox',
-                        'title'     => __('Display authors for posts', 'anaglyph-framework'),
+                        'title'     => __('Display authors for posts', 'anaglyph-lite'),
                         'default'   => true,
 						'class'		=> 'icheck',
-						'desc'      => __('Yes', 'anaglyph-framework'),
+						'desc'      => __('Yes', 'anaglyph-lite'),
                     ),	
 					
 					array(
                         'id'        => 'pp-share',
                         'type'      => 'checkbox',
-                        'title'     => __('Display share for post', 'anaglyph-framework'),
+                        'title'     => __('Display share for post', 'anaglyph-lite'),
                         'default'   => true,
 						'class'		=> 'icheck',
-						'desc'      => __('Yes', 'anaglyph-framework'),
+						'desc'      => __('Yes', 'anaglyph-lite'),
                     ),	
 					
 					array(
                         'id'        => 'pp-animation-mobile',
                         'type'      => 'checkbox',
-                        'title'     => __('Disable all animations on all mobile devices', 'anaglyph-framework'),
-                        'desc'      => __('Yes', 'anaglyph-framework'),
+                        'title'     => __('Disable all animations on all mobile devices', 'anaglyph-lite'),
+                        'desc'      => __('Yes', 'anaglyph-lite'),
 						'class'		=> 'icheck',
                         'default'   => '0'
                     ),
@@ -486,7 +486,7 @@ if (!class_exists('anaglyph_config')) {
 				
 			/*Styling options Section*/
 			$arr_section['styling'] = array(
-                'title'     => __('Styling', 'anaglyph-framework'),
+                'title'     => __('Styling', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/styling.png',
 				'icon_type'	=> 'image',
                 'fields'    => array (
@@ -494,8 +494,8 @@ if (!class_exists('anaglyph_config')) {
                         'id'        => 'body-background',
                         'type'      => 'background',
                         'output'    => array('body'),
-                        'title'     => __('Body Background', 'anaglyph-framework'),
-                        'subtitle'  => __('Body background with image, color, etc.', 'anaglyph-framework'),
+                        'title'     => __('Body Background', 'anaglyph-lite'),
+                        'subtitle'  => __('Body background with image, color, etc.', 'anaglyph-lite'),
 						'transparent'	=> false,
 						'default'   => array(
 							'background-color' => '#ffffff',
@@ -509,14 +509,14 @@ if (!class_exists('anaglyph_config')) {
 					array(
 						'id' 	=> 'headline-section',
 						'type' 	=> 'section',
-						'title' => __('Headline options', 'anaglyph-framework'),
+						'title' => __('Headline options', 'anaglyph-lite'),
 						'indent' => true 
 					),
 					
 					array(
                         'id'        => 'headline-before-sep-color',
                         'type'      => 'color',
-                        'title'     => __('Headline before color separator.', 'anaglyph-framework'),
+                        'title'     => __('Headline before color separator.', 'anaglyph-lite'),
                         'default'   => '#FACE00',
                         'validate'  => 'color',
 						'transparent'	=> false
@@ -525,7 +525,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'headline-after-sep-color',
                         'type'      => 'color',
-                        'title'     => __('Headline after color separator.', 'anaglyph-framework'),
+                        'title'     => __('Headline after color separator.', 'anaglyph-lite'),
                         'default'   => '#E23A00',
                         'validate'  => 'color',
 						'transparent'	=> false
@@ -534,14 +534,14 @@ if (!class_exists('anaglyph_config')) {
 					array(
 						'id' 	=> 'top-title-section',
 						'type' 	=> 'section',
-						'title' => __('Page title options', 'anaglyph-framework'),
+						'title' => __('Page title options', 'anaglyph-lite'),
 						'indent' => true 
 					),
 					
 					array(
                         'id'        => 'top-title-text',
 						'type'      => 'typography', 
-						'title'       => __('Page title text options.', 'anaglyph-framework'),
+						'title'       => __('Page title text options.', 'anaglyph-lite'),
 						'google'      => true, 
 						'subsets'	  => false,
 						'font-backup' => false,
@@ -551,7 +551,7 @@ if (!class_exists('anaglyph_config')) {
 						'subsets'	  => true,
 						'output'      => array('.sub-page #page-title .title h1'),
 						'units'       =>'px',
-						'subtitle'	  => __('Select typography for title text.', 'anaglyph-framework'),
+						'subtitle'	  => __('Select typography for title text.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#ffffff', 
 														'font-style'  => '400', 
@@ -566,7 +566,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'top-title-bg-color',
 						'type'      => 'color_rgba',
-                        'title'     => __('Page title text background color.', 'anaglyph-framework'),
+                        'title'     => __('Page title text background color.', 'anaglyph-lite'),
                         'default'   => array('color' => '#000000', 'alpha' => '0.8'),
                         'mode'      => 'color',
                         'validate'  => 'colorrgba',
@@ -576,14 +576,14 @@ if (!class_exists('anaglyph_config')) {
 					array(
 						'id' 	=> 'blog-section',
 						'type' 	=> 'section',
-						'title' => __('Blog options', 'anaglyph-framework'),
+						'title' => __('Blog options', 'anaglyph-lite'),
 						'indent' => true 
 					),
 					
 					array(
                         'id'        => 'blog-date-text',
 						'type'      => 'typography', 
-						'title'       => __('Blog date text options.', 'anaglyph-framework'),
+						'title'       => __('Blog date text options.', 'anaglyph-lite'),
 						'google'      => true, 
 						'subsets'	  => false,
 						'font-backup' => false,
@@ -592,7 +592,7 @@ if (!class_exists('anaglyph_config')) {
 						'subsets'		=> true,
 						'output'      => array('.blog-post .date-circle', '.blog-post .date-circle'),
 						'units'       =>'px',
-						'subtitle'	  => __('Select typography for title text.', 'anaglyph-framework'),
+						'subtitle'	  => __('Select typography for title text.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#ffffff', 
 														'font-style'  => '400', 
@@ -606,7 +606,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        	=> 'blog-date-bg-color',
 						'type'      	=> 'color',
-                        'title'     	=> __('Blog date background color.', 'anaglyph-framework'),
+                        'title'     	=> __('Blog date background color.', 'anaglyph-lite'),
                         'default'   	=> '#292422',
                         'mode'      	=> 'color',
 						'transparent'	=> false
@@ -615,14 +615,14 @@ if (!class_exists('anaglyph_config')) {
 					array(
 						'id' 	=> 'navigation-section',
 						'type' 	=> 'section',
-						'title' => __('Post navigation options', 'anaglyph-framework'),
+						'title' => __('Post navigation options', 'anaglyph-lite'),
 						'indent' => true 
 					),
 					
 					array(
                         'id'        => 'navigation-text',
 						'type'      => 'typography', 
-						'title'       => __('Navigation text options.', 'anaglyph-framework'),
+						'title'       => __('Navigation text options.', 'anaglyph-lite'),
 						'google'      => true, 
 						'subsets'	  => false,
 						'font-backup' => false,
@@ -633,7 +633,7 @@ if (!class_exists('anaglyph_config')) {
 						'subsets'		=> true,
 						'output'	  => array('.pagination li a, .pagination li span'),
 						'units'       =>'px',
-						'subtitle'	  => __('Select typography for page navigation text.', 'anaglyph-framework'),
+						'subtitle'	  => __('Select typography for page navigation text.', 'anaglyph-lite'),
 								'default'     => array(
 														'font-style'  => '400', 
 														'font-family' => 'Montserrat', 
@@ -645,7 +645,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'navigation-border',
                         'type'      => 'border',
-                        'title'     => __('Navigation border.', 'anaglyph-framework'),
+                        'title'     => __('Navigation border.', 'anaglyph-lite'),
 						'color'		=> false,
                         'default'   => array(
                             'border-style'  => 'solid', 
@@ -659,7 +659,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'navigation-border-color',
                         'type'      => 'link_color',
-                        'title'     => __('Navigation border color.', 'anaglyph-framework'),
+                        'title'     => __('Navigation border color.', 'anaglyph-lite'),
                         'default'   => array(
                             'regular'   => '#999999',
                             'hover'     => '#000000',
@@ -670,7 +670,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'navigation-link-color',
                         'type'      => 'link_color',
-                        'title'     => __('Navigation link color.', 'anaglyph-framework'),
+                        'title'     => __('Navigation link color.', 'anaglyph-lite'),
                         'default'   => array(
                             'regular'   => '#292422',
                             'hover'     => '#292422',
@@ -682,7 +682,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'navigation-bglink-color',
                         'type'      => 'link_color',
-                        'title'     => __('Navigation background link color.', 'anaglyph-framework'),
+                        'title'     => __('Navigation background link color.', 'anaglyph-lite'),
                         'default'   => array(
                             'regular'   => '#ffffff',
                             'hover'     => '#ffffff',
@@ -697,7 +697,7 @@ if (!class_exists('anaglyph_config')) {
 			
 			/*Slider Section*/
 			$arr_section['slider'] = array(
-                'title'     => __('Slider', 'anaglyph-framework'),
+                'title'     => __('Slider', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/slider.png',
 				'icon_type'	=> 'image',
                 'fields'    => array (
@@ -705,7 +705,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'switch-slider',
                         'type'      => 'switch',
-                        'title'     => __('Slider on "Home" page', 'anaglyph-framework'),
+                        'title'     => __('Slider on "Home" page', 'anaglyph-lite'),
                         'default'   =>  0,
                         'on'        => 'On',
                         'off'       => 'Off',
@@ -715,12 +715,12 @@ if (!class_exists('anaglyph_config')) {
                         'id'        => 'home-slides',
                         'type'      => 'slides',
 						'required'  => array('switch-slider', '=', '1'),
-                        'title'     => __('Slides', 'anaglyph-framework'),
-                        'subtitle'  => __('Add slides to slider', 'anaglyph-framework'),
+                        'title'     => __('Slides', 'anaglyph-lite'),
+                        'subtitle'  => __('Add slides to slider', 'anaglyph-lite'),
                         'placeholder'   => array(
-                            'title'         => __('This is a title', 'anaglyph-framework'),
-                            'description'   => __('Description Here', 'anaglyph-framework'),
-                            'url'           => __('Url', 'anaglyph-framework'),
+                            'title'         => __('This is a title', 'anaglyph-lite'),
+                            'description'   => __('Description Here', 'anaglyph-lite'),
+                            'url'           => __('Url', 'anaglyph-lite'),
                         ),
                     ),
 					
@@ -728,9 +728,9 @@ if (!class_exists('anaglyph_config')) {
                         'id'        => 'slider-parallax',
                         'type'      => 'checkbox',
 						'required'  => array('switch-slider', '=', '1'),
-                        'title'     => __('Enable parallax', 'anaglyph-framework'),
-                        'subtitle'  => __('Select to enable parallax effect.', 'anaglyph-framework'),
-                        'desc'      => __('Yes', 'anaglyph-framework'),
+                        'title'     => __('Enable parallax', 'anaglyph-lite'),
+                        'subtitle'  => __('Select to enable parallax effect.', 'anaglyph-lite'),
+                        'desc'      => __('Yes', 'anaglyph-lite'),
 						'class'		=> 'icheck',
                         'default'   => '1',
 						'data'		=> null
@@ -740,8 +740,8 @@ if (!class_exists('anaglyph_config')) {
                         'id'            => 'slider-showspeed',
                         'type'          => 'slider',
 						'required'  => array('switch-slider', '=', '1'),
-                        'title'         => __('Slideshow Speed', 'anaglyph-framework'),
-                        'desc'          => __('Min: 1000, max: 28000, step: 500, default value: 8000', 'anaglyph-framework'),
+                        'title'         => __('Slideshow Speed', 'anaglyph-lite'),
+                        'desc'          => __('Min: 1000, max: 28000, step: 500, default value: 8000', 'anaglyph-lite'),
                         'default'       => 8000,
                         'min'           => 1000,
                         'step'          => 500,
@@ -752,7 +752,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'slider-animationeffect-in',
                         'type'      => 'select',
-                        'title'     => __('Select animation in', 'anaglyph-framework'),
+                        'title'     => __('Select animation in', 'anaglyph-lite'),
                         'options'   => $arr_slider_effects,
                         'default'   => 'flipInX',
 						'required'  => array('switch-slider', '=', '1'),
@@ -761,7 +761,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'slider-animationeffect-out',
                         'type'      => 'select',
-                        'title'     => __('Select animation out', 'anaglyph-framework'),
+                        'title'     => __('Select animation out', 'anaglyph-lite'),
                         'options'   => $arr_slider_effects,
                         'default'   => 'fadeOutUp',
 						'required'  => array('switch-slider', '=', '1'),
@@ -770,7 +770,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
 								'id'          => 'slider-typography',
 								'type'        => 'typography', 
-								'title'       => __('Slider title', 'anaglyph-framework'),
+								'title'       => __('Slider title', 'anaglyph-lite'),
 								'required'  => array('switch-slider', '=', '1'),
 								'google'      => true, 
 								'subsets'	  => false,
@@ -781,7 +781,7 @@ if (!class_exists('anaglyph_config')) {
 								'subsets'		=> true,
 								'output'    => array('#slider .flexslider .slides .slide .slide-content .slide-wrapper h1'),
 								'units'       =>'px',
-								'subtitle'	  => __('Select typography for general text.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select typography for general text.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#fff', 
 														'font-style'  => '400', 
@@ -796,7 +796,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
  								'id'          => 'slider-sub-typography',
  								'type'        => 'typography', 
- 								'title'       => __('Slider subtitle', 'anaglyph-framework'),
+ 								'title'       => __('Slider subtitle', 'anaglyph-lite'),
  								'required'  => array('switch-slider', '=', '1'),
  								'google'      => true, 
  								'subsets'	  => false,
@@ -807,7 +807,7 @@ if (!class_exists('anaglyph_config')) {
  								'subsets'		=> true,
  								'output'    => array('#slider .flexslider .slides .slide .slide-content .slide-wrapper h3'),
  								'units'       =>'px',
- 								'subtitle'	  => __('Select typography for subtitle.', 'anaglyph-framework'),
+ 								'subtitle'	  => __('Select typography for subtitle.', 'anaglyph-lite'),
  								'default'     => array(
  														'color'       => '#fff', 
  														'font-style'  => '400', 
@@ -822,7 +822,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        	=> 'slider-title-bg-color',
 						'type'      	=> 'color_rgba',
-                        'title'     	=> __('Slider title background color.', 'anaglyph-framework'),
+                        'title'     	=> __('Slider title background color.', 'anaglyph-lite'),
                         'default'  => array(
 							'color' => '#000000', 
 							'alpha' => '0.9'
@@ -838,14 +838,14 @@ if (!class_exists('anaglyph_config')) {
 				
 			/*Header Section*/
 			$arr_section['header'] = array(
-                'title'     => __('Header', 'anaglyph-framework'),
+                'title'     => __('Header', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/header.png',
 				'icon_type' => 'image',
                 'fields'    => array(
 					 array(
                         'id'        => 'header-background-color',
                         'type'      => 'color',
-                        'title'     => __('Header background color', 'anaglyph-framework'),
+                        'title'     => __('Header background color', 'anaglyph-lite'),
                         'default'   => '#FFFFFF',
                         'validate'  => 'color',
 						'transparent'	=> true
@@ -854,11 +854,11 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'header-fixed-settings',
                         'type'      => 'select',
-                        'title'     => __('Select animation in', 'anaglyph-framework'),
+                        'title'     => __('Select animation in', 'anaglyph-lite'),
                         'options'   => array(
-									'1' => __('Fixed header on home page', 'anaglyph-framework'),
-									'2' => __('Fixed header for all pages', 'anaglyph-framework'),
-									'3' => __('Disable fixed header', 'anaglyph-framework'),
+									'1' => __('Fixed header on home page', 'anaglyph-lite'),
+									'2' => __('Fixed header for all pages', 'anaglyph-lite'),
+									'3' => __('Disable fixed header', 'anaglyph-lite'),
 							),
                         'default'   => '1',
 						'std'		=> '1'
@@ -874,8 +874,8 @@ if (!class_exists('anaglyph_config')) {
                         'right'        	=> false,     	
                         'units'    			=> array('em','px','%'),
 						'units_extended'    => 'true',  
-                        'title'         => __('Padding Option', 'anaglyph-framework'),
-                        'subtitle'      => __('Allow your users to choose the spacing or margin they want.', 'anaglyph-framework'),
+                        'title'         => __('Padding Option', 'anaglyph-lite'),
+                        'subtitle'      => __('Allow your users to choose the spacing or margin they want.', 'anaglyph-lite'),
                         'default'       => array(
                             'padding-top'    => 10, 
                             'padding-bottom' => 10 
@@ -887,7 +887,7 @@ if (!class_exists('anaglyph_config')) {
 			
 			/*Menu Section*/
 			$arr_section['menu'] = array(
-                'title'     => __('Menu', 'anaglyph-framework'),
+                'title'     => __('Menu', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/menu.png',
 				'icon_type' => 'image',
                 'fields'    => array(
@@ -895,7 +895,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
 								'id'          => 'menu-font-settings',
 								'type'        => 'typography', 
-								'title'       => __('Menu font settings', 'anaglyph-framework'),
+								'title'       => __('Menu font settings', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -906,7 +906,7 @@ if (!class_exists('anaglyph_config')) {
 								'output'      => array('.navigation-wrapper .navigation .nav li a'),
 								'units'       =>'px',
 								'subsets'		=> true,
-								'subtitle'	  => __('Select typography for general text.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select typography for general text.', 'anaglyph-lite'),
 								'default'     => array(
 														'font-style'  => '400', 
 														'font-family' => 'Montserrat', 
@@ -920,7 +920,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'menu-link-color',
                         'type'      => 'link_color',
-                        'title'     => __('Menu item color', 'anaglyph-framework'),
+                        'title'     => __('Menu item color', 'anaglyph-lite'),
                         'default'   => array(
                             'regular'   => '#292422',
                             'hover'     => '#292422',
@@ -930,7 +930,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'submenu-link-color',
                         'type'      => 'link_color',
-                        'title'     => __('Submenu item color', 'anaglyph-framework'),
+                        'title'     => __('Submenu item color', 'anaglyph-lite'),
                         'default'   => array(
                             'regular'   => '#292422',
                             'hover'     => '#E23A00',
@@ -941,7 +941,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'submenu-itembg-color',
                         'type'      => 'link_color',
-                        'title'     => __('Submenu item background color', 'anaglyph-framework'),
+                        'title'     => __('Submenu item background color', 'anaglyph-lite'),
                         'default'   => array(
                             'regular'   => '#EDEAE6',
                             'hover'     => '#FFFFFF',
@@ -952,7 +952,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'submenu-color',
                         'type'      => 'color',
-                        'title'     => __('Submenu background color', 'anaglyph-framework'),
+                        'title'     => __('Submenu background color', 'anaglyph-lite'),
                         'default'   => '#EDEAE6',
                         'validate'  => 'color',
 						'transparent'	=> false
@@ -961,7 +961,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'submenu-itemborder-color',
                         'type'      => 'color_rgba',
-                        'title'     => __('Submenu item border color', 'anaglyph-framework'),
+                        'title'     => __('Submenu item border color', 'anaglyph-lite'),
                         'default'   => array('color' => '#000000', 'alpha' => '0.05'),
                         'mode'      => 'color',
                         'validate'  => 'colorrgba',
@@ -971,7 +971,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'before-item-color',
                         'type'      => 'color',
-                        'title'     => __('Menu before item color.', 'anaglyph-framework'),
+                        'title'     => __('Menu before item color.', 'anaglyph-lite'),
                         'default'   => '#E23A00',
                         'validate'  => 'color',
 						'transparent'	=> false
@@ -980,7 +980,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'after-item-color',
                         'type'      => 'color',
-                        'title'     => __('Menu after item color.', 'anaglyph-framework'),
+                        'title'     => __('Menu after item color.', 'anaglyph-lite'),
                         'default'   => '#FACE00',
                         'validate'  => 'color',
 						'transparent'	=> false
@@ -990,14 +990,14 @@ if (!class_exists('anaglyph_config')) {
 				
 			/*Font Styles Section*/
 			$arr_section['font-style'] = array(
-                'title'     => __('Font styles', 'anaglyph-framework'),
+                'title'     => __('Font styles', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/fonts.png',
 				'icon_type' => 'image',
                 'fields'    => array(
 						array(
 								'id'          => 'general-typography',
 								'type'        => 'typography', 
-								'title'       => __('General Text Font Style', 'anaglyph-framework'),
+								'title'       => __('General Text Font Style', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1006,7 +1006,7 @@ if (!class_exists('anaglyph_config')) {
 								'output'      => array('body'),
 								'units'       =>'px',
 								'subsets'		=> true,
-								'subtitle'	  => __('Select typography for general text.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select typography for general text.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#333', 
 														'font-style'  => '400', 
@@ -1020,8 +1020,8 @@ if (!class_exists('anaglyph_config')) {
 							 array(
 								'id'            => 'p-opacity',
 								'type'          => 'slider',
-								'title'         => __('Transparency for content', 'anaglyph-framework'),
-								'subtitle'      => __('Set the opacity for the content part', 'anaglyph-framework'),
+								'title'         => __('Transparency for content', 'anaglyph-lite'),
+								'subtitle'      => __('Set the opacity for the content part', 'anaglyph-lite'),
 								'default'       => .65,
 								'min'           => 0,
 								'step'          => .1,
@@ -1033,7 +1033,7 @@ if (!class_exists('anaglyph_config')) {
 							array(
 								'id'          => 'hone-typography',
 								'type'        => 'typography', 
-								'title'       => __('H1 Font Style.', 'anaglyph-framework'),
+								'title'       => __('H1 Font Style.', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1043,7 +1043,7 @@ if (!class_exists('anaglyph_config')) {
 								'output'      => array('h1'),
 								'subsets'		=> true,
 								'units'       =>'px',
-								'subtitle'	  => __('Select the typography you want for header H1.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select the typography you want for header H1.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#333', 
 														'font-style'  => '400', 
@@ -1057,7 +1057,7 @@ if (!class_exists('anaglyph_config')) {
 							array(
 								'id'          => 'htwo-typography',
 								'type'        => 'typography', 
-								'title'       => __('H2 Font Style.', 'anaglyph-framework'),
+								'title'       => __('H2 Font Style.', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1067,7 +1067,7 @@ if (!class_exists('anaglyph_config')) {
 								'subsets'		=> true,
 								'output'      => array('h2'),
 								'units'       =>'px',
-								'subtitle'	  => __('Select the typography you want for header H2.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select the typography you want for header H2.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#333', 
 														'font-style'  => '400', 
@@ -1081,7 +1081,7 @@ if (!class_exists('anaglyph_config')) {
 							 array(
 								'id'          => 'hthree-typography',
 								'type'        => 'typography', 
-								'title'       => __('H3 Font Style.', 'anaglyph-framework'),
+								'title'       => __('H3 Font Style.', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1091,7 +1091,7 @@ if (!class_exists('anaglyph_config')) {
 								'subsets'		=> true,
 								'output'      => array('h3'),
 								'units'       =>'px',
-								'subtitle'	  => __('Select the typography you want for header H3.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select the typography you want for header H3.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#333', 
 														'font-style'  => '400', 
@@ -1106,7 +1106,7 @@ if (!class_exists('anaglyph_config')) {
 							 array(
 								'id'          => 'hfour-typography',
 								'type'        => 'typography', 
-								'title'       => __('H4 Font Style.', 'anaglyph-framework'),
+								'title'       => __('H4 Font Style.', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1116,7 +1116,7 @@ if (!class_exists('anaglyph_config')) {
 								'subsets'		=> true,
 								'output'      => array('h4'),
 								'units'       =>'px',
-								'subtitle'	  => __('Select the typography you want for header H4.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select the typography you want for header H4.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#333', 
 														'font-style'  => '700', 
@@ -1130,7 +1130,7 @@ if (!class_exists('anaglyph_config')) {
 							 array(
 								'id'          => 'hfive-typography',
 								'type'        => 'typography', 
-								'title'       => __('H5 Font Style.', 'anaglyph-framework'),
+								'title'       => __('H5 Font Style.', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1140,7 +1140,7 @@ if (!class_exists('anaglyph_config')) {
 								'subsets'		=> true,
 								'output'      => array('h5'),
 								'units'       =>'px',
-								'subtitle'	  => __('Select the typography you want for header H5.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select the typography you want for header H5.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#333', 
 														'font-style'  => '400', 
@@ -1155,7 +1155,7 @@ if (!class_exists('anaglyph_config')) {
 							 array(
 								'id'          => 'hsix-typography',
 								'type'        => 'typography', 
-								'title'       => __('H6 Font Style.', 'anaglyph-framework'),
+								'title'       => __('H6 Font Style.', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1165,7 +1165,7 @@ if (!class_exists('anaglyph_config')) {
 								'subsets'		=> true,
 								'output'      => array('h6'),
 								'units'       =>'px',
-								'subtitle'	  => __('Select the typography you want for header H6.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select the typography you want for header H6.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#333', 
 														'font-style'  => '400', 
@@ -1180,7 +1180,7 @@ if (!class_exists('anaglyph_config')) {
 							 array(
 								'id'          => 'p-typography',
 								'type'        => 'typography', 
-								'title'       => __('"p" Font Style.', 'anaglyph-framework'),
+								'title'       => __('"p" Font Style.', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1189,7 +1189,7 @@ if (!class_exists('anaglyph_config')) {
 								'subsets'		=> true,
 								'output'      => array('p'),
 								'units'       =>'px',
-								'subtitle'	  => __('Select the typography you want for tag "p".', 'anaglyph-framework'),
+								'subtitle'	  => __('Select the typography you want for tag "p".', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#292422', 
 														'font-style'  => '400', 
@@ -1206,8 +1206,8 @@ if (!class_exists('anaglyph_config')) {
 							 array(
 									'id'        => 'content-link-color',
 									'type'      => 'link_color',
-									'title'     => __('Link style.', 'anaglyph-framework'),
-									'subtitle'  => __('Select the typography you want for tag "a".', 'anaglyph-framework'),
+									'title'     => __('Link style.', 'anaglyph-lite'),
+									'subtitle'  => __('Select the typography you want for tag "a".', 'anaglyph-lite'),
 									'output'      => array('a'),
 									'default'   => array(
 										'regular'   => '#292422',
@@ -1221,127 +1221,127 @@ if (!class_exists('anaglyph_config')) {
 			
 			/*Social Section*/
 			$arr_section['social'] = array(
-                'title'     => __('Social Links', 'anaglyph-framework'),
-                'desc'      => __('Add link to your social media profiles. Icons with link will be display in header or footer.', 'anaglyph-framework'),
+                'title'     => __('Social Links', 'anaglyph-lite'),
+                'desc'      => __('Add link to your social media profiles. Icons with link will be display in header or footer.', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/social-links.png',
 				'icon_type' => 'image',
 				'fields'    => array(
 					array(
                         'id'        => 'facebook-url',
                         'type'      => 'text',
-                        'title'     => __('Facebook', 'anaglyph-framework'),
+                        'title'     => __('Facebook', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'twitter-url',
                         'type'      => 'text',
-                        'title'     => __('Twitter', 'anaglyph-framework'),
+                        'title'     => __('Twitter', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'linkedin-url',
                         'type'      => 'text',
-                        'title'     => __('LinkedIn', 'anaglyph-framework'),
+                        'title'     => __('LinkedIn', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'myspace-url',
                         'type'      => 'text',
-                        'title'     => __('MySpace', 'anaglyph-framework'),
+                        'title'     => __('MySpace', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'gplus-url',
                         'type'      => 'text',
-                        'title'     => __('Google Plus+', 'anaglyph-framework'),
+                        'title'     => __('Google Plus+', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'dribbble-url',
                         'type'      => 'text',
-                        'title'     => __('Dribbble', 'anaglyph-framework'),
+                        'title'     => __('Dribbble', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'flickr-url',
                         'type'      => 'text',
-                        'title'     => __('Flickr', 'anaglyph-framework'),
+                        'title'     => __('Flickr', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'youtube-url',
                         'type'      => 'text',
-                        'title'     => __('You Tube', 'anaglyph-framework'),
+                        'title'     => __('You Tube', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'delicious-url',
                         'type'      => 'text',
-                        'title'     => __('Delicious', 'anaglyph-framework'),
+                        'title'     => __('Delicious', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'deviantart-url',
                         'type'      => 'text',
-                        'title'     => __('Deviantart', 'anaglyph-framework'),
+                        'title'     => __('Deviantart', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'rss-url',
                         'type'      => 'text',
-                        'title'     => __('RSS', 'anaglyph-framework'),
+                        'title'     => __('RSS', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'instagram-url',
                         'type'      => 'text',
-                        'title'     => __('Instagram', 'anaglyph-framework'),
+                        'title'     => __('Instagram', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'pinterest-url',
                         'type'      => 'text',
-                        'title'     => __('Pinterest', 'anaglyph-framework'),
+                        'title'     => __('Pinterest', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'vimeo-url',
                         'type'      => 'text',
-                        'title'     => __('Vimeo', 'anaglyph-framework'),
+                        'title'     => __('Vimeo', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'picassa-url',
                         'type'      => 'text',
-                        'title'     => __('Picassa', 'anaglyph-framework'),
+                        'title'     => __('Picassa', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'tumblr-url',
                         'type'      => 'text',
-                        'title'     => __('Tumblr', 'anaglyph-framework'),
+                        'title'     => __('Tumblr', 'anaglyph-lite'),
                         'validate'  => 'url',
                         'default'   => ''
                     ),
 					array(
                         'id'        => 'email-address',
                         'type'      => 'text',
-                        'title'     => __('E-mail', 'anaglyph-framework'),
+                        'title'     => __('E-mail', 'anaglyph-lite'),
                         'validate'  => 'email',
                         'msg'       => 'custom error message',
                         'default'   => ''
@@ -1349,7 +1349,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'skype-username',
                         'type'      => 'text',
-                        'title'     => __('Skype', 'anaglyph-framework'),
+                        'title'     => __('Skype', 'anaglyph-lite'),
                         'default'   => ''
                     ),
 				)	
@@ -1358,7 +1358,7 @@ if (!class_exists('anaglyph_config')) {
 			include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
 			global $wpdb;
 			$contact_form_array = array();
-			$contact_form_array[-1] = __('Anaglyph contact form', 'anaglyph-framework');
+			$contact_form_array[-1] = __('Anaglyph contact form', 'anaglyph-lite');
 			if ( is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) ) {
 				
 				$cf7_forms = $wpdb->get_results("SELECT ID, post_title FROM $wpdb->posts WHERE post_type = 'wpcf7_contact_form' order by post_title");
@@ -1372,30 +1372,30 @@ if (!class_exists('anaglyph_config')) {
 
 			/*Contact Section*/
 			$arr_section['contact'] = array(
-                'title'     => __('Contact', 'anaglyph-framework'),
+                'title'     => __('Contact', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/contact.png',
 				'icon_type' => 'image',
 				'fields'    => array(
 					array(
                         'id'        => 'contact-stitle',
                         'type'      => 'text',
-                        'title'     => __('Contact section title', 'anaglyph-framework'),
-                        'subtitle'  => __('Edit title for contact section', 'anaglyph-framework'),
+                        'title'     => __('Contact section title', 'anaglyph-lite'),
+                        'subtitle'  => __('Edit title for contact section', 'anaglyph-lite'),
                         'default'   => 'Contact us'
                     ),
 					array(
                         'id'        => 'contact-satitle',
                         'type'      => 'text',
-                        'title'     => __('Contact section additional title', 'anaglyph-framework'),
-                        'subtitle'  => __('Edit additional title for contact section', 'anaglyph-framework'),
+                        'title'     => __('Contact section additional title', 'anaglyph-lite'),
+                        'subtitle'  => __('Edit additional title for contact section', 'anaglyph-lite'),
                         'default'   => 'Questions or just wanna say hello? We&#8217;re waiting!'
                     ),
 					
 					array(
                         'id'        => 'contact-scolor',
                         'type'      => 'color',
-                        'title'     => __('Contact section Background Color', 'anaglyph-framework'),
-                        'subtitle'  => __('Pick a background color for the contact section.', 'anaglyph-framework'),
+                        'title'     => __('Contact section Background Color', 'anaglyph-lite'),
+                        'subtitle'  => __('Pick a background color for the contact section.', 'anaglyph-lite'),
                         'default'   => '#181818',
                         'validate'  => 'color',
 						'transparent' => false
@@ -1403,13 +1403,13 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-simage',
                         'type'      => 'media',
-                        'title'     => __('Contact section background image', 'anaglyph-framework'),
+                        'title'     => __('Contact section background image', 'anaglyph-lite'),
                     ),
 					
 					array(
                         'id'        => 'contact-address-icon-color',
                         'type'      => 'color',
-                        'title'     => __('Contact section address icon color.', 'anaglyph-framework'),
+                        'title'     => __('Contact section address icon color.', 'anaglyph-lite'),
                         'default'   => '#E23A00',
                         'validate'  => 'color',
 						'transparent' => false
@@ -1418,7 +1418,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-sopacity',
                         'type'      => 'select',
-                        'title'     => __('Select section opacity', 'anaglyph-framework'),
+                        'title'     => __('Select section opacity', 'anaglyph-lite'),
                         'options'   => array(
                             __("opacity-1", "anaglyph-lite") => "opacity-1", 
 							__("opacity-2", "anaglyph-lite") => "opacity-2", 
@@ -1444,7 +1444,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-information',
                         'type'      => 'switch',
-                        'title'     => __('Contact information panel', 'anaglyph-framework'),
+                        'title'     => __('Contact information panel', 'anaglyph-lite'),
                         'default'   => 0,
                         'on'        => 'Enabled',
                         'off'       => 'Disabled',
@@ -1453,8 +1453,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-location',
                         'type'      => 'text',
-                        'title'     => __('Location Name', 'anaglyph-framework'),
-                        'subtitle'  => __('Enter the location name.', 'anaglyph-framework'),
+                        'title'     => __('Location Name', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter the location name.', 'anaglyph-lite'),
                         'default'   => '',
 						'required'  => array('contact-information', '=', '1'),
                     ),
@@ -1462,8 +1462,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-address',
                         'type'      => 'textarea',
-                        'title'     => __('Location Address', 'anaglyph-framework'),
-                        'subtitle'  => __("Enter your company's address", 'anaglyph-framework'),
+                        'title'     => __('Location Address', 'anaglyph-lite'),
+                        'subtitle'  => __("Enter your company's address", 'anaglyph-lite'),
                         'validate'  => 'no_html',
                         'default'   => '',
 						'required'  => array('contact-information', '=', '1'),
@@ -1472,8 +1472,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-tel',
                         'type'      => 'text',
-                        'title'     => __('Telephone', 'anaglyph-framework'),
-                        'subtitle'  => __('Enter your telephone number', 'anaglyph-framework'),
+                        'title'     => __('Telephone', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter your telephone number', 'anaglyph-lite'),
                         'default'   => '',
 						'required'  => array('contact-information', '=', '1'),
                     ),
@@ -1481,8 +1481,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-fax',
                         'type'      => 'text',
-                        'title'     => __('Fax', 'anaglyph-framework'),
-                        'subtitle'  => __('Enter your fax number', 'anaglyph-framework'),
+                        'title'     => __('Fax', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter your fax number', 'anaglyph-lite'),
                         'default'   => '',
 						'required'  => array('contact-information', '=', '1'),
                     ),
@@ -1490,8 +1490,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-skype',
                         'type'      => 'text',
-                        'title'     => __('Skype', 'anaglyph-framework'),
-                        'subtitle'  => __('Enter your skype number', 'anaglyph-framework'),
+                        'title'     => __('Skype', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter your skype number', 'anaglyph-lite'),
                         'default'   => '',
 						'required'  => array('contact-information', '=', '1'),
                     ),
@@ -1500,7 +1500,7 @@ if (!class_exists('anaglyph_config')) {
 					array(
 						'id' 	=> 'contact-section',
 						'type' 	=> 'section',
-						'title' => __('Contact form settings', 'anaglyph-framework'),
+						'title' => __('Contact form settings', 'anaglyph-lite'),
 						'indent' => true,
 						'required'  => array('contact-information', '=', '1'),						
 					),
@@ -1508,8 +1508,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
 						'id'       => 'contact-section-cform',
 						'type'     => 'select',
-						'title'    => __('Select contact form', 'anaglyph-framework'), 
-						'subtitle' => __('select a form from the list to be displayed.', 'anaglyph-framework'),
+						'title'    => __('Select contact form', 'anaglyph-lite'), 
+						'subtitle' => __('select a form from the list to be displayed.', 'anaglyph-lite'),
 						'options'  => $contact_form_array,
 						'default'  => '-1',
 						'required'  => array('contact-information', '=', '1'),						
@@ -1518,8 +1518,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-email',
                         'type'      => 'text',
-                        'title'     => __('Contact Form E-Mail', 'anaglyph-framework'),
-                        'subtitle'  => __('Enter your E-mail address to use on the "Contact Form".', 'anaglyph-framework'),
+                        'title'     => __('Contact Form E-Mail', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter your E-mail address to use on the "Contact Form".', 'anaglyph-lite'),
                         'validate'  => 'email',
                         'default'   => get_option('admin_email'),
 						'required'  => array(
@@ -1531,9 +1531,9 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-description',
                         'type'      => 'text',
-                        'title'     => __('Contact Form description', 'anaglyph-framework'),
-                        'subtitle'  => __('Enter description for "Contact Form".', 'anaglyph-framework'),
-                        'default'   => __('Worried about a SPAM? We are first to hate it!', 'anaglyph-framework'),
+                        'title'     => __('Contact Form description', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter description for "Contact Form".', 'anaglyph-lite'),
+                        'default'   => __('Worried about a SPAM? We are first to hate it!', 'anaglyph-lite'),
 						'required'  => array(
 										array('contact-information', '=', '1'),
 										array('contact-section-cform', '<', '0'),
@@ -1543,9 +1543,9 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-submit',
                         'type'      => 'text',
-                        'title'     => __('Contact Form submit', 'anaglyph-framework'),
-                        'subtitle'  => __('Enter submit button text for "Contact Form".', 'anaglyph-framework'),
-                        'default'   => __('Send a message', 'anaglyph-framework'),
+                        'title'     => __('Contact Form submit', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter submit button text for "Contact Form".', 'anaglyph-lite'),
+                        'default'   => __('Send a message', 'anaglyph-lite'),
 						'required'  => array(
 										array('contact-information', '=', '1'),
 										array('contact-section-cform', '<', '0'),
@@ -1555,18 +1555,18 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-form-fields',
                         'type'      => 'sorter',
-                        'title'     => __('Contact Form Fields', 'anaglyph-framework'),
-                        'subtitle'  => __('Select the order and fields for the contact form.', 'anaglyph-framework'),
+                        'title'     => __('Contact Form Fields', 'anaglyph-lite'),
+                        'subtitle'  => __('Select the order and fields for the contact form.', 'anaglyph-lite'),
                         'options' => array(
 								'enabled'  => array(
-									'name' 	=> __('Name','anaglyph-framework'),
-									'email' => __('Email','anaglyph-framework'),
-									'message' => __('Message', 'anaglyph-framework'),
+									'name' 	=> __('Name','anaglyph-lite'),
+									'email' => __('Email','anaglyph-lite'),
+									'message' => __('Message', 'anaglyph-lite'),
 									),
 									'disabled' => array(
-										'mob'	=> __('Mobile', 'anaglyph-framework'),
-										'phone'	=> __('Phone','anaglyph-framework'),
-										'captcha' => __('Captcha','anaglyph-framework'),
+										'mob'	=> __('Mobile', 'anaglyph-lite'),
+										'phone'	=> __('Phone','anaglyph-lite'),
+										'captcha' => __('Captcha','anaglyph-lite'),
 									),
 								),	
 								
@@ -1578,8 +1578,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'contact-animations',
                         'type'      => 'checkbox',
-                        'title'     => __('Animation', 'anaglyph-framework'),
-                        'desc'      => __('On', 'anaglyph-framework'),
+                        'title'     => __('Animation', 'anaglyph-lite'),
+                        'desc'      => __('On', 'anaglyph-lite'),
 						'class'		=> 'icheck',
                         'default'   => '1'
                     ),		
@@ -1590,77 +1590,77 @@ if (!class_exists('anaglyph_config')) {
 			
 			/*Default Page*/
 			$arr_section['default-pages'] = array(
-                'title'     => __('Default pages', 'anaglyph-framework'),
+                'title'     => __('Default pages', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/default-pages.png',
 				'icon_type' => 'image',
 				'fields'    => array(
 					array(
                         'id'        => 'simple-post',
                         'type'      => 'media',
-                        'title'     => __('Single Post header image.', 'anaglyph-framework'),
+                        'title'     => __('Single Post header image.', 'anaglyph-lite'),
                         'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					
 					array(
                         'id'        => 'simple-page',
                         'type'      => 'media',
-                        'title'     => __('Page header image.', 'anaglyph-framework'),
+                        'title'     => __('Page header image.', 'anaglyph-lite'),
                         'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					
 					array(
                         'id'        => 'search-image',
                         'type'      => 'media',
-                        'title'     => __('Search header image.', 'anaglyph-framework'),
+                        'title'     => __('Search header image.', 'anaglyph-lite'),
                         'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					
 					array(
                         'id'        => '404-titleimage',
                         'type'      => 'media',
-                        'title'     => __('404 header image.', 'anaglyph-framework'),
+                        'title'     => __('404 header image.', 'anaglyph-lite'),
                         'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					array(
                         'id'        => '404-image',
                         'type'      => 'media',
-                        'title'     => __('404 logo.', 'anaglyph-framework'),
-                        'subtitle'  => __('Upload a banner for your 404 page.', 'anaglyph-framework'),
+                        'title'     => __('404 logo.', 'anaglyph-lite'),
+                        'subtitle'  => __('Upload a banner for your 404 page.', 'anaglyph-lite'),
 						//'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					array(
                         'id'        => '404-text',
                         'type'      => 'textarea',
-                        'title'     => __('404 page text.', 'anaglyph-framework'),
-                        'subtitle'  => __('Enter the text you want to show in your 404 page here.', 'anaglyph-framework'),
-                        'default'   => __('It looks like nothing was found at this location. Maybe try a search?', 'anaglyph-framework')
+                        'title'     => __('404 page text.', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter the text you want to show in your 404 page here.', 'anaglyph-lite'),
+                        'default'   => __('It looks like nothing was found at this location. Maybe try a search?', 'anaglyph-lite')
                     ),
 					
 					array(
                         'id'        => 'category-image',
                         'type'      => 'media',
-                        'title'     => __('Category header image.', 'anaglyph-framework'),
+                        'title'     => __('Category header image.', 'anaglyph-lite'),
 						'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					
 					array(
                         'id'        => 'archive-image',
                         'type'      => 'media',
-                        'title'     => __('Archive header image.', 'anaglyph-framework'),
+                        'title'     => __('Archive header image.', 'anaglyph-lite'),
 						'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					
 					array(
                         'id'        => 'author-image',
                         'type'      => 'media',
-                        'title'     => __('Author archive header image.', 'anaglyph-framework'),
+                        'title'     => __('Author archive header image.', 'anaglyph-lite'),
                         'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					
 					array(
                         'id'        => 'tag-image',
                         'type'      => 'media',
-                        'title'     => __('Tag archive header image.', 'anaglyph-framework'),
+                        'title'     => __('Tag archive header image.', 'anaglyph-lite'),
                         'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
                     ),
 					
@@ -1670,22 +1670,22 @@ if (!class_exists('anaglyph_config')) {
 				
 			/*Footer Section*/
 			$arr_section['footer'] = array(
-                'title'     => __('Footer', 'anaglyph-framework'),
+                'title'     => __('Footer', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/footer.png',
 				'icon_type' => 'image',
 				'fields'    => array(
 					array(
                         'id'        => 'footer-text',
                         'type'      => 'editor',
-                        'title'     => __('Copyright section', 'anaglyph-framework'),
-                        'subtitle'  => __('Replace default theme copyright information and links', 'anaglyph-framework'),
+                        'title'     => __('Copyright section', 'anaglyph-lite'),
+                        'subtitle'  => __('Replace default theme copyright information and links', 'anaglyph-lite'),
                         'default'   => '&#169; <a title="WordPress Development" href="http://fruitfulcode.com/">Fruitful Code</a>, Powered by <a href="http://wordpress.org/">WordPress</a>',
                     ),
 					array(
                         'id'        => 'footer-color',
                         'type'      => 'color',
-                        'title'     => __('Footer Background Color', 'anaglyph-framework'),
-                        'subtitle'  => __('Pick a background color for the footer.', 'anaglyph-framework'),
+                        'title'     => __('Footer Background Color', 'anaglyph-lite'),
+                        'subtitle'  => __('Pick a background color for the footer.', 'anaglyph-lite'),
                         'default'   => '#181818',
                         'validate'  => 'color',
 						'transparent' => false
@@ -1693,12 +1693,12 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'footer-image',
                         'type'      => 'media',
-                        'title'     => __('Footer background image', 'anaglyph-framework'),
+                        'title'     => __('Footer background image', 'anaglyph-lite'),
                     ),
 					array(
                         'id'        => 'opacity-fsection',
                         'type'      => 'select',
-                        'title'     => __('Select section opacity', 'anaglyph-framework'),
+                        'title'     => __('Select section opacity', 'anaglyph-lite'),
                         'options'   => array(
                             __("opacity-1", "anaglyph-lite") => "opacity-1", 
 							__("opacity-2", "anaglyph-lite") => "opacity-2", 
@@ -1724,23 +1724,23 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'footer-issocial',
                         'type'      => 'checkbox',
-                        'title'     => __('Social icons', 'anaglyph-framework'),
-                        'desc'      => __('Enable social icons.', 'anaglyph-framework'),
+                        'title'     => __('Social icons', 'anaglyph-lite'),
+                        'desc'      => __('Enable social icons.', 'anaglyph-lite'),
                         'default'   => '1',
 						'class'		=> 'icheck',
                     ),
 					array(
                         'id'        => 'footer-iscontact',
                         'type'      => 'checkbox',
-                        'title'     => __('See the contact information in the footer', 'anaglyph-framework'),
-                        'desc'      => __('Enable contact information', 'anaglyph-framework'),
+                        'title'     => __('See the contact information in the footer', 'anaglyph-lite'),
+                        'desc'      => __('Enable contact information', 'anaglyph-lite'),
                         'default'   => '1',
 						'class'		=> 'icheck',
                     ),
 					array(
 								'id'          => 'footer-typography',
 								'type'        => 'typography', 
-								'title'       => __('Footer Font Style.', 'anaglyph-framework'),
+								'title'       => __('Footer Font Style.', 'anaglyph-lite'),
 								'google'      => true, 
 								'subsets'	  => false,
 								'font-backup' => false,
@@ -1749,7 +1749,7 @@ if (!class_exists('anaglyph_config')) {
 								'subsets'		=> true,
 								'output'      => array('footer#page-footer, footer#page-footer p'),
 								'units'       =>'px',
-								'subtitle'	  => __('Select typography for footer.', 'anaglyph-framework'),
+								'subtitle'	  => __('Select typography for footer.', 'anaglyph-lite'),
 								'default'     => array(
 														'color'       => '#fff', 
 														'font-style'  => '400', 
@@ -1767,15 +1767,15 @@ if (!class_exists('anaglyph_config')) {
 			
 			/*Custom Section*/
 			$arr_section['custom'] = array(
-                'title'     => __('Custom Code', 'anaglyph-framework'),
+                'title'     => __('Custom Code', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/custom-code.png',
 				'icon_type' => 'image',
                 'fields'    => array (
 					array(
                         'id'        => 'custom-css',
                         'type'      => 'ace_editor',
-                        'title'     => __('CSS Code', 'anaglyph-framework'),
-                        'subtitle'  => __('Paste your CSS code here.', 'anaglyph-framework'),
+                        'title'     => __('CSS Code', 'anaglyph-lite'),
+                        'subtitle'  => __('Paste your CSS code here.', 'anaglyph-lite'),
                         'mode'      => 'css',
                         'theme'     => 'chrome',
                         'desc'      => '',
@@ -1784,8 +1784,8 @@ if (!class_exists('anaglyph_config')) {
 					array(
                         'id'        => 'custom-js',
                         'type'      => 'ace_editor',
-                        'title'     => __('JS Code', 'anaglyph-framework'),
-                        'subtitle'  => __('Paste your JS code here.', 'anaglyph-framework'),
+                        'title'     => __('JS Code', 'anaglyph-lite'),
+                        'subtitle'  => __('Paste your JS code here.', 'anaglyph-lite'),
                         'mode'      => 'javascript',
                         'theme'     => 'chrome',
                         'desc'      => '',
@@ -1797,22 +1797,22 @@ if (!class_exists('anaglyph_config')) {
 			if ( class_exists( 'woocommerce' ) ) {
 				/*WooCommerce options*/
 				$arr_section['woocommerce'] = array(
-					'title'     => __('WooCommerce', 'anaglyph-framework'),
+					'title'     => __('WooCommerce', 'anaglyph-lite'),
 					'icon'      => $sample_patterns_url . 'images/icons/woo.png',
 					'icon_type' => 'image',
 					'fields'    => array (
 						array(
 							'id'        => 'shopheader-image',
 							'type'      => 'media',
-							'title'     => __('Shop header image.', 'anaglyph-framework'),
+							'title'     => __('Shop header image.', 'anaglyph-lite'),
 							'default'   => array('url' =>  esc_url(get_template_directory_uri() . '/includes/theme/assets/bgs/title-background.jpg')),
 						),
 						
 						array(
 							'id'        => 'shop-layout',
 							'type'      => 'image_select',
-							'title'     => __('Shop layout', 'anaglyph-framework'),
-							'subtitle'  => __('Select main content and sidebar alignment.', 'anaglyph-framework'),
+							'title'     => __('Shop layout', 'anaglyph-lite'),
+							'subtitle'  => __('Select main content and sidebar alignment.', 'anaglyph-lite'),
 							'options'   => array(
 								'1' => array('alt' => '1 Column',       'img' => ReduxFramework::$_url . 'assets/img/1col.png'),
 								'2' => array('alt' => '2 Column Left',  'img' => ReduxFramework::$_url . 'assets/img/2cl.png'),
@@ -1824,8 +1824,8 @@ if (!class_exists('anaglyph_config')) {
 						array(
 							'id'        => 'shop-product-perpage',
 							'type'      => 'text',
-							'title'     => __('Products per page', 'anaglyph-framework'),
-							'subtitle'      => __('Change number of products displayed per page.', 'anaglyph-framework'),
+							'title'     => __('Products per page', 'anaglyph-lite'),
+							'subtitle'      => __('Change number of products displayed per page.', 'anaglyph-lite'),
 							'validate'  => 'numeric',
 							'default'   => '12',
 						),
@@ -1834,12 +1834,12 @@ if (!class_exists('anaglyph_config')) {
 						array(
 							'id'        => 'shop-product-perrow',
 							'type'      => 'select',
-							'title'     => __('Products per row', 'anaglyph-framework'),
-							'subtitle'  => __('Change number of products per row.', 'anaglyph-framework'),
+							'title'     => __('Products per row', 'anaglyph-lite'),
+							'subtitle'  => __('Change number of products per row.', 'anaglyph-lite'),
 							'options'   => array(
-								'2' => __('2 Columns', 'anaglyph-framework'),
-								'3' => __('3 Columns', 'anaglyph-framework'),
-								'4' => __('4 Columns', 'anaglyph-framework'),
+								'2' => __('2 Columns', 'anaglyph-lite'),
+								'3' => __('3 Columns', 'anaglyph-lite'),
+								'4' => __('4 Columns', 'anaglyph-lite'),
 							),
 							'default'   => '4'
 						),
@@ -1847,13 +1847,13 @@ if (!class_exists('anaglyph_config')) {
 						array(
 							'id'        => 'shop-animations',
 							'type'      => 'select',
-							'title'     => __('Select animation for products.', 'anaglyph-framework'),
+							'title'     => __('Select animation for products.', 'anaglyph-lite'),
 							'options'   => array(
-								'top' => __("Top", "anaglyph-framework"), 
-								'left' => __("Left", "anaglyph-framework"), 
-								'right' => __("Right", "anaglyph-framework"),
-								'bottom' => __("Bottom", "anaglyph-framework"),
-								'none' => __("None", "anaglyph-framework"),
+								'top' => __("Top", "anaglyph-lite"), 
+								'left' => __("Left", "anaglyph-lite"), 
+								'right' => __("Right", "anaglyph-lite"),
+								'bottom' => __("Bottom", "anaglyph-lite"),
+								'none' => __("None", "anaglyph-lite"),
 							),
 							'default'   => 'bottom'
 						),
@@ -1863,8 +1863,8 @@ if (!class_exists('anaglyph_config')) {
 			}	
             
             $arr_section['import-export'] = array(
-                'title'     => __('Import / Export', 'anaglyph-framework'),
-                'desc'      => __('Import and Export your anaglyph Framework settings from file, text or URL.', 'anaglyph-framework'),
+                'title'     => __('Import / Export', 'anaglyph-lite'),
+                'desc'      => __('Import and Export your anaglyph Framework settings from file, text or URL.', 'anaglyph-lite'),
                 'icon'      => $sample_patterns_url . 'images/icons/import-export.png',
 				'icon_type' => 'image',
                 'fields'    => array(
@@ -1895,8 +1895,8 @@ if (!class_exists('anaglyph_config')) {
                 'display_version'   => $this->theme->get('Version'),   // Version that appears at the top of your panel
                 'menu_type'         => 'menu',                   // Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                 'allow_sub_menu'    => false,                    // Show the sections below the admin menu item or not
-                'menu_title'        => __('Anaglyph options', 'anaglyph-framework'),
-                'page_title'        => __('Anaglyph options', 'anaglyph-framework'),
+                'menu_title'        => __('Anaglyph options', 'anaglyph-lite'),
+                'page_title'        => __('Anaglyph options', 'anaglyph-lite'),
                 
                 // You will need to generate a Google API key to use this feature.
                 // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
@@ -1925,7 +1925,7 @@ if (!class_exists('anaglyph_config')) {
                 'transient_time'    => 60 * MINUTE_IN_SECONDS,
                 'output'            => true,                   // Global shut-off for dynamic CSS output by the framework. Will also disable google fonts output
                 'output_tag'        => true,                   // Allows dynamic CSS to be generated for customizer and google fonts, but stops the dynamic CSS from going to the head
-                'footer_credit'     => '<span id="footer-thankyou">' . __( 'Anaglyph Options panel created using "Reduxe Framework".', 'anaglyph-framework' ). '</span>',                     // Disable the footer credit of anaglyph. Please leave if you can help it.
+                'footer_credit'     => '<span id="footer-thankyou">' . __( 'Anaglyph Options panel created using "Reduxe Framework".', 'anaglyph-lite' ). '</span>',                     // Disable the footer credit of anaglyph. Please leave if you can help it.
                 
                 // FUTURE -> Not in use yet, but reserved or partially implemented. Use at your own risk.
                 'database'              => '', 	  // possible: options, theme_mods, theme_mods_expanded, transient. Not fully functional, warning!
@@ -1933,9 +1933,9 @@ if (!class_exists('anaglyph_config')) {
 				'page_type'				=> 'submenu',
 				
 				'header_list_links'		=> array(
-					array('link' => 'http://support.fruitfulcode.com/', 'name' => __('Support', 'anaglyph-framework')),
-					array('link' => 'http://themes.fruitfulcode.com/anaglyph/documentation/', 'name' => __('Documentation', 'anaglyph-framework')),
-					array('link' => 'http://support.fruitfulcode.com/hc/en-us/sections/200388603-Anaglyph', 'name' => __('Faq', 'anaglyph-framework')),
+					array('link' => 'http://support.fruitfulcode.com/', 'name' => __('Support', 'anaglyph-lite')),
+					array('link' => 'http://themes.fruitfulcode.com/anaglyph/documentation/', 'name' => __('Documentation', 'anaglyph-lite')),
+					array('link' => 'http://support.fruitfulcode.com/hc/en-us/sections/200388603-Anaglyph', 'name' => __('Faq', 'anaglyph-lite')),
 				),
 
                 // HINTS
@@ -1996,7 +1996,7 @@ if (!class_exists('anaglyph_config')) {
                     $v = str_replace('-', '_', $this->args['opt_name']);
                 }
                  $this->args['intro_text'] = '';
-			   //sprintf(__('', 'anaglyph-framework'), $v);
+			   //sprintf(__('', 'anaglyph-lite'), $v);
             } else {
                 $this->args['intro_text']  = '';
             }

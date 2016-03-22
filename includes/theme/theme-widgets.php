@@ -10,10 +10,6 @@ class Anaglyph_Widget_Recent_Posts extends WP_Widget {
 		$widget_ops = array('classname' => 'recent-posts', 'description' => __( "Your site&#8217;s most recent Posts.", 'anaglyph-lite') );
 		parent::__construct('anaglyph-wrp', __('Anaglyph Recent Posts', 'anaglyph-lite'), $widget_ops);
 		$this->alt_option_name = 'anaglyph-wrp';
-
-		add_action( 'save_post', array($this, 'flush_widget_cache') );
-		add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-		add_action( 'switch_theme', array($this, 'flush_widget_cache') );
 	}
 
 	function widget($args, $instance) {
@@ -92,18 +88,12 @@ class Anaglyph_Widget_Recent_Posts extends WP_Widget {
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['show_date'] 		= isset( $new_instance['show_date'] ) ? (bool) $new_instance['show_date'] : false;
 		$instance['show_comments'] 	= isset( $new_instance['show_comments'] ) ? (bool) $new_instance['show_comments'] : false;
-		
-		$this->flush_widget_cache();
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
 		if ( isset($alloptions['anaglyph-wrp']) )
 			delete_option('anaglyph-wrp');
 
 		return $instance;
-	}
-
-	function flush_widget_cache() {
-		wp_cache_delete('widget_recent_posts', 'widget');
 	}
 
 	function form( $instance) {

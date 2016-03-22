@@ -230,7 +230,7 @@ if ( ! function_exists( 'anaglyph_woo_breadcrumbs' ) ) {
 					'wrap_after'  => '</ol></div></section>',
 					'before'      => '<li>',
 					'after'       => '</li>',
-					'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+					'home'        => _x( 'Home', 'breadcrumb', 'anaglyph-lite' ),
 				) );
 					woocommerce_breadcrumb($args); 
 			}
