@@ -8,9 +8,7 @@ We want to make our product even better and better and we need users support and
 
 Theme demo  http://themes.fruitfulcode.com/anaglyph-lite/
 Documentation http://themes.fruitfulcode.com/anaglyph-lite/documentation/
-Support http://support.fruitfulcode.com/hc/en-us/requests/new
-
-Don't forget to visit our website http://fruitfulcode.com
+Support http://fruitfulcode.zendesk.com/hc/en-us/requests/new
 
 Thank you.
 
@@ -18,7 +16,7 @@ Thank you.
     Copyright
 -------------------------------------------------------
 
-Anaglyph-lite is a free WordPress responsive theme with theme options panel, designed and developed in Fruitful Code (www.fruitfulcode.com)
+Anaglyph-lite is a free WordPress responsive theme with theme options panel, designed and developed in Fruitful Code.
 Feel free to use and modify this theme as you like.
 Anaglyph-lite is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
 

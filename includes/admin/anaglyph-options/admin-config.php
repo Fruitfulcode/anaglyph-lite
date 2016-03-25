@@ -1702,7 +1702,7 @@ if (!class_exists('anaglyph_config')) {
                         'type'      => 'editor',
                         'title'     => __('Copyright section', 'anaglyph-lite'),
                         'subtitle'  => __('Replace default theme copyright information and links', 'anaglyph-lite'),
-                        'default'   => '&#169; <a title="WordPress Development" href="http://fruitfulcode.com/">Fruitful Code</a>, Powered by <a href="http://wordpress.org/">WordPress</a>',
+                        'default'   => '&#169; <a title="WordPress Development" href="https://github.com/fruitfulcode/">Fruitful Code</a>, Powered by <a href="http://wordpress.org/">WordPress</a>',
                     ),
 					array(
                         'id'        => 'footer-color',
@@ -1955,12 +1955,6 @@ if (!class_exists('anaglyph_config')) {
                 'system_info'           => false, // REMOVE
 				'page_type'				=> 'submenu',
 				
-				'header_list_links'		=> array(
-					array('link' => 'http://support.fruitfulcode.com/', 'name' => __('Support', 'anaglyph-lite')),
-					array('link' => 'http://themes.fruitfulcode.com/anaglyph/documentation/', 'name' => __('Documentation', 'anaglyph-lite')),
-					array('link' => 'http://support.fruitfulcode.com/hc/en-us/sections/200388603-Anaglyph', 'name' => __('Faq', 'anaglyph-lite')),
-				),
-
                 // HINTS
                 'hints' => array(
                     'icon'          => 'icon-question-sign',

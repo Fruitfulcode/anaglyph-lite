@@ -945,7 +945,7 @@ function anaglyph_get_social() {
 	if (!empty($anaglyph_config['footer-text'])) {
 		$ftext = anaglyph_kses_data(stripslashes($anaglyph_config['footer-text']));
 	} elseif (!$anaglyph_is_redux_active) {
-		$ftext = '&#169; <a title="WordPress Development" href="http://fruitfulcode.com/">Fruitful Code</a>, Powered by <a href="http://wordpress.org/">WordPress</a>';
+		$ftext = '&#169; <a title="WordPress Development" href="https://github.com/fruitfulcode/">Fruitful Code</a>, Powered by <a href="http://wordpress.org/">WordPress</a>';
 	}
 		
 		if (is_home() || is_front_page()) {
