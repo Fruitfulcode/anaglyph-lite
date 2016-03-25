@@ -693,7 +693,21 @@ if (!class_exists('anaglyph_config')) {
 					
 				)
 			);
+			
 				
+			$pages_list = array();
+			
+			$args_query_pages = array(
+				'post_status' => 'publish',
+				'post_type' => array('post', 'page'),
+				'posts_per_page' => -1
+			);
+			$pages_array = get_posts( $args_query_pages );
+			if (!empty($pages_array)){
+				foreach ( $pages_array as $page_item ) {
+					$pages_list[$page_item->ID] = $page_item->post_title;
+				}
+			}
 			
 			/*Slider Section*/
 			$arr_section['slider'] = array(
@@ -712,17 +726,26 @@ if (!class_exists('anaglyph_config')) {
                     ),
 					
 					array(
-                        'id'        => 'home-slides',
-                        'type'      => 'slides',
+						'id'       		=> 'home-slides',
+						'type'     		=> 'select',
+						'required'  	=> array('switch-slider', '=', '1'),
+						'multi'    		=> true,
+						'title'   		=> __('Slides', 'anaglyph-lite'), 
+						'subtitle' 		=> __('Select pages or posts', 'anaglyph-lite'),
+						'desc'     		=> __('You can sort it.', 'anaglyph-lite'),
+						'placeholder'	=> __('Page or post name.', 'anaglyph-lite'),
+						'sortable' 		=> true,
+						'options'  		=> $pages_list
+					),
+					
+					array(
+						'id'        => 'slider-links',
+						'type'      => 'checkbox',
 						'required'  => array('switch-slider', '=', '1'),
-                        'title'     => __('Slides', 'anaglyph-lite'),
-                        'subtitle'  => __('Add slides to slider', 'anaglyph-lite'),
-                        'placeholder'   => array(
-                            'title'         => __('This is a title', 'anaglyph-lite'),
-                            'description'   => __('Description Here', 'anaglyph-lite'),
-                            'url'           => __('Url', 'anaglyph-lite'),
-                        ),
-                    ),
+						'title'     => __('Link to page', 'anaglyph-lite'),
+						'desc'      => __('Yes', 'anaglyph-lite'),
+						'default'   => '1'
+					),
 					
 					array(
                         'id'        => 'slider-parallax',

@@ -517,7 +517,8 @@ endif; //anaglyph_get_logo
 if ( ! function_exists( 'anaglyph_get_hslider' ) ) :
 function anaglyph_get_hslider() {
 	$out_ = '';
-	global $anaglyph_config;
+	global $anaglyph_config, $post;
+	
 	if ((!is_front_page()) || (!$anaglyph_config['switch-slider'])) { return; }
 	
 	$animationeffectin = '';
@@ -532,36 +533,42 @@ function anaglyph_get_hslider() {
 	
 	if (!empty($anaglyph_config['home-slides'])) {
 		$slides = $anaglyph_config['home-slides'];
+		?>
 		
-		$out_ .= '<section id="slider"><!-- Slider -->';
-			$out_ .= '<div class="flexslider">';
-				$out_ .= '<ul class="slides">';
-					foreach ($slides as $slide) {
+		<section id="slider"><!-- Slider -->
+			<div class="flexslider">
+				<ul class="slides">
+				<?php
+					foreach ($slides as $item_id) {
 					
-						$title = $description = $url = '';
-						$title = esc_attr($slide['title']);
-						$description = esc_attr($slide['description']);
-						$url = $slide['url'];
+						$post = get_post($item_id);
+						$attachment_id = get_post_thumbnail_id( $item_id );
+						$slide_image = wp_get_attachment_image_src( $attachment_id, 'full');
+						setup_postdata($post); ?>
 						
-						$out_ .= '<li class="slide">';
-							if (!empty($title)) {
-								$out_ .= '<div class="slide-content">';
-									$out_ .= '<div class="'.implode(' ', $run_classes).'">';
-										if (!empty($url)) $out_ .= '<a href="'.esc_url($url).'">';
-										$out_ .= '<h2 class="reset-margin">'.$title.'</h2>';
-										if (!empty($description)) {
-											$out_ .= '<h3 class="description">'.$description.'</h3>';
-										}	
-										if (!empty($url)) $out_ .= '</a>';
-									$out_ .= '</div>';
-								$out_ .= '</div>';
-							}
-							$out_ .= '<img src="'.esc_url($slide['image']).'" class="slider-bg" alt="'.$title.'">';
-						$out_ .= '</li>';
-					}
-				$out_ .= '</ul>';
-			$out_ .= '</div>';
-		$out_ .= '</section><!-- end Slider -->';
+						<li class="slide">
+							<div class="slide-content">
+								<div class="<?php echo implode(' ', $run_classes); ?>">
+									<?php if (!empty($anaglyph_config['slider-links'])) { ?> 
+										<a href="<?php the_permalink(); ?>">
+									<?php } ?>
+											<h2 class="reset-margin"><?php the_title(); ?></h2>
+											<h3 class="description"><?php echo get_the_excerpt(); ?></h3>
+									<?php if (!empty($anaglyph_config['slider-links'])) { ?> 
+										</a>
+									<?php } ?>
+								</div>
+							</div>
+							<img src="<?php echo esc_url($slide_image[0]); ?>" class="slider-bg" alt="<?php the_title(); ?>">
+						</li>
+						<?php
+						wp_reset_postdata();
+					} 
+				?>
+				</ul>
+			</div>
+		</section><!-- end Slider -->
+		<?php
 	}	
 	echo $out_;
 }
