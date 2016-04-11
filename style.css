@@ -186,9 +186,15 @@ i.icon {
   top: 5px;
 }
 .navigation-wrapper .navigation .nav li:hover .child-navigation, 
-.navigation-wrapper .navigation .nav li:hover .child-navigation li:hover .child-navigation,
+.navigation-wrapper .navigation .nav li:hover .child-navigation > li:hover > .child-navigation,
 .navigation-wrapper .navigation .nav li.focus .child-navigation, 
-.navigation-wrapper .navigation .nav li.focus .child-navigation li.focus .child-navigation {
+.navigation-wrapper .navigation .nav li.focus .child-navigation > li.focus > .child-navigation {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-item-has-children:hover > ul.child-navigation {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   visibility: visible;
