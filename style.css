@@ -1628,26 +1628,26 @@ footer#page-footer textarea:focus {
   font-size: 11px;
 }
 
-.single aside {
+.widget-area aside {
   margin-bottom: 40px;
 }
 
-.single aside ul, 
+.widget-area aside ul, 
 #comments ol.comment-list,
 #comments ol.children {
 	list-style: none outside none;
     padding-left: 0;
 }
 
-.single aside .recent-post {
+.widget-area aside .recent-post {
   border-bottom: 1px solid #edeae6;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-.single aside .recent-post h5 {
+.widget-area aside .recent-post h5 {
   margin-bottom: 0;
 }
-.single aside .recent-post .meta > div {
+.widget-area aside .recent-post .meta > div {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
   display: inline-block;
@@ -1710,10 +1710,10 @@ img.size-full, img.size-large, img.wp-post-image {
     background: none repeat scroll 0 0 #FF0000 !important;
 }
 
-.single #page aside .tag {
+#page .widget-area aside .tag {
   margin: 2px 0;
 }
-.single aside ul li {
+.widget-area aside ul li {
   padding: 3px 0;
 }
 .entry-content .post-header h1,
