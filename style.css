@@ -1823,8 +1823,7 @@ section h3,
 section h4,
 section h5,
 section h6, 
-section p, 
-section a {
+section p {
 	color:inherit;
 }
 
