@@ -58,13 +58,13 @@ get_header(); ?>
 			<?php
 			endwhile;
 		} else {
-			$blog_id = get_option( 'page_for_posts' ); 
+			$page_for_posts_id = get_option( 'page_for_posts' ); 
 			if (is_home()) { 
 				if (!is_front_page()) {
 				?>
 				<section id="page-title">
 					<?php 
-						$title = get_the_title($blog_id);
+						$title = get_the_title($page_for_posts_id);
 						if (!empty($title)) {
 					?>	
 							<div class="title">
@@ -72,8 +72,8 @@ get_header(); ?>
 							</div>
 					<?php } ?>		
 				<?php 
-					if ( has_post_thumbnail($blog_id)) { 
-						$title_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($blog_id), 'full');
+					if ( has_post_thumbnail($page_for_posts_id)) { 
+						$title_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($page_for_posts_id), 'full');
 						echo '<img src="'.$title_thumbnail[0].'" class="parallax-bg" alt="">';
 					}	
 				?>
