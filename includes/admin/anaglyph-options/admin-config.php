@@ -1519,7 +1519,15 @@ if (!class_exists('anaglyph_config')) {
 						'required'  => array('contact-information', '=', '1'),
                     ),
 					
-					
+					array(
+                        'id'        => 'contact-add-email',
+                        'type'      => 'text',
+                        'title'     => __('E-Mail', 'anaglyph-lite'),
+                        'subtitle'  => __('Enter your E-Mail', 'anaglyph-lite'),
+                        'default'   => '',
+						'required'  => array('contact-information', '=', '1'),
+                    ),
+
 					array(
 						'id' 	=> 'contact-section',
 						'type' 	=> 'section',

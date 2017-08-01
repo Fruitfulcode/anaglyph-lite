@@ -17,14 +17,14 @@
 get_header(); ?>
 		
 	<!-- Page Title -->
-	<?php $blog_id = get_option( 'page_for_posts' ); ?>
+	<?php $page_for_posts_id = get_option( 'page_for_posts' ); ?>
 	<?php if (is_home()) { ?>
 	<section id="page-title">
 		<div class="title">
-			<h1 class="reset-margin"><?php echo get_the_title($blog_id);?></h1>
+			<h1 class="reset-margin"><?php echo get_the_title($page_for_posts_id);?></h1>
 		</div>
-		<?php if ( has_post_thumbnail($blog_id)) { 
-			  $title_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($blog_id), 'full');
+		<?php if ( has_post_thumbnail($page_for_posts_id)) { 
+			  $title_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($page_for_posts_id), 'full');
 			  echo '<img src="'.$title_thumbnail[0].'" class="parallax-bg" alt="">';
 			  }	
 		?>

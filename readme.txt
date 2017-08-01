@@ -63,6 +63,27 @@ Files: en_US.po, en_US.mo, ru_Ru.po, ru_Ru.mo, fr_FR.mo, fr_FR.po icluded. Defau
     Changelog
 -------------------------------------------------------
 
+= 1.6 =
+13.07.2017
+
+- Update: Removed color inheritance for a tag
+- Bug fix: NEW SHORTCODE With gallery
+- Bug fix: WooCommerce columns fixed
+- New: Added additional email field
+- Bug fix: Multisite Blog_id conflict
+- Bug fix: footer links color
+- Bug fix: error upon installing and activating plugins via tgm
+- Update: Woocommerce template versions
+
+= 1.5 =
+26.04.2016
+
+- New: Main sidebar
+- Improvements: Slider content grabs information from post or page
+- Update: jquery.scrollTo.js
+- Bug fix: Multilevel menu display
+
+
 = 1.4 =
 21.03.2016
 

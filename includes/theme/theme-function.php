@@ -39,6 +39,10 @@ function anaglyph_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 750, 360, true );
 	
+	//add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+	
 	register_nav_menus( array(
 		'primary'   => __( 'Top primary menu', 'anaglyph-lite' )
 	) );
@@ -831,7 +835,7 @@ function anaglyph_get_footer_contact_form() {
 	global $anaglyph_config;
 	$out_ = '';
 	$class_title = $title = $sub_title = $name_company = $location = $skype = $scroll_reveal = '';
-	$tel = $fax = '';
+	$tel = $fax = $add_email = '';
 	
 	if ($anaglyph_config['contact-animations']) {
 		$scroll_reveal = 'data-scroll-reveal="enter left and move 50px"';
@@ -847,7 +851,7 @@ function anaglyph_get_footer_contact_form() {
 	if (!empty($anaglyph_config['contact-fax'])) { $fax = esc_attr($anaglyph_config['contact-fax']); }	
 	if (!empty($anaglyph_config['contact-email'])) { $email = esc_attr($anaglyph_config['contact-email']); }	
 	if (!empty($anaglyph_config['contact-skype'])) { $skype = esc_attr($anaglyph_config['contact-skype']); }	
-	
+	if (!empty($anaglyph_config['contact-add-email'])) { $add_email = esc_attr($anaglyph_config['contact-add-email']); }
 
 	$out_ .= '<section id="nav-contact-us" class="block">';
 		$out_ .= '<div class="container">';
@@ -896,11 +900,16 @@ function anaglyph_get_footer_contact_form() {
 												$out_ .='<dd>'.$fax.'</dd>';
 											}	
 											
-											if (!empty($email)) {
+											if (!empty($add_email)) {
 												$out_ .='<dt><i class="icon icon_mail"></i></dt>';
-												$out_ .='<dd><a href="mailto:'.$email.'">'.$email.'</a></dd>';
+												$out_ .='<dd><a href="mailto:'.$add_email.'">'.$add_email.'</a></dd>';
 											}	
                                             
+											if (!empty($email) && empty($add_email)) {
+												$out_ .='<dt><i class="icon icon_mail"></i></dt>';
+												$out_ .='<dd><a href="mailto:'.$email.'">'.$email.'</a></dd>';
+											}
+
 											if (!empty($skype)) {
 												$out_ .='<dt><i class="icon social_skype"></i></dt>';
 												$out_ .='<dd><a title="Call to '.$skype.'" href="skype:'.$skype.'?call">'.$skype.'</a></dd>';

@@ -3,8 +3,8 @@ Theme Name: Anaglyph Lite
 Theme URI: https://github.com/fruitfulcode/anaglyph-lite
 Author: fruitfulcode
 Author URI: https://github.com/fruitfulcode/
-Description: Anaglyph Lite is a free version of Premium WordPress theme ANAGLYPH. Flat and clean design, responsive and retina ready, bootstrap 3 grid 1170px, redux framework theme options, woocommerce, contact form 7, visual composer support. Powerful Theme options: adding your Logo, display options, styling options, flex slider options, header options, menu options, fonts options, social media links, contact form
-Version: 1.4
+Description: Anaglyph Lite is a free version of Premium WordPress theme ANAGLYPH. Flat and clean design, responsive and retina ready, bootstrap 3 grid 1170px, redux framework theme options, contact form 7, visual composer support. Works perfect with WooCommerce till version 3.0.The latest versions of WooCommerce supports our Premium WordPress theme ANAGLYPH.Powerful Theme options: adding your Logo, display options, styling options, flex slider options, header options, menu options, fonts options, social media links, contact form
+Version: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
@@ -14,7 +14,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
 embed, iframe, object, video {
   max-width: 100%;
@@ -1474,7 +1474,17 @@ footer#page-footer textarea:focus {
   border-color: #fff;
   color: #292422;
 }
-
+footer .background{
+  z-index: 1;
+}
+footer .section-content{
+  position: relative;
+  z-index: 9;
+}
+#footer-bottom > .container{
+  position: relative;
+  z-index: 9;
+}
 .wpcf7-response-output {
   margin: 2em 0 1em !important;
 }
@@ -1628,26 +1638,26 @@ footer#page-footer textarea:focus {
   font-size: 11px;
 }
 
-.single aside {
+.widget-area aside {
   margin-bottom: 40px;
 }
 
-.single aside ul, 
+.widget-area aside ul, 
 #comments ol.comment-list,
 #comments ol.children {
   list-style: none outside none;
     padding-left: 0;
 }
 
-.single aside .recent-post {
+.widget-area aside .recent-post {
   border-bottom: 1px solid #edeae6;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-.single aside .recent-post h5 {
+.widget-area aside .recent-post h5 {
   margin-bottom: 0;
 }
-.single aside .recent-post .meta > div {
+.widget-area aside .recent-post .meta > div {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
   display: inline-block;
@@ -1710,10 +1720,10 @@ img.size-full, img.size-large, img.wp-post-image {
     background: none repeat scroll 0 0 #FF0000 !important;
 }
 
-.single #page aside .tag {
+#page .widget-area aside .tag {
   margin: 2px 0;
 }
-.single aside ul li {
+.widget-area aside ul li {
   padding: 3px 0;
 }
 .entry-content .post-header h1,
@@ -1782,7 +1792,7 @@ img.size-full, img.size-large, img.wp-post-image {
 }
 
 #page-footer a {
-  /* color: #fff; */
+  color: #fff;
 }
 
 #page-footer dl dd {
@@ -1823,7 +1833,7 @@ section h3,
 section h4,
 section h5,
 section h6, 
-section p, 
+section p,
 section a {
   color:inherit;
 }

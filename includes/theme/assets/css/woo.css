@@ -401,6 +401,10 @@ padding-bottom: 20px;
     position: relative;
 }
 
+.product.has-default-attributes.has-children.anaglyph-woo-has-gallery > .images {
+	opacity: 1;
+}
+
 .anaglyph-woo-has-gallery .onsale {
     z-index: 9;
 }
