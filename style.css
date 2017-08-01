@@ -1474,7 +1474,17 @@ footer#page-footer textarea:focus {
   border-color: #fff;
   color: #292422;
 }
-
+footer .background{
+  z-index: 1;
+}
+footer .section-content{
+  position: relative;
+  z-index: 9;
+}
+#footer-bottom > .container{
+  position: relative;
+  z-index: 9;
+}
 .wpcf7-response-output {
 	margin: 2em 0 1em !important;
 }
