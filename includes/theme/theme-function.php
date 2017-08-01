@@ -39,6 +39,10 @@ function anaglyph_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 750, 360, true );
 	
+	//add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+	
 	register_nav_menus( array(
 		'primary'   => __( 'Top primary menu', 'anaglyph-lite' )
 	) );
