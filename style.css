@@ -1207,6 +1207,7 @@ body .btn:active {
   bottom: -1px;
 }
 
+body .btn:after {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
@@ -1675,12 +1676,15 @@ img.size-full, img.size-large, img.wp-post-image {
   height: auto;
 }
 
+body .alignleft {
   float: left;
 }
 
+body .alignright {
   float: right;
 }
 
+body .aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
