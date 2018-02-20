@@ -560,7 +560,7 @@ if (!class_exists('anaglyph_config')) {
 														'font-size'   => '48px',
 														'text-transform' => 'uppercase'														
 												),
-								'preview' => array('text' => 'Page Title')				
+								'preview' => array('text' => __('Page Title', 'anaglyph-lite'))
 					),
 					
 					array(
@@ -600,7 +600,7 @@ if (!class_exists('anaglyph_config')) {
 														'google'      => true,
 														'font-size'   => '14px' 
 												),
-								'preview' => array('text' => 'Blog date')				
+								'preview' => array('text' => __('Blog date', 'anaglyph-lite'))
 					),
 					
 					array(
@@ -1404,14 +1404,14 @@ if (!class_exists('anaglyph_config')) {
                         'type'      => 'text',
                         'title'     => __('Contact section title', 'anaglyph-lite'),
                         'subtitle'  => __('Edit title for contact section', 'anaglyph-lite'),
-                        'default'   => 'Contact us'
+                        'default'   => __('Contact us', 'anaglyph-lite')
                     ),
 					array(
                         'id'        => 'contact-satitle',
                         'type'      => 'text',
                         'title'     => __('Contact section additional title', 'anaglyph-lite'),
                         'subtitle'  => __('Edit additional title for contact section', 'anaglyph-lite'),
-                        'default'   => 'Questions or just wanna say hello? We&#8217;re waiting!'
+                        'default'   => __('Questions or just wanna say hello? We&#8217;re waiting!', 'anaglyph-lite')
                     ),
 					
 					array(
@@ -1902,7 +1902,7 @@ if (!class_exists('anaglyph_config')) {
                     array(
                         'id'            => 'opt-import-export',
                         'type'          => 'import_export',
-                        'title'         => 'Import Export',
+                        'title'         => __('Import Export', 'anaglyph-lite'),
                         'subtitle'      => 'Save and restore your anaglyph options',
                         'full_width'    => false,
                     ),
@@ -1998,17 +1998,17 @@ if (!class_exists('anaglyph_config')) {
             // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
             $this->args['share_icons'][] = array(
                 'url'   => 'https://github.com/Fruitfulcode',
-                'title' => 'Visit us on GitHub',
+                'title' => __('Visit us on GitHub', 'anaglyph-lite'),
                 'img'   => esc_url($source_path . 'images/icons/github.png'), 
             );
             $this->args['share_icons'][] = array(
                 'url'   => 'https://www.facebook.com/fruitfulc0de',
-                'title' => 'Like us on Facebook',
+                'title' => __('Like us on Facebook', 'anaglyph-lite'),
                 'img'   => esc_url($source_path . 'images/icons/facebook.png'), 
             );
             $this->args['share_icons'][] = array(
                 'url'   => 'https://twitter.com/fruitfulcode',
-                'title' => 'Follow us on Twitter',
+                'title' => __('Follow us on Twitter', 'anaglyph-lite'),
                 'img'   => esc_url($source_path . 'images/icons/twitter.png'), 
             );
             
