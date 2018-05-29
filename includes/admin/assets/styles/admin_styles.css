@@ -1,28 +1,68 @@
-.frtfl-modal *{
-    box-sizing: border-box;
+.frtfl-modal {
+  position: fixed;
+  display: flex;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.5;
 }
-.frtfl-modal{
-    position: fixed;
-    display: flex;
-    z-index: 999999;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
+.frtfl-modal * {
+  box-sizing: border-box;
+}
+.frtfl-modal .frtfl-modal__content {
+  position: relative;
+  max-width: 50%;
+  max-height: 50%;
+  background-color: #fff;
+  padding: 25px 50px;
+  overflow: auto;
+}
+.frtfl-modal .submit-btn__wrapper {
+  text-align: right;
+}
+.frtfl-modal .floating-placeholder__wrapper {
+  position: relative;
+  height: 30px;
+  margin: 15px 0;
+}
+.frtfl-modal .floating-placeholder__wrapper input {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+}
+.frtfl-modal .floating-placeholder__wrapper input::placeholder {
+  color: transparent;
+}
+.frtfl-modal .floating-placeholder__wrapper label,
+.frtfl-modal .floating-placeholder__wrapper input:placeholder-shown:focus + label,
+.frtfl-modal .floating-placeholder__wrapper input:placeholder-shown:active + label {
+  font-size: 12px;
+  line-height: 1;
+  position: absolute;
+  left: 5px;
+  top: 0;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  display: block;
+  padding: 0 3px;
+  background-color: #fff;
+  color: #666;
+  z-index: 2;
+  cursor: default;
+}
+.frtfl-modal .floating-placeholder__wrapper input:placeholder-shown + label {
+  transform: translateY(50%);
+  font-size: 16px;
+  z-index: 0;
+  transition: 0.3s;
 }
 
-.frtfl-modal__content{
-    position: relative;
-    max-width: 50%;
-    max-height: 50%;
-    background-color: #fff;
-    padding: 25px 50px;
-    overflow: auto;
-}
-
-.frtfl-modal .submit{
-    text-align: right;
-}
+/*# sourceMappingURL=admin_styles.css.map */
