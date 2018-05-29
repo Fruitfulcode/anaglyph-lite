@@ -2108,13 +2108,14 @@ global $anaglyphConfig;
 $anaglyphConfig = new anaglyph_config();
 
 
-if (class_exists( 'ReduxFramework' )) {
+if ( class_exists( 'ReduxFramework' ) ) {
 	/**
 	 * Enqueue scripts for all admin pages
 	 */
 	add_action( 'admin_enqueue_scripts', 'anaglyph_add_admin_scripts' );
 	function anaglyph_add_admin_scripts() {
 		wp_enqueue_script( 'admin_scripts', get_template_directory_uri() . '/includes/admin/assets/js/admin_scripts.js', array( 'jquery' ) );
+		wp_enqueue_style( 'admin_styles', get_template_directory_uri() . '/includes/admin/assets/styles/admin_styles.css' );
 	}
 
 	function anaglyph_shortcodes_admin_notice() {
@@ -2122,27 +2123,75 @@ if (class_exists( 'ReduxFramework' )) {
 		$options = $anaglyph_config;
 
 		if ( $options['ffc_subscribe'] === '0' && empty( $options['ffc_is_hide_subscribe_notification'] ) ) {
-			echo '<div class="notice-info notice is-dismissible" id="subscribe-notification-container"><p>';
-			echo __( 'Subscribe to Fruitful newsletters? ', 'anaglyph-lite' );
-			echo '<a id="subscribe-to-newsletters-btn" href="#" >' . __( 'Allow', 'anaglyph-lite' ) . '</a>';
-			echo '</p></div>';
+			?>
+            <div class="frtfl-modal modal" id="subscribe-notification-container">
+                <div class="frtfl-modal__content">
+
+                    <table class="form-table">
+                        <tbody>
+                        <tr>
+                            <th scope="row">Send Statistic to Fruitfulcode</th>
+                            <td>
+                                <fieldset>
+                                    <label>
+                                        <input type="checkbox"
+                                               id="modal-ffc-statistic"
+                                               value="1"
+											<?php checked( $options['ffc_statistic'], true, true ); ?>>
+                                        Yes
+                                    </label>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Subscribe to Fruitful Newsletters?</th>
+                            <td>
+                                <fieldset>
+                                    <label>
+                                        <input type="checkbox"
+                                               id="modal-ffc-subscribe"
+                                               value="0" <?php checked( $options['ffc_subscribe'], true, true ); ?>>
+                                        Yes
+                                    </label>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="submit">
+                        <a href="#" id="frtfl-modal__submit-btn" class="button button-primary">Submit</a>
+                    </p>
+                    <button type="button" class="notice-dismiss"><span
+                                class="screen-reader-text">Dismiss this notice.</span></button>
+                </div>
+            </div>
+			<?php
 		}
 	}
 
-	add_action( 'admin_notices', 'anaglyph_shortcodes_admin_notice' );
+	add_action( 'admin_footer', 'anaglyph_shortcodes_admin_notice' );
 
 
-	add_action( 'wp_ajax_anaglyph_allow_subscribe', 'anaglyph_allow_subscribe' );
-	function anaglyph_allow_subscribe() {
+	add_action( 'wp_ajax_anaglyph_submit_modal', 'anaglyph_submit_modal' );
+	function anaglyph_submit_modal() {
 
 		global $anaglyph_config;
+		$request_data = $_POST['data'];
 
 		$response = array(
 			'status'  => 'failed',
 			'message' => __( 'Something went wrong. You can subscribe manually on Theme Options page.', 'anaglyph-lite' )
 		);
-		if ( isset( $anaglyph_config['ffc_subscribe'] ) ) {
-			Redux::setOption( 'anaglyph_config', 'ffc_subscribe', '1' );
+
+
+		if ( ! empty( $request_data ) ) {
+			foreach ( $request_data as $option => $value ) {
+				if ( isset( $anaglyph_config[ $option ] ) ) {
+					$opt = ( $value === 'true' ) ? '1' : '0';
+					Redux::setOption( 'anaglyph_config', $option, $opt );
+					Redux::setOption( 'anaglyph_config', 'ffc_is_hide_subscribe_notification', '1' );
+				}
+			}
 
 			$response['status']  = 'success';
 			$response['message'] = __( 'Thank You for Subscription', 'anaglyph-lite' );
