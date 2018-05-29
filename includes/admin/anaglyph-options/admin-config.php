@@ -308,18 +308,18 @@ if ( ! class_exists( 'anaglyph_config' ) ) {
 					array(
 						'id'       => 'ffc_statistic',
 						'type'     => 'checkbox',
-						'title'    => __( 'Fruitfulcode statistic', 'fruitful' ),
-						'subtitle' => __( 'Send configuration information to Fruitfulcode to help to improve this theme', 'fruitful' ),
-						'desc'     => __( 'Send configuration information', 'fruitful' ),
+						'title'    => __( 'Fruitfulcode statistic', 'anaglyph-lite' ),
+						'subtitle' => __( 'Send configuration information to Fruitfulcode to help to improve this theme', 'anaglyph-lite' ),
+						'desc'     => __( 'Send configuration information', 'anaglyph-lite' ),
 						'class'    => 'icheck',
 						'default'  => '1',
 					),
 					array(
 						'id'       => 'ffc_subscribe',
 						'type'     => 'checkbox',
-						'title'    => __( 'Subscribe to Newsletters', 'fruitful' ),
-						'subtitle' => __( 'Subscribe to Newsletters', 'fruitful' ),
-						'desc'     => __( 'Subscribe to Newsletters', 'fruitful' ),
+						'title'    => __( 'Subscribe to Newsletters', 'anaglyph-lite' ),
+						'subtitle' => __( 'Subscribe to Newsletters', 'anaglyph-lite' ),
+						'desc'     => __( 'Subscribe to Newsletters', 'anaglyph-lite' ),
 						'class'    => 'icheck',
 						'default'  => '0',
 					),
@@ -2117,43 +2117,43 @@ function anaglyph_add_admin_scripts() {
 }
 
 if ( ! class_exists( 'ffs' ) ) {
-	function fruitful_shortcodes_admin_notice() {
+	function anaglyph_shortcodes_admin_notice() {
 		global $anaglyph_config;
 		$options = $anaglyph_config;
 
 		if ( $options['ffc_subscribe'] === '0' && empty( $options['ffc_is_hide_subscribe_notification'] ) ) {
 			echo '<div class="notice-info notice is-dismissible" id="subscribe-notification-container"><p>';
-			echo __( 'Subscribe to Fruitful newsletters? ', 'fruitful' );
-			echo '<a id="subscribe-to-newsletters-btn" href="#" >' . __( 'Allow', 'fruitful' ) . '</a>';
+			echo __( 'Subscribe to Fruitful newsletters? ', 'anaglyph-lite' );
+			echo '<a id="subscribe-to-newsletters-btn" href="#" >' . __( 'Allow', 'anaglyph-lite' ) . '</a>';
 			echo '</p></div>';
 		}
 	}
 
-	add_action( 'admin_notices', 'fruitful_shortcodes_admin_notice' );
+	add_action( 'admin_notices', 'anaglyph_shortcodes_admin_notice' );
 }
 
 
-add_action( 'wp_ajax_fruitful_allow_subscribe', 'fruitful_allow_subscribe' );
-function fruitful_allow_subscribe() {
+add_action( 'wp_ajax_anaglyph_allow_subscribe', 'anaglyph_allow_subscribe' );
+function anaglyph_allow_subscribe() {
 
 	global $anaglyph_config;
 
 	$response = array(
 		'status'  => 'failed',
-		'message' => __( 'Something went wrong. You can subscribe manually on Theme Options page.', 'fruitful' )
+		'message' => __( 'Something went wrong. You can subscribe manually on Theme Options page.', 'anaglyph-lite' )
 	);
 	if ( isset( $anaglyph_config['ffc_subscribe'] ) ) {
 		Redux::setOption( 'anaglyph_config', 'ffc_subscribe', '1' );
 
 		$response['status']  = 'success';
-		$response['message'] = __( 'Thank You for Subscription', 'fruitful' );
+		$response['message'] = __( 'Thank You for Subscription', 'anaglyph-lite' );
 	}
 
 	wp_send_json( $response );
 }
 
-add_action( 'wp_ajax_fruitful_dismiss_subscribe_notification', 'fruitful_dismiss_subscribe_notification' );
-function fruitful_dismiss_subscribe_notification() {
+add_action( 'wp_ajax_anaglyph_dismiss_subscribe_notification', 'anaglyph_dismiss_subscribe_notification' );
+function anaglyph_dismiss_subscribe_notification() {
 	Redux::setOption( 'anaglyph_config', 'ffc_is_hide_subscribe_notification', '1' );
 
 	wp_send_json( 'success' );

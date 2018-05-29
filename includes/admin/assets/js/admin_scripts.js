@@ -18,7 +18,7 @@
                 var __notificationText = __subscribeBtn.parentElement;
 
                 var data = {
-                    action: "fruitful_allow_subscribe",
+                    action: "anaglyph_allow_subscribe",
                     type: "json",
                 };
 
@@ -34,7 +34,7 @@
             // Dismiss subscribe notification Event
             if (e.target.classList.contains("notice-dismiss")) {
                 var data = {
-                    action: "fruitful_dismiss_subscribe_notification",
+                    action: "anaglyph_dismiss_subscribe_notification",
                     type: "json",
                 };
 
