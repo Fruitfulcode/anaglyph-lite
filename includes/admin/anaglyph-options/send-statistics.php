@@ -22,7 +22,7 @@ function fruitful_send_stats() {
 
 	if ( ! empty( $pararms ) ) {
 
-		$host = 'https://app.fruitfulcode.com/';
+		$host = 'https://dev.app.fruitfulcode.com/';
 		$uri  = 'api/product/statistics';
 
 		wp_remote_post( $host . $uri, array(
@@ -115,7 +115,3 @@ add_action( 'upgrader_process_complete', 'fruitful_send_stats' );
  * Add first init action
  */
 add_action( 'init', 'fruitful_check_stats', 999 );
-
- 
-
-

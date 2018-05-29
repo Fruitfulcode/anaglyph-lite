@@ -2108,15 +2108,15 @@ global $anaglyphConfig;
 $anaglyphConfig = new anaglyph_config();
 
 
-/**
- * Enqueue scripts for all admin pages
- */
-add_action( 'admin_enqueue_scripts', 'anaglyph_add_admin_scripts' );
-function anaglyph_add_admin_scripts() {
-	wp_enqueue_script( 'admin_scripts', get_template_directory_uri() . '/includes/admin/assets/js/admin_scripts.js', array( 'jquery' ) );
-}
+if (class_exists( 'ReduxFramework' )) {
+	/**
+	 * Enqueue scripts for all admin pages
+	 */
+	add_action( 'admin_enqueue_scripts', 'anaglyph_add_admin_scripts' );
+	function anaglyph_add_admin_scripts() {
+		wp_enqueue_script( 'admin_scripts', get_template_directory_uri() . '/includes/admin/assets/js/admin_scripts.js', array( 'jquery' ) );
+	}
 
-if ( ! class_exists( 'ffs' ) ) {
 	function anaglyph_shortcodes_admin_notice() {
 		global $anaglyph_config;
 		$options = $anaglyph_config;
@@ -2130,31 +2130,31 @@ if ( ! class_exists( 'ffs' ) ) {
 	}
 
 	add_action( 'admin_notices', 'anaglyph_shortcodes_admin_notice' );
-}
 
 
-add_action( 'wp_ajax_anaglyph_allow_subscribe', 'anaglyph_allow_subscribe' );
-function anaglyph_allow_subscribe() {
+	add_action( 'wp_ajax_anaglyph_allow_subscribe', 'anaglyph_allow_subscribe' );
+	function anaglyph_allow_subscribe() {
 
-	global $anaglyph_config;
+		global $anaglyph_config;
 
-	$response = array(
-		'status'  => 'failed',
-		'message' => __( 'Something went wrong. You can subscribe manually on Theme Options page.', 'anaglyph-lite' )
-	);
-	if ( isset( $anaglyph_config['ffc_subscribe'] ) ) {
-		Redux::setOption( 'anaglyph_config', 'ffc_subscribe', '1' );
+		$response = array(
+			'status'  => 'failed',
+			'message' => __( 'Something went wrong. You can subscribe manually on Theme Options page.', 'anaglyph-lite' )
+		);
+		if ( isset( $anaglyph_config['ffc_subscribe'] ) ) {
+			Redux::setOption( 'anaglyph_config', 'ffc_subscribe', '1' );
 
-		$response['status']  = 'success';
-		$response['message'] = __( 'Thank You for Subscription', 'anaglyph-lite' );
+			$response['status']  = 'success';
+			$response['message'] = __( 'Thank You for Subscription', 'anaglyph-lite' );
+		}
+
+		wp_send_json( $response );
 	}
 
-	wp_send_json( $response );
-}
+	add_action( 'wp_ajax_anaglyph_dismiss_subscribe_notification', 'anaglyph_dismiss_subscribe_notification' );
+	function anaglyph_dismiss_subscribe_notification() {
+		Redux::setOption( 'anaglyph_config', 'ffc_is_hide_subscribe_notification', '1' );
 
-add_action( 'wp_ajax_anaglyph_dismiss_subscribe_notification', 'anaglyph_dismiss_subscribe_notification' );
-function anaglyph_dismiss_subscribe_notification() {
-	Redux::setOption( 'anaglyph_config', 'ffc_is_hide_subscribe_notification', '1' );
-
-	wp_send_json( 'success' );
+		wp_send_json( 'success' );
+	}
 }
