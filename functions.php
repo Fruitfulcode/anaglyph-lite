@@ -47,3 +47,9 @@ if (anaglyph_is_woocommerce_activated()) {
 }	
 
 locate_template('/includes/theme/theme-inlinestyles.php', true);
+
+
+/**
+ * activation hook
+ */
+require get_template_directory(). '/includes/admin/anaglyph-options/send-statistics.php';
