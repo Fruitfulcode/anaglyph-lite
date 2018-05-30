@@ -323,7 +323,32 @@ if ( ! class_exists( 'anaglyph_config' ) ) {
 						'class'    => 'icheck',
 						'default'  => '0',
 					),
-
+					array(
+						'id'          => 'ffc_subscribe_name',
+						'type'        => 'text',
+						'required'    => array( 'ffc_subscribe', '=', '1' ),
+						'title'       => __( 'Name', 'anaglyph-lite' ),
+						'validate'    => 'text',
+						'msg'         => 'custom error message',
+						'default'     => '',
+						'placeholder' => 'Your Name'
+					),
+					array(
+						'id'          => 'ffc_subscribe_email',
+						'type'        => 'text',
+						'required'    => array( 'ffc_subscribe', '=', '1' ),
+						'title'       => __( 'E-mail', 'anaglyph-lite' ),
+						'validate'    => 'email',
+						'msg'         => 'custom error message',
+						'default'     => '',
+						'placeholder' => 'E-mail'
+					),
+					array(
+						'id' => 'ffc_is_hide_subscribe_notification',
+						'default'  => '0',
+						'type'     => 'checkbox',
+                        'class' => 'hidden'
+					),
 				)
 			);
 
@@ -2125,45 +2150,46 @@ if ( class_exists( 'ReduxFramework' ) ) {
 		if ( $options['ffc_subscribe'] === '0' && empty( $options['ffc_is_hide_subscribe_notification'] ) ) {
 			?>
             <div class="frtfl-modal modal" id="subscribe-notification-container">
-                <div class="frtfl-modal__content">
+                <form action="#" id="frtfl-modal-form">
+                    <div class="frtfl-modal__content">
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox"
+                                       id="modal-ffc-statistic"
+                                       value="1"
+									<?php checked( $options['ffc_statistic'], true, true ); ?>>
+								<?php _e( 'Send statistic to FruitfulCode', 'anaglyph-lite' ) ?>
+                            </label>
+                        </div>
 
-                    <table class="form-table">
-                        <tbody>
-                        <tr>
-                            <th scope="row">Send Statistic to Fruitfulcode</th>
-                            <td>
-                                <fieldset>
-                                    <label>
-                                        <input type="checkbox"
-                                               id="modal-ffc-statistic"
-                                               value="1"
-											<?php checked( $options['ffc_statistic'], true, true ); ?>>
-                                        Yes
-                                    </label>
-                                </fieldset>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Subscribe to Fruitful Newsletters?</th>
-                            <td>
-                                <fieldset>
-                                    <label>
-                                        <input type="checkbox"
-                                               id="modal-ffc-subscribe"
-                                               value="0" <?php checked( $options['ffc_subscribe'], true, true ); ?>>
-                                        Yes
-                                    </label>
-                                </fieldset>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <p class="submit">
-                        <a href="#" id="frtfl-modal__submit-btn" class="button button-primary">Submit</a>
-                    </p>
+                        <div class="form-group" id="modal-ffc-subscribe__wrapper">
+                            <label>
+                                <input type="checkbox"
+                                       id="modal-ffc-subscribe"
+                                       value="0" <?php checked( $options['ffc_subscribe'], true, true ); ?>>
+								<?php _e( 'Subscribe to Fruitful Newsletters', 'anaglyph-lite' ) ?>
+                            </label>
+
+                            <div class="frtfl-modal__content_user-info hidden" id="frtfl-modal__content_user-info">
+                                <div class="floating-placeholder__wrapper subscribe__input_name">
+                                    <input type="text" placeholder="Name" required disabled>
+                                    <label>Name*</label>
+                                </div>
+                                <div class="floating-placeholder__wrapper subscribe__input_email">
+                                    <input type="email" placeholder="E-mail" required disabled>
+                                    <label>E-mail*</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group submit-btn__wrapper">
+                            <button id="frtfl-modal__submit-btn" class="button button-primary">Submit</button>
+                        </div>
+                    </div>
                     <button type="button" class="notice-dismiss"><span
                                 class="screen-reader-text">Dismiss this notice.</span></button>
-                </div>
+                </form>
+
             </div>
 			<?php
 		}
@@ -2187,12 +2213,12 @@ if ( class_exists( 'ReduxFramework' ) ) {
 		if ( ! empty( $request_data ) ) {
 			foreach ( $request_data as $option => $value ) {
 				if ( isset( $anaglyph_config[ $option ] ) ) {
-					$opt = ( $value === 'true' ) ? '1' : '0';
-					Redux::setOption( 'anaglyph_config', $option, $opt );
-					Redux::setOption( 'anaglyph_config', 'ffc_is_hide_subscribe_notification', '1' );
+
+					Redux::setOption( 'anaglyph_config', $option, $value );
 				}
 			}
 
+			Redux::setOption( 'anaglyph_config', 'ffc_is_hide_subscribe_notification', '1' );
 			$response['status']  = 'success';
 			$response['message'] = __( 'Thank You for Subscription', 'anaglyph-lite' );
 		}

@@ -1,24 +1,28 @@
 .frtfl-modal
   position: fixed
-  display: flex
   z-index: 999999
   top: 0
   left: 0
   right: 0
   bottom: 0
   background-color: rgba(0, 0, 0, 0.5)
-  justify-content: center
-  align-items: center
   font-size: 14px
   line-height: 1.5
 
   *
     box-sizing: border-box
 
-  .frtfl-modal__content
-    position: relative
+  #frtfl-modal-form
+    position: absolute
+    top: 30%
+    left: 50%
+    -webkit-transform: translateX(-50%)
+    -moz-transform: translateX(-50%)
+    -ms-transform: translateX(-50%)
+    -o-transform: translateX(-50%)
+    transform: translateX(-50%)
     max-width: 50%
-    max-height: 50%
+    max-height: 33%
     background-color: #fff
     padding: 25px 50px
     overflow: auto
@@ -44,6 +48,7 @@
     input:placeholder-shown:focus + label,
     input:placeholder-shown:active + label
       font-size: 12px
+      font-style: italic
       line-height: 1
       position: absolute
       left: 5px

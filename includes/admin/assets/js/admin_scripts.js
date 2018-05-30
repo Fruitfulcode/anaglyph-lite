@@ -9,35 +9,38 @@
         }
         var statsInput = document.getElementById('modal-ffc-statistic');
         var subscribeInput = document.getElementById('modal-ffc-subscribe');
+        var userInfoContainer = document.getElementById("frtfl-modal__content_user-info");
 
+        var modalForm = document.getElementById("frtfl-modal-form");
+        var submitBtn = document.getElementById("frtfl-modal__submit-btn");
+        var modalData = {};
 
         modalContainer.addEventListener("click", function (e) {
 
-            // Subscribe to newsletter event
-            if (e.target.getAttribute("id") === "frtfl-modal__submit-btn") {
-                e.preventDefault();
+            //Subscribe checkbox event. If checked show additional inputs
+            if (e.target === subscribeInput) {
+                userInfoContainer.classList.toggle("hidden");
+                if (userInfoContainer.classList.contains("hidden")) {
+                    userInfoContainer.querySelector('input[type="email"]').setAttribute('disabled', 'true');
+                    userInfoContainer.querySelector('input[type="text"]').setAttribute('disabled', 'true');
+                } else {
+                    userInfoContainer.querySelector('input[type="email"]').removeAttribute('disabled');
+                    userInfoContainer.querySelector('input[type="text"]').removeAttribute('disabled');
+                }
 
-                var __submitBtn = e.target;
-                var __notificationText = __submitBtn.parentElement;
+            }
 
-                var data = {
-                    action: "anaglyph_submit_modal",
-                    type: "json",
-                    data: {
-                        'ffc_statistic' : statsInput.checked,
-                        'ffc_subscribe' : subscribeInput.checked
-                    }
-                };
-
-                jQuery.post(ajaxurl, data, function (response) {
-                    console.log(response);
-
-                    if (response.status === "success") {
-                        __notificationText.innerHTML = response.message;
-                    } else {
-                        __notificationText.innerHTML = response.message;
-                    }
-                });
+            // Subscribe to newsletter click event - create modalData
+            if (e.target === submitBtn) {
+                modalData['ffc_statistic'] = +statsInput.checked;
+                modalData['ffc_subscribe'] = +subscribeInput.checked;
+                if (userInfoContainer.classList.contains("hidden")) {
+                    modalData['ffc_subscribe_name'] = '';
+                    modalData['ffc_subscribe_email'] = '';
+                } else {
+                    modalData['ffc_subscribe_name'] = userInfoContainer.querySelector('input[type="text"]').value;
+                    modalData['ffc_subscribe_email'] = userInfoContainer.querySelector('input[type="email"]').value;
+                }
             }
 
             // Dismiss subscribe notification Event
@@ -49,11 +52,35 @@
 
                 jQuery.post(ajaxurl, data, function (response) {
                     modalContainer.remove();
+                    location.reload();
                 });
-
             }
 
         });
+
+        modalForm.addEventListener('submit', function (e) {
+
+            e.preventDefault();
+
+            var __notificationText = modalForm.querySelector('.frtfl-modal__content');
+
+            console.log(modalData);
+            var data = {
+                action: "anaglyph_submit_modal",
+                type: "json",
+                data: modalData
+            };
+
+            jQuery.post(ajaxurl, data, function (response) {
+                if (response.status === "success") {
+                    __notificationText.innerHTML = response.message;
+                } else {
+                    __notificationText.innerHTML = response.message;
+                }
+            });
+
+        });
+
     });
 }());
 
