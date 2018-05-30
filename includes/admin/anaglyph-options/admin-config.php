@@ -2151,6 +2151,7 @@ if ( class_exists( 'ReduxFramework' ) ) {
 			?>
             <div class="frtfl-modal modal" id="subscribe-notification-container">
                 <form action="#" id="frtfl-modal-form">
+                    <h2>Fruitful Send statistics & Subscribe</h2>
                     <div class="frtfl-modal__content">
                         <div class="form-group">
                             <label>
