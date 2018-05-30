@@ -308,8 +308,8 @@ if ( ! class_exists( 'anaglyph_config' ) ) {
 					array(
 						'id'       => 'ffc_statistic',
 						'type'     => 'checkbox',
-						'title'    => __( 'Fruitfulcode statistic', 'anaglyph-lite' ),
-						'subtitle' => __( 'Send configuration information to Fruitfulcode to help to improve this theme', 'anaglyph-lite' ),
+						'title'    => __( 'Fruitful Code statistic', 'anaglyph-lite' ),
+						'subtitle' => __( 'Send configuration information to Fruitful Code to help to improve this theme', 'anaglyph-lite' ),
 						'desc'     => __( 'Send configuration information', 'anaglyph-lite' ),
 						'class'    => 'icheck',
 						'default'  => '1',
