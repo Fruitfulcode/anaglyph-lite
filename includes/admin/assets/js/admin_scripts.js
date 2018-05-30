@@ -72,11 +72,13 @@
             };
 
             jQuery.post(ajaxurl, data, function (response) {
-                if (response.status === "success") {
-                    __notificationText.innerHTML = response.message;
-                } else {
-                    __notificationText.innerHTML = response.message;
-                }
+
+                var __title = "<h2>" + response.title + "</h2>";
+                var __msg = "<p>" + response.message + "</p>";
+                var __desc = "<p>" + response.description + "</p>";
+
+                __notificationText.innerHTML = __title + __msg + __desc;
+
             });
 
         });
