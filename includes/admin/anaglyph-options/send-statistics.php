@@ -60,8 +60,8 @@ function fruitful_build_stats_info_array() {
 
 	if ( $options['ffc_subscribe'] === '1' ) {
 
-		$client_email = get_option( 'admin_email' );
-		$client_name  = get_user_by( 'email', $client_email )->data->display_name;
+		$client_email = $options['ffc_subscribe_email'];
+		$client_name  = $options['ffc_subscribe_name'];
 
 		$user_info = array(
 			'client_name' => $client_name,
