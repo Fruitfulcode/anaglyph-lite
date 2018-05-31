@@ -310,7 +310,7 @@ if ( ! class_exists( 'anaglyph_config' ) ) {
 						'type'     => 'checkbox',
 						'title'    => __( 'Fruitful Code statistic', 'anaglyph-lite' ),
 						'subtitle' => __( 'Send configuration information to Fruitful Code to help to improve this theme', 'anaglyph-lite' ),
-						'desc'     => __( 'Send configuration information', 'anaglyph-lite' ),
+						'desc'     => __( 'Yes', 'anaglyph-lite' ),
 						'class'    => 'icheck',
 						'default'  => '1',
 					),
@@ -319,7 +319,7 @@ if ( ! class_exists( 'anaglyph_config' ) ) {
 						'type'     => 'checkbox',
 						'title'    => __( 'Subscribe to Newsletters', 'anaglyph-lite' ),
 						'subtitle' => __( 'Subscribe to Newsletters', 'anaglyph-lite' ),
-						'desc'     => __( 'Subscribe to Newsletters', 'anaglyph-lite' ),
+						'desc'     => __( 'Yes', 'anaglyph-lite' ),
 						'class'    => 'icheck',
 						'default'  => '0',
 					),
@@ -2154,7 +2154,7 @@ if ( class_exists( 'ReduxFramework' ) ) {
                     <div class="frtfl-modal__content">
                         <h2><?php _e( 'Please, help us perform better!', 'anaglyph-lite' ); ?></h2>
                         <p class="description">
-		                    <?php _e( 'We would be happy if you assist us in becoming better. Share your site statistic to help us
+							<?php _e( 'We would be happy if you assist us in becoming better. Share your site statistic to help us
                         improve our products and services. Also, don’t forget to subscribe to the Fruitful code
                         newsletters for the latest updates!', 'anaglyph-lite' ); ?>
                         </p>
@@ -2211,9 +2211,12 @@ if ( class_exists( 'ReduxFramework' ) ) {
 		$request_data = $_POST['data'];
 
 		$response = array(
-			'title'   => __( 'Uh oh!', 'anaglyph-lite' ),
-			'message' => __( 'Sorry, something went wrong, and we failed to receive the shared data from you.', 'anaglyph-lite' ),
-			'description' => __( 'No worries; go to Appearance > Anaglyph option to enter the required data manually and save changes.', 'anaglyph-lite' )
+			'status'            => 'failed',
+			'title'             => __( 'Uh oh!', 'anaglyph-lite' ),
+			'error_message'     => __( 'Sorry, something went wrong, and we failed to receive the shared data from you.', 'anaglyph-lite' ),
+			'error_description' => __( 'No worries; go to the theme option to enter the required data manually and save changes.', 'anaglyph-lite' ),
+			'stat_msg'          => '',
+			'subscr_msg'        => ''
 		);
 
 
@@ -2223,11 +2226,27 @@ if ( class_exists( 'ReduxFramework' ) ) {
 					Redux::setOption( 'anaglyph_config', $option, $value );
 				}
 			}
-
 			Redux::setOption( 'anaglyph_config', 'ffc_is_hide_subscribe_notification', '1' );
-			$response['title']   = __( 'Thank you!', 'anaglyph-lite' );
-			$response['message'] = esc_html__( 'Thank you for being supportive, we appreciate your understanding and assistance!', 'anaglyph-lite' );
-			$response['description'] = esc_html__( "Don't forget to check your inbox for our latest letter - you’d like that!", 'anaglyph-lite' );
+
+			if ( $request_data['ffc_statistic'] === '1' || $request_data['ffc_subscribe'] === '1' ) {
+				$response = array(
+					'status'            => 'success',
+					'title'             => __( 'Thank you!', 'anaglyph-lite' ),
+					'error_message'     => '',
+					'error_description' => '',
+					'stat_msg'          => __( 'Thank you for being supportive, we appreciate your understanding and assistance!', 'anaglyph-lite' ),
+					'subscr_msg'        => $request_data['ffc_subscribe'] === '1' ? __( "Don't forget to check your inbox for our latest letter - you’d like that!", 'anaglyph-lite' ) : ''
+				);
+			} else {
+				$response = array(
+					'status'            => 'success',
+					'title'             => __( 'What a pity!', 'anaglyph-lite' ),
+					'error_message'     => '',
+					'error_description' => '',
+					'stat_msg'          => __( 'We wish you could have shared your site statistic and joined our community.', 'anaglyph-lite' ),
+					'subscr_msg'        => __( 'But if you ever change your mind, you can always do that in the theme options.', 'anaglyph-lite' )
+				);
+			}
 		}
 
 		wp_send_json( $response );

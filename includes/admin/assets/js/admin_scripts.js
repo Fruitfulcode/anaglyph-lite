@@ -72,13 +72,21 @@
             };
 
             jQuery.post(ajaxurl, data, function (response) {
-
-                var __title = "<h2>" + response.title + "</h2>";
-                var __msg = "<p>" + response.message + "</p>";
-                var __desc = "<p>" + response.description + "</p>";
-
-                __notificationText.innerHTML = __title + __msg + __desc;
-
+                var __title, __statMsg, __subscrMsg, __errMsg, __errDescr;
+                if (response.status === 'success'){
+                    __title = "<h2>" + response.title + "</h2>";
+                    __statMsg = "<p>" + response.stat_msg + "</p>";
+                    __subscrMsg = "<p>" + response.subscr_msg + "</p>";
+                    __errMsg = '';
+                    __errDescr = '';
+                } else {
+                    __title = '';
+                    __statMsg = '';
+                    __subscrMsg = '';
+                    __errMsg = "<p>" + response.error_message + "</p>";
+                    __errDescr = "<p>" + response.error_description + "</p>";
+                }
+                __notificationText.innerHTML = __title + __statMsg + __subscrMsg + __errMsg + __errDescr;
             });
 
         });
