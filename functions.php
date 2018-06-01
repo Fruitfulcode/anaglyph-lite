@@ -49,7 +49,13 @@ if (anaglyph_is_woocommerce_activated()) {
 locate_template('/includes/theme/theme-inlinestyles.php', true);
 
 
-/**
- * activation hook
- */
-require get_template_directory(). '/includes/admin/anaglyph-options/send-statistics.php';
+if (is_admin()) {
+	/**
+	 * activation hook
+	 */
+	require get_template_directory() . '/includes/admin/fruitful-stats/send-statistics.php';
+	/**
+	 * modal form for request to sending statistics
+	 */
+	require get_template_directory() . '/includes/admin/fruitful-stats/send-statistics-modal.php';
+}
