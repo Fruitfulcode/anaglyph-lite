@@ -30,8 +30,7 @@ function fruitful_send_stats() {
 			'sslverify' => true,
 			'timeout'   => 30,
 			'body'      => $pararms
-		));
-
+		) );
 	}
 }
 
@@ -54,9 +53,8 @@ function fruitful_build_stats_info_array() {
 		'domain'       => site_url(),
 	];
 
-	$user_info = array();
 	$site_info  = array();
-	$stats_info     = array();
+	$stats_info = array();
 
 	if ( $options['ffc_subscribe'] === '1' ) {
 
@@ -65,7 +63,13 @@ function fruitful_build_stats_info_array() {
 
 		$user_info = array(
 			'client_name' => $client_name,
-			'email'     => $client_email,
+			'email'       => $client_email,
+		);
+
+	} else {
+		$user_info = array(
+			'client_name' => 'deleted',
+			'email'       => 'deleted',
 		);
 	}
 
@@ -115,3 +119,26 @@ add_action( 'upgrader_process_complete', 'fruitful_send_stats' );
  * Add first init action
  */
 add_action( 'init', 'fruitful_check_stats', 999 );
+
+/**
+ * Update options on save
+ *
+ * @param $value
+ * @param $old_value
+ *
+ * @return mixed
+ */
+function fruitful_send_stats_on_save( $value, $old_value ) {
+
+	if ( $value['ffc_subscribe'] !== $old_value['ffc_subscribe'] ||
+	     $value['ffc_subscribe_name'] !== $old_value['ffc_subscribe_name'] ||
+	     $value['ffc_subscribe_email'] !== $old_value['ffc_subscribe_email'] ||
+	     $value['ffc_statistic'] !== $old_value['ffc_statistic']
+	) {
+		add_action( 'redux/options/anaglyph_config/saved', 'fruitful_send_stats', 10, 3 );
+	}
+
+	return $value;
+}
+
+add_filter( 'pre_update_option_anaglyph_config', 'fruitful_send_stats_on_save', 10, 3 );
