@@ -50,12 +50,9 @@ locate_template('/includes/theme/theme-inlinestyles.php', true);
 
 
 if (is_admin()) {
-	/**
-	 * activation hook
-	 */
-	require get_template_directory() . '/includes/admin/fruitful-stats/send-statistics.php';
-	/**
-	 * modal form for request to sending statistics
-	 */
-	require get_template_directory() . '/includes/admin/fruitful-stats/send-statistics-modal.php';
+	// Fruitful statistics
+	require get_template_directory() . '/vendor/fruitful-stats/send-statistics.php';
+	
+	$FF_anaglyph_lite_Stats = new FF_anaglyph_lite_Stats( __FILE__ );
+	$FF_anaglyph_lite_Stats->dispatch();
 }
