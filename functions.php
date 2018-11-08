@@ -50,9 +50,9 @@ locate_template('/includes/theme/theme-inlinestyles.php', true);
 
 
 if (is_admin()) {
-	// Fruitful statistics
-	require get_template_directory() . '/vendor/fruitful-stats/send-statistics.php';
-	
-	$FF_anaglyph_lite_Stats = new FF_anaglyph_lite_Stats( __FILE__ );
-	$FF_anaglyph_lite_Stats->dispatch();
+	// Fruitful apps
+	require get_template_directory() . '/vendor/fruitful-app/fruitful-app-core.php';
+
+	$FF_Anaglyph_Lite_App = new FruitfulAnaglyphLiteApp( __FILE__ );
+	$FF_Anaglyph_Lite_App->dispatch();
 }

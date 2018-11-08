@@ -35,7 +35,27 @@ if ( ! class_exists( 'anaglyph_config' ) ) {
 			}
 			add_action( 'anaglyph/loaded', array( $this, 'remove_demo' ) );
 
+			// Add notice with fruitful advertising
+			add_action('admin_notices', array( $this, 'fruitful_advertising_notice') );
+
 			$this->ReduxFramework = new ReduxFramework( $this->sections, $this->args );
+		}
+
+		/**
+		 * Display notice with advertising info on theme settings page
+		 */
+		function fruitful_advertising_notice() {
+
+			$advertising_enable = apply_filters('ffc_is_advertising_enabled_anaglyph_lite', false);
+
+			if( $advertising_enable ) {
+
+				global $pagenow;
+				if ( ( $pagenow === 'themes.php' ) && ( isset($_GET['page']) && $_GET['page'] === 'anaglyph_options' ) ) {
+					$advertising_html = apply_filters('ffc_advertising_anaglyph_lite', null);
+					echo '<div class="notice notice-info is-dismissible"><p>'. $advertising_html .'</p></div>';
+				}
+			}
 		}
 
 		/**
